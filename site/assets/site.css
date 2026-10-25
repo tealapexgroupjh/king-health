@@ -1187,3 +1187,132 @@ body > .site-footer { flex-shrink: 0; margin-top: auto; }
 @media (max-width: 960px) {
   .hero-wide .hero-photo, .hero-slide .hero-photo { left: 0; -webkit-mask-image: none; mask-image: none; }
 }
+
+/* ============================== WAVE 5 (2026-10-25) ==============================
+   Consultation section and form about one fifth more compact, a category FAQ beside the form,
+   a shorter "Coverage for every season of life" band, and the Why King Health commitments as a deep band. */
+.section.consult { padding: clamp(45px, 6.4vw, 83px) 0; }
+.consult-solo { max-width: 752px; }
+.consult .panel { padding: clamp(20px, 3vw, 36px); }
+.consult .panel h2 { font-size: clamp(22px, 1.9vw, 27px); }
+.consult .panel-lede { margin-top: 8px; font-size: 16px; line-height: 1.55; }
+.consult .form { gap: 12px 16px; margin-top: 18px; }
+.consult .field { gap: 5px; }
+.consult .field label { font-size: 13px; }
+.consult .field input, .consult .field select { min-height: 44px; padding: 9px 12px; }
+.consult .field textarea { min-height: 72px; height: 72px; }
+.consult .check { gap: 10px; }
+.consult .check label { font-size: 12.5px; line-height: 1.5; }
+.consult .btn-submit { min-height: 48px; }
+
+/* Category FAQ beside the form. GOLD 6 hairlines are inherited from .faq */
+.consult-faq { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr); gap: clamp(32px, 4.5vw, 64px); align-items: start; }
+.consult-faq-aside { padding-top: 6px; position: sticky; top: calc(var(--hd-h) + var(--sn-h) + 32px); align-self: start; }
+.consult-faq-aside h2 { margin-top: 6px; font-size: clamp(22px, 1.9vw, 27px); letter-spacing: -0.025em; }
+.cfaq { margin-top: 20px; }
+.cfaq button { padding: 16px 0; min-height: 52px; font-size: 16.5px; gap: 18px; }
+.cfaq .ans { padding: 0 0 18px; font-size: 15.5px; line-height: 1.6; }
+.consult-faq-aside .fine { margin-top: 18px; }
+.consult-faq-aside .fine a { color: var(--link); text-underline-offset: 3px; }
+
+/* Home: Coverage for every season of life, about one fifth shorter */
+#categories.after-band { padding-top: calc(44px + clamp(36px, 4.6vw, 60px)); padding-bottom: clamp(45px, 6.4vw, 83px); }
+#categories .sec-head { padding-bottom: 22px; margin-bottom: clamp(26px, 3.2vw, 40px); }
+#categories .card-media { aspect-ratio: 16 / 7.4; }
+#categories .card-body { padding: 20px 22px 22px; }
+#categories .card-body > p { margin-top: 8px; font-size: 15.5px; line-height: 1.55; }
+#categories .card-body .tlink { padding-top: 10px; }
+
+/* Why King Health: deep band, numbered panels, gold rule that draws across on hover (GOLD 6 placement) */
+.why-band { position: relative; overflow: hidden; isolation: isolate; padding: clamp(52px, 7vw, 92px) 0; }
+.why-band::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(55% 90% at 100% 0%, color-mix(in srgb, var(--accent) 16%, transparent) 0%, transparent 62%),
+              radial-gradient(45% 70% at 0% 100%, color-mix(in srgb, var(--band-ink) 7%, transparent) 0%, transparent 60%); }
+.why-head { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 18px 72px; align-items: end; margin-bottom: clamp(30px, 3.8vw, 48px); }
+.why-head .h2 { max-width: 15em; margin-top: 6px; }
+.why-head .band-lede { margin-top: 0; max-width: 44ch; }
+.why-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2vw, 24px); counter-reset: why; }
+.why-card { counter-increment: why; position: relative; padding: 24px 26px 26px; border-radius: 2px;
+  background: color-mix(in srgb, var(--band-ink) 5%, transparent); border: 1px solid color-mix(in srgb, var(--band-ink) 14%, transparent);
+  transition: transform .45s cubic-bezier(.2,.7,.2,1), background-color .45s ease, border-color .45s ease; }
+.why-card::before { content: counter(why, decimal-leading-zero); content: counter(why, decimal-leading-zero) / "";
+  display: block; margin-bottom: 14px; font-family: Manrope, Inter, sans-serif; font-weight: 700; font-size: 32px; line-height: 1; letter-spacing: -0.03em; color: var(--band-kicker); }
+.why-card::after { content: ""; position: absolute; top: -1px; left: -1px; right: -1px; height: 2px; background: var(--accent);
+  transform: scaleX(.2); transform-origin: left center; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.why-card:hover { transform: translateY(-4px); background: color-mix(in srgb, var(--band-ink) 9%, transparent); border-color: color-mix(in srgb, var(--band-ink) 24%, transparent); }
+.why-card:hover::after { transform: scaleX(1); }
+.why-card h3 { font-size: 21px; letter-spacing: -0.02em; color: var(--band-ink); }
+.why-card p { margin-top: 12px; font-size: 16px; line-height: 1.62; color: var(--band-soft); max-width: 40ch; }
+
+@media (max-width: 960px) {
+  .consult-faq, .why-head { grid-template-columns: minmax(0, 1fr); }
+  .consult-faq-aside { position: static; }
+  .why-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 760px) {
+  .section.consult { padding: 45px 0; }
+  .consult .form { grid-template-columns: minmax(0, 1fr); }
+  #categories.after-band { padding-top: 40px; padding-bottom: 45px; }
+  .why-card { padding: 22px 20px 24px; }
+  .why-card::before { font-size: 32px; margin-bottom: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .why-card, .why-card::after { transition: none; }
+  .why-card:hover { transform: none; }
+  .why-card::after { transform: scaleX(1); }
+}
+
+/* ============================== LEGAL DOCUMENTS (2026-10-25) ==============================
+   Privacy Policy and Terms and Conditions: entity header, On this page index, numbered sections via CSS counters. */
+.legal-wrap { display: grid; grid-template-columns: minmax(0, 17rem) minmax(0, 1fr); gap: clamp(32px, 5vw, 80px); align-items: start; }
+.legal-toc { position: sticky; top: calc(var(--hd-h) + var(--sn-h) + 28px); padding-top: 4px; }
+.legal-toc ol { margin: 14px 0 0; padding: 0; list-style: none; counter-reset: toc; border-left: 1px solid var(--line); }
+.legal-toc li { counter-increment: toc; }
+.legal-toc a { display: grid; grid-template-columns: 2.1em minmax(0, 1fr); padding: 6px 0 6px 14px; margin-left: -1px; border-left: 2px solid transparent;
+  font-size: 14px; line-height: 1.45; color: var(--ink-soft); text-decoration: none; transition: color .2s ease, border-color .2s ease; }
+.legal-toc a::before { content: counter(toc) "."; content: counter(toc) "." / ""; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+.legal-toc a:hover { color: var(--ink); border-left-color: var(--accent); }
+.legal-doc { max-width: 46rem; counter-reset: legal; }
+.legal-meta { padding: 22px 26px; background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 2px; margin-bottom: 32px; }
+.legal-entity { font-family: Manrope, Inter, sans-serif; font-weight: 700; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); }
+.legal-title { margin-top: 4px; font-family: Manrope, Inter, sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink); }
+.legal-meta dl { margin: 14px 0 0; display: flex; flex-wrap: wrap; gap: 8px 36px; padding-top: 14px; border-top: 1px solid var(--line); }
+.legal-meta dt { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+.legal-meta dd { margin: 2px 0 0; font-size: 15px; font-weight: 600; color: var(--ink); }
+.legal-preamble p { font-size: 17px; line-height: 1.7; color: var(--ink); }
+.legal-sec { counter-increment: legal; padding-top: 30px; margin-top: 30px; border-top: 1px solid var(--line); scroll-margin-top: calc(var(--hd-h) + var(--sn-h) + 20px); }
+.legal-sec h2 { display: flex; gap: .6em; font-size: clamp(19px, 1.5vw, 22px); letter-spacing: -0.02em; }
+.legal-sec h2::before { content: counter(legal) "."; content: counter(legal) "." / ""; min-width: 1.4em; color: var(--brand); font-variant-numeric: tabular-nums; }
+.legal-sec p, .legal-sec li, .legal-sec dd { font-size: 16px; line-height: 1.68; color: var(--ink-soft); }
+.legal-sec > p { margin-top: 12px; max-width: 42rem; }
+.legal-list { margin: 12px 0 0; padding: 0; list-style: none; }
+.legal-list li { position: relative; padding: 4px 0 4px 22px; }
+.legal-list li::before { content: ""; position: absolute; left: 4px; top: 15px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.legal-defs { margin: 14px 0 0; display: grid; gap: 0; border-top: 1px solid var(--line); }
+.legal-defs > div { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); gap: 6px 24px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+.legal-defs dt { font-size: 15px; font-weight: 600; color: var(--ink); }
+.legal-defs dd { margin: 0; }
+.legal-sec a, .legal-closing a, .legal-preamble a { color: var(--link); text-underline-offset: 3px; }
+.legal-contact { margin-top: 16px; padding: 20px 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 2px; }
+.legal-contact-name { font-family: Manrope, Inter, sans-serif; font-weight: 700; font-size: 17px; color: var(--ink) !important; }
+.legal-contact .legal-defs { border-top: 0; margin-top: 8px; }
+.legal-contact .legal-defs > div { grid-template-columns: 6rem minmax(0, 1fr); }
+.legal-contact .legal-defs > div:last-child { border-bottom: 0; }
+.legal-closing { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 15px; }
+.legal .tpmo { margin-top: 14px; }
+@media (max-width: 960px) {
+  .legal-wrap { grid-template-columns: minmax(0, 1fr); }
+  .legal-toc { position: static; }
+  .legal-toc ol { columns: 2; column-gap: 24px; }
+}
+@media (max-width: 760px) {
+  .legal-toc ol { columns: 1; }
+  .legal-defs > div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .legal-meta { padding: 18px 18px; }
+}
+@media print {
+  .site-header, .subnav, .site-footer, .legal-toc, .banner, .float-badge, .kh-float { display: none !important; }
+  .legal-wrap { display: block; }
+  .legal-doc { max-width: none; }
+  .legal-sec { break-inside: avoid-page; }
+}

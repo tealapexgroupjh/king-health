@@ -132,7 +132,9 @@
           "title": "A relationship that endures",
           "text": "We remain beside you after enrollment, reviewing your coverage as your life changes and helping with questions whenever they arise."
         }
-      ]
+      ],
+      "kicker": "The King Health standard",
+      "lede": "Three commitments govern every recommendation we make, from the first side by side comparison through the years of service that follow enrollment."
     },
     "about_strip": {
       "heading": "Advice offered the way we would offer it to our own family",
@@ -206,7 +208,26 @@
       "form_intro": {
         "heading": "Speak with us about your senior benefits",
         "text": "Tell us a little about your situation, and we will arrange a conversation to review your options with patience and care."
-      }
+      },
+      "faq_heading": "Senior benefits, answered",
+      "faq": [
+        {
+          "q": "When should we begin planning for Medicare?",
+          "a": "Your Initial Enrollment Period is a seven month window that opens three months before the month you turn sixty five, includes that month, and closes three months after it. Beginning the conversation a few months early leaves time to compare plans against your doctors and prescriptions without the pressure of a deadline."
+        },
+        {
+          "q": "Is there a cost for your guidance?",
+          "a": "There is no fee for our guidance. We are compensated by the carriers whose plans we place, and the premium for a given plan is the same whether you enroll through us or directly. King Health is not connected with or endorsed by the U.S. government or the federal Medicare program."
+        },
+        {
+          "q": "Does Original Medicare cover dental, vision and hearing?",
+          "a": "Original Medicare generally does not cover routine dental care, eye examinations for glasses or hearing aids. Standalone ancillary plans, and some Medicare Advantage plans, can close those gaps, and we compare both routes against the care you expect to need."
+        },
+        {
+          "q": "What does final expense insurance provide?",
+          "a": "Final expense coverage is a modest whole life policy intended to cover funeral costs, outstanding medical bills and other obligations at the end of life. The benefit is paid directly to your beneficiary, and many policies require answers to a short set of health questions rather than a medical examination."
+        }
+      ]
     },
     "individual-benefits": {
       "nav_label": "Individual Benefits",
@@ -238,7 +259,26 @@
       "form_intro": {
         "heading": "Speak with us about coverage for your household",
         "text": "Share a few details about your family and your goals, and we will prepare a thoughtful comparison of the options that suit you."
-      }
+      },
+      "faq_heading": "Individual and family coverage, answered",
+      "faq": [
+        {
+          "q": "When can we enroll in an individual health plan?",
+          "a": "Individual health plans generally enroll during the annual Open Enrollment Period each fall. Outside that window, a qualifying life event such as losing employer coverage, marriage, the birth of a child or a move can open a Special Enrollment Period, which is typically limited to sixty days from the event."
+        },
+        {
+          "q": "Should we choose term or whole life insurance?",
+          "a": "Term life insurance covers a defined period, such as the years a mortgage remains outstanding or children live at home, at a lower premium. Whole life insurance lasts for your lifetime and builds cash value at a higher premium. Many households combine the two, and we model both against your goals before recommending either."
+        },
+        {
+          "q": "How much life insurance does our family need?",
+          "a": "The right amount depends on the income your household would need to replace, outstanding debts, future obligations such as education, and the savings and coverage you already hold. We work through each of those figures with you rather than relying on a single rule of thumb."
+        },
+        {
+          "q": "Is dedicated dental and vision coverage worth adding?",
+          "a": "For households that expect regular cleanings, fillings, eye examinations or new lenses, a dedicated dental and vision plan can reduce out of pocket costs considerably. Waiting periods often apply to major dental work, so enrolling before the need arises tends to matter."
+        }
+      ]
     },
     "group-benefits": {
       "nav_label": "Group Benefits",
@@ -270,7 +310,26 @@
       "form_intro": {
         "heading": "Speak with us about benefits for your team",
         "text": "Tell us about your business and your goals for employee benefits, and we will arrange a conversation to explore the options together."
-      }
+      },
+      "faq_heading": "Group benefits, answered",
+      "faq": [
+        {
+          "q": "Is our business large enough to offer group coverage?",
+          "a": "Eligibility rules vary by carrier and by state, and many carriers write small group plans for businesses with only a handful of employees. We confirm the participation and eligibility requirements that apply to your company before any quote is prepared."
+        },
+        {
+          "q": "What will group coverage cost the business?",
+          "a": "Employers typically contribute a share of each employee premium, and carriers often set a minimum employer contribution. We model several contribution levels so that you can see the cost to the business and the cost to employees side by side before you commit."
+        },
+        {
+          "q": "Can we offer dental, vision or life without group health?",
+          "a": "In many cases you can. Group dental, vision and life plans can often be offered on their own or added later, which allows a business to begin with a focused benefits package and expand it as the team grows."
+        },
+        {
+          "q": "How long does it take for coverage to begin?",
+          "a": "Group plans usually take effect on the first day of a month once the carrier approves the application, the employee census and the initial premium. Timing depends on underwriting, so we recommend beginning the process several weeks before the date you have in mind."
+        }
+      ]
     },
     "retirement": {
       "nav_label": "Retirement",
@@ -302,7 +361,26 @@
       "form_intro": {
         "heading": "Speak with us about your retirement plan",
         "text": "Share a few details about your goals for retirement, and we will arrange a conversation to explore the strategies that may suit you."
-      }
+      },
+      "faq_heading": "Retirement planning, answered",
+      "faq": [
+        {
+          "q": "How does an annuity differ from indexed universal life?",
+          "a": "An annuity is designed primarily to accumulate savings and convert them into dependable income, while indexed universal life is permanent life insurance that provides a death benefit and builds cash value linked to the performance of a market index. Each serves a different purpose, and some plans use both."
+        },
+        {
+          "q": "Can we lose money in an indexed product?",
+          "a": "Index crediting in fixed indexed annuities and indexed universal life is protected from index declines. Surrender charges, rider fees, policy charges or withdrawals beyond the contract allowance can still reduce the value, so we review those terms carefully before you commit."
+        },
+        {
+          "q": "When should we begin planning for retirement income?",
+          "a": "Earlier planning allows more time for growth and more flexibility in how income is structured. A review in the years immediately before retirement remains valuable, because it can clarify how guaranteed income, savings and coverage will work together."
+        },
+        {
+          "q": "Do you replace our financial advisor or tax professional?",
+          "a": "We do not. Our role is the insurance and annuity side of your plan, and we coordinate with your financial advisor and tax professional so that each recommendation fits the strategy you already have in place."
+        }
+      ]
     }
   },
   "products": {
@@ -812,14 +890,164 @@
     ]
   },
   "privacy": {
-    "heading": "Privacy statement",
-    "body": [
+    "heading": "Privacy Policy",
+    "kicker": "Legal",
+    "lede": "How King Health LLC collects, uses, discloses and safeguards your information, including information related to SMS communications.",
+    "description": "How King Health LLC collects, uses, discloses and safeguards your information, including SMS communications.",
+    "effective_label": "Effective",
+    "effective_date": "",
+    "effective_placeholder": "[effective date]",
+    "support_email": "Admin@kinghealthdirect.com",
+    "source_note": "Wording adopted from the privacy policy published on the original kinghealthdirect.com site, reformatted; insurance carrier sharing line carried over from the previous site statement.",
+    "preamble": [
+      "King Health LLC (\"Company,\" \"we,\" \"us\" or \"our\") respects your privacy and is committed to protecting it through this Privacy Policy. This policy explains how we collect, use, disclose and safeguard your information when you visit {site_url} or engage with our services, including SMS communications."
+    ],
+    "sections": [
+      {
+        "id": "collect",
+        "h": "Information We Collect",
+        "p": [
+          "We may collect the following information:"
+        ],
+        "defs": [
+          [
+            "Personal Information",
+            "Name, email address, phone number and mailing address."
+          ],
+          [
+            "Mobile Information",
+            "Phone number provided for SMS communications."
+          ],
+          [
+            "Usage Data",
+            "IP address, browser type, pages visited and time spent on pages."
+          ],
+          [
+            "Cookies and Tracking Data",
+            "See {cookies_link} below."
+          ]
+        ]
+      },
+      {
+        "id": "use",
+        "h": "How We Use Your Information",
+        "p": [
+          "We use your information to:"
+        ],
+        "list": [
+          "Provide and manage our services",
+          "Communicate with you regarding your account or inquiries",
+          "Send SMS messages you have opted into",
+          "Improve our website and services",
+          "Comply with legal obligations"
+        ]
+      },
+      {
+        "id": "sms",
+        "h": "SMS Communications and Consent",
+        "p": [
+          "By providing your mobile phone number and opting in, you expressly consent to receive automated and non-automated SMS messages from King Health LLC, including but not limited to:"
+        ],
+        "list": [
+          "Customer support messages",
+          "Service updates and notifications",
+          "Appointment reminders",
+          "Promotional and marketing messages"
+        ],
+        "defs": [
+          [
+            "Message Frequency",
+            "May vary."
+          ],
+          [
+            "Message and Data Rates",
+            "Standard message and data rates may apply."
+          ],
+          [
+            "Opt-Out",
+            "You may opt out at any time by replying STOP to any message. Reply HELP for assistance."
+          ],
+          [
+            "Consent Not Required for Purchase",
+            "Your consent to receive SMS messages is not a condition of purchasing any goods or services."
+          ]
+        ]
+      },
+      {
+        "id": "sharing",
+        "h": "Sharing of Information",
+        "p": [
+          "We do not sell or rent your personal information. We may share information with:"
+        ],
+        "list": [
+          "Service providers assisting us in operating our business",
+          "Insurance carriers, only when you ask us to submit an application or request coverage on your behalf",
+          "Legal authorities if required by law"
+        ],
+        "after": [
+          "No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. All other categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties."
+        ]
+      },
+      {
+        "id": "security",
+        "h": "Data Security",
+        "p": [
+          "We implement reasonable administrative, technical and physical safeguards designed to protect your information. However, no method of transmission over the internet is completely secure."
+        ]
+      },
+      {
+        "id": "cookies",
+        "h": "Cookies and Tracking Technologies",
+        "p": [
+          "We use cookies and similar tracking technologies to:"
+        ],
+        "list": [
+          "Analyze website traffic and usage",
+          "Improve user experience",
+          "Understand user behavior"
+        ],
+        "after": [
+          "You may control cookie settings through your browser preferences. Disabling cookies may affect website functionality."
+        ]
+      },
+      {
+        "id": "rights",
+        "h": "Your Rights and Choices",
+        "p": [
+          "You have the right to:"
+        ],
+        "list": [
+          "Access, correct or delete your personal information",
+          "Opt out of marketing communications",
+          "Withdraw SMS consent at any time by replying STOP"
+        ],
+        "after": [
+          "To exercise these rights, contact us using the information below."
+        ]
+      },
+      {
+        "id": "children",
+        "h": "Children's Privacy",
+        "p": [
+          "Our services are not intended for individuals under the age of eighteen. We do not knowingly collect information from minors."
+        ]
+      },
+      {
+        "id": "contact",
+        "h": "Contact Us",
+        "p": [
+          "If you have questions about this Privacy Policy or our SMS practices, contact us at:"
+        ],
+        "contact": true
+      }
+    ],
+    "terms_sentence": "Your use of this site is also governed by our {link}.",
+    "terms_link": "Terms and Conditions",
+    "legacy_body": [
       "King Health uses the information you submit only to respond to your request and to prepare coverage options for you. We do not sell your personal information, and we share it with an insurance carrier only when you ask us to submit an application on your behalf.",
       "If you agree to receive text messages from King Health, message frequency varies and message and data rates may apply. You may reply STOP at any time to opt out or HELP for assistance, and consent to receive text messages is never a condition of purchase. Mobile information and text messaging consent are not shared with third parties for marketing purposes.",
       "To review, correct or delete the information we hold about you, please contact us by phone or email, and we will respond promptly."
-    ],
-    "terms_sentence": "Your use of this site is also governed by our {link}.",
-    "terms_link": "Terms and Conditions"
+    ]
   },
   "accessibility": {
     "heading": "Accessibility statement",
@@ -1166,7 +1394,7 @@
     "_comment": "Outline for counsel. COUNSEL REVIEW REQUIRED before publication. Set effective_date and governing_state, then remove counsel_review_pending.",
     "heading": "Terms and Conditions",
     "kicker": "Legal",
-    "lede": "These terms govern your use of this website and the information and services offered through it.",
+    "lede": "The terms that govern your use of the King Health website, its services and its SMS messaging program.",
     "effective_label": "Effective",
     "effective_date": "",
     "effective_placeholder": "[effective date]",
@@ -1176,6 +1404,214 @@
     "review_notice": "This document is pending legal review.",
     "description": "The terms that govern your use of the King Health website and the information and services offered through it.",
     "sections": [
+      {
+        "id": "sms-program",
+        "h": "SMS Program Description",
+        "p": [
+          "King Health LLC offers SMS messaging programs that may include:"
+        ],
+        "list": [
+          "Account notifications",
+          "Customer support communications",
+          "Appointment reminders",
+          "Promotional offers and updates (where consent is provided)"
+        ]
+      },
+      {
+        "id": "opt",
+        "h": "Opt-In and Opt-Out",
+        "p": [
+          "By opting into our SMS program, you agree to receive text messages as described above."
+        ],
+        "defs": [
+          [
+            "Opt-Out",
+            "Reply STOP at any time to unsubscribe."
+          ],
+          [
+            "Help",
+            "Reply HELP or contact {support_email}."
+          ]
+        ]
+      },
+      {
+        "id": "frequency",
+        "h": "Message Frequency and Costs",
+        "p": [
+          "Message frequency may vary. Message and data rates may apply depending on your carrier plan."
+        ]
+      },
+      {
+        "id": "carrier",
+        "h": "Carrier Disclaimer",
+        "p": [
+          "Wireless carriers are not liable for delayed or undelivered messages."
+        ]
+      },
+      {
+        "id": "eligibility",
+        "h": "Eligibility",
+        "p": [
+          "You must be at least eighteen years old to participate in our SMS programs."
+        ]
+      },
+      {
+        "id": "support",
+        "h": "Customer Support",
+        "p": [
+          "For SMS related support, contact {support_email}."
+        ]
+      },
+      {
+        "id": "privacy",
+        "h": "Privacy Policy",
+        "p": [
+          "Your participation in our SMS program is subject to our {privacy_link}. By opting in, you agree to the collection and use of information as described therein."
+        ]
+      },
+      {
+        "h": "About King Health",
+        "p": [
+          "King Health is an independent insurance agency owned by Javon King. License number: {license_number}. Licensed in: {licensed_in}.",
+          "King Health represents multiple insurance carriers and is not itself an insurer. Policies are issued, underwritten and administered by the carriers we represent, and each carrier is responsible for the obligations described in its own policy documents."
+        ],
+        "id": "site1"
+      },
+      {
+        "h": "No Coverage Through This Website",
+        "p": [
+          "Nothing on this website binds, changes or cancels any insurance coverage. Coverage begins only when a carrier approves an application and issues a policy. Submitting a form on this website is a request to be contacted, and it is not an application for coverage."
+        ],
+        "id": "site2"
+      },
+      {
+        "h": "Educational Information Only",
+        "p": [
+          "The content of this website is general and educational. It is not legal, tax or investment advice, and it does not describe the terms of any specific policy. Where this website and a policy differ, the policy documents issued by the carrier control."
+        ],
+        "id": "site3"
+      },
+      {
+        "h": "Quotes, Eligibility and Underwriting",
+        "p": [
+          "Any premium or benefit discussed with you before a policy is issued is an estimate. Eligibility, rates and benefits are determined by each carrier, vary by state and may depend on underwriting, and a carrier may decline an application."
+        ],
+        "id": "site4"
+      },
+      {
+        "h": "Medicare Information",
+        "p": [
+          "King Health is not connected with or endorsed by the United States government or the federal Medicare program. The Medicare plans we discuss are limited to those offered by the carriers King Health represents in your area."
+        ],
+        "tpmo": true,
+        "id": "site5"
+      },
+      {
+        "h": "Communications and Consent",
+        "p": [
+          "When you submit a form, we may contact you by phone, email or text message in keeping with the consents you give on that form. Consent to be contacted is not a condition of purchase. You may withdraw your consent at any time by telling us by phone or email, or by replying STOP to any text message."
+        ],
+        "id": "site6"
+      },
+      {
+        "h": "Information You Provide",
+        "p": [
+          "You agree that the information you submit through this website is accurate and complete to the best of your knowledge. We rely on what you provide in order to compare plans and to prepare recommendations for you."
+        ],
+        "id": "site7"
+      },
+      {
+        "h": "Reviews and Third Party Content",
+        "p": [
+          "Reviews shown on this website are published by their authors on Google and are displayed unedited. King Health does not pay for reviews and does not solicit reviews in exchange for anything of value. Google's own terms govern that content."
+        ],
+        "id": "site8"
+      },
+      {
+        "h": "Links to Other Sites",
+        "p": [
+          "This website may link to carrier websites and other third party sites. Those sites are governed by their own terms and privacy practices, and a link does not imply that King Health endorses them."
+        ],
+        "id": "site9"
+      },
+      {
+        "h": "Intellectual Property",
+        "p": [
+          "The text, design and photography arrangement of this website belong to King Health or are used under license. Carrier names and logos belong to their respective owners and are shown for reference only."
+        ],
+        "id": "site10"
+      },
+      {
+        "h": "Acceptable Use",
+        "p": [
+          "You agree not to use this website for any unlawful purpose, not to scrape or copy its content by automated means, not to interfere with its operation and not to misrepresent your identity in any submission."
+        ],
+        "id": "site11"
+      },
+      {
+        "h": "Applications to Join King Health",
+        "p": [
+          "Submitting an application through our Join the Team page creates no offer, no engagement and no guarantee of carrier appointment. King Health makes no representation of income to any applicant."
+        ],
+        "id": "site12"
+      },
+      {
+        "h": "Disclaimer of Warranties",
+        "p": [
+          "This website is provided as is and as available, without warranties of any kind, whether express or implied, to the fullest extent the law allows."
+        ],
+        "id": "site13"
+      },
+      {
+        "h": "Limitation of Liability",
+        "p": [
+          "To the extent the law allows, King Health is not liable for any indirect, incidental or consequential loss arising from your use of this website or from your reliance on its general information."
+        ],
+        "id": "site14"
+      },
+      {
+        "h": "Indemnification",
+        "p": [
+          "You agree to indemnify and hold harmless King Health and its owner from claims arising out of your misuse of this website or your breach of these terms."
+        ],
+        "id": "site15"
+      },
+      {
+        "h": "Privacy and Accessibility",
+        "p": [
+          "Our {privacy_link} explains how we collect and use the information you share with us, and our {accessibility_link} describes our commitment to making this website usable for everyone."
+        ],
+        "id": "site16"
+      },
+      {
+        "id": "modifications",
+        "h": "Modifications",
+        "p": [
+          "We reserve the right to modify these Terms at any time. The effective date shown at the top of this page identifies the version currently in force, and continued use of the services constitutes acceptance of updated Terms."
+        ]
+      },
+      {
+        "id": "law",
+        "h": "Governing Law",
+        "p": [
+          "These Terms are governed by the laws of the United States."
+        ]
+      },
+      {
+        "id": "contact",
+        "h": "Contact",
+        "p": [
+          "Questions about these Terms are welcome at:"
+        ],
+        "contact": true
+      }
+    ],
+    "support_email": "Admin@kinghealthdirect.com",
+    "source_note": "SMS sections, modifications and governing law adopted from the terms published on the original kinghealthdirect.com site; website sections carried over from the previous outline. Duplicates of the original text (acceptance, text message terms, changes, governing law placeholder) were folded into the original wording; see legacy_sections.",
+    "preamble": [
+      "By accessing or using our website and services, including SMS communications, you agree to these Terms of Use."
+    ],
+    "legacy_sections": [
       {
         "h": "Acceptance of these terms",
         "p": [
