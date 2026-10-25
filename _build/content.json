@@ -1,0 +1,1475 @@
+{
+  "site": {
+    "name": "King Health",
+    "tagline": "Insurance Advisory You Can Trust",
+    "owner": "Javon King",
+    "phone": "(973) 524-7188",
+    "email": "Javon@kinghealthdirect.com",
+    "hours": "Monday through Friday from half past eight in the morning until six in the evening, and Saturday from half past eight until five. Closed on Sunday.",
+    "footer_blurb": "King Health is an independent insurance advisory that helps seniors, families and employers find protection that suits their needs and fits comfortably within their budgets. We compare options across carriers on your behalf and remain your advisor long after coverage begins.",
+    "disclosure": "Coverage is subject to underwriting, eligibility and carrier approval, and plan availability, benefits and pricing vary by state and by carrier. The information on this site is general and educational; it does not describe the terms of any specific policy and is not tax, legal or investment advice. Guarantees within insurance and annuity products are backed by the financial strength and claims paying ability of the issuing insurance company. King Health is not connected with or endorsed by the U.S. government or the federal Medicare program.",
+    "social": {
+      "_comment": "Wave 2 footer social row. Paste the full profile URLs here. A link left empty renders as a marked placeholder in review builds and is omitted entirely in release builds. WhatsApp uses the https://wa.me/ form followed by the number in international format.",
+      "facebook": "https://www.facebook.com/kinghealthdirect",
+      "instagram": "https://www.instagram.com/kinghealthdirect",
+      "whatsapp": "https://wa.me/19735247188?text=Hello%20Javon%2C%20I%20found%20King%20Health%20online%20and%20would%20like%20to%20talk%20about%20my%20coverage."
+    },
+    "footer_more": {
+      "reviews": "Reviews",
+      "blog": "Blog",
+      "join": "Join the Team",
+      "social_label": "King Health on social media"
+    },
+    "tpmo_disclaimer": "We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
+    "_comment": "To hide a page, add its key to site.hidden_pages and rebuild. The page is not generated and every link to it (main nav, second nav, footer, home sections, About cards, Contact aside, Privacy sentence, sitemap) disappears automatically. Remove the key and rebuild to bring it back. Valid keys: reviews, join-the-team, blog, terms, carriers, about.",
+    "hidden_pages": [
+      "blog",
+      "join-the-team"
+    ],
+    "legal_name": "King Health LLC",
+    "address": {
+      "street": "801 Elizabeth Avenue",
+      "city": "Newark",
+      "region": "NJ",
+      "postal_code": "07112",
+      "country": "US",
+      "geo": {
+        "lat": 40.7072735,
+        "lng": -74.2028628
+      }
+    },
+    "hours_structured": [
+      {
+        "days": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:30",
+        "closes": "18:00"
+      },
+      {
+        "days": [
+          "Saturday"
+        ],
+        "opens": "08:30",
+        "closes": "17:00"
+      }
+    ],
+    "_facts_source": "Business facts from BUSINESS_FACTS_KING_HEALTH.json (Google Business Profile and kinghealthdirect.com, 2026-10-25). Email still a placeholder until Javon supplies one.",
+    "license_number": "New Jersey 1636452",
+    "licensed_in": "New Jersey and North Carolina",
+    "contact_card": {
+      "_comment": "Footer QR code and the downloadable contact card (vCard). Phone, email, address and website come from site.*; edit names and title here.",
+      "first_name": "Javon",
+      "last_name": "King",
+      "title": "Independent Insurance Advisor",
+      "file": "javon-king-king-health.vcf",
+      "label": "Scan or tap to save Javon's contact",
+      "website": "https://kinghealthdirect.com",
+      "heading": "Keep Javon's contact on hand",
+      "text": "Scan the code with your phone's camera, or tap it on your phone, to add Javon's name, direct line, email and office address to your contacts in one step.",
+      "link": "Download the contact card"
+    }
+  },
+  "site_nav": {
+    "_comment": "Wave 3: the King Health second nav shown on every page that has no category bar. Rename an item by editing its label; keys and hrefs must stay as they are. Items whose page is listed in site.hidden_pages are dropped automatically.",
+    "label": "King Health",
+    "label_href": "index.html",
+    "items": [
+      {
+        "key": "about",
+        "label": "About Us",
+        "href": "about.html"
+      },
+      {
+        "key": "carriers",
+        "label": "Carriers",
+        "href": "carriers.html"
+      },
+      {
+        "key": "reviews",
+        "label": "Client Reviews",
+        "href": "reviews.html"
+      },
+      {
+        "key": "blog",
+        "label": "Blog",
+        "href": "blog.html"
+      },
+      {
+        "key": "join-the-team",
+        "label": "Join the Team",
+        "href": "join-the-team.html"
+      }
+    ],
+    "cta": {
+      "label": "Contact Us",
+      "href": "contact.html"
+    }
+  },
+  "home": {
+    "hero_heading": "Protection for the people you love, chosen with care and priced within reach.",
+    "hero_lede": "King Health is an independent advisory that compares coverage across carriers so that seniors, families and employers can secure the protection they need at a cost they can sustain.",
+    "category_intro": {
+      "heading": "Coverage for every season of life",
+      "text": "Whether you are approaching Medicare, providing for a growing household, caring for a team of employees or preparing for a comfortable retirement, we bring the same patience and the same careful comparison to every conversation."
+    },
+    "why": {
+      "heading": "Why families and businesses choose King Health",
+      "items": [
+        {
+          "title": "Independent counsel",
+          "text": "Because we are not bound to any carrier, our recommendations are shaped by your circumstances and your budget rather than by a sales quota."
+        },
+        {
+          "title": "Affordability as a discipline",
+          "text": "We compare plans side by side and explain the tradeoffs plainly, so that the coverage you choose protects your family without straining your monthly finances."
+        },
+        {
+          "title": "A relationship that endures",
+          "text": "We remain beside you after enrollment, reviewing your coverage as your life changes and helping with questions whenever they arise."
+        }
+      ]
+    },
+    "about_strip": {
+      "heading": "Advice offered the way we would offer it to our own family",
+      "text": "Javon King founded King Health on the conviction that people deserve an advisor who cares about their loved ones as deeply as they do. That conviction shapes how we listen, how we compare and how we stay in touch for years to come."
+    },
+    "chart": {
+      "title": "How a thoughtful plan fits together",
+      "caption": "Health coverage, life insurance and retirement income each protect a different part of family life, and a well designed plan lets them work in concert so that your household remains secure through every stage."
+    },
+    "form_intro": {
+      "heading": "Begin a conversation with King Health",
+      "text": "Share a few details about what you would like to protect, and we will reach out personally to arrange a conversation at a time that suits you. There is never any cost or obligation for our guidance."
+    },
+    "hero_slides": {
+      "_comment": "Home hero slideshow. Put master photos in _build/hero_slides/ and list them here in order; the build makes small web copies automatically (site/media/hero/). pos is the focus point (x% y%) that stays visible when the photo is cropped. Remove all items to fall back to the single hero photo.",
+      "interval_seconds": 7,
+      "pause_label": "Pause the photo slideshow",
+      "play_label": "Play the photo slideshow",
+      "items": [
+        {
+          "file": "01-family-of-five-sofa.jpg",
+          "alt": "A mother, a father and their three children sitting close together on a sofa at home",
+          "pos": "50% 24%"
+        },
+        {
+          "file": "02-three-generations-porch.jpg",
+          "alt": "Three generations of a family laughing together on a garden porch",
+          "pos": "50% 30%"
+        },
+        {
+          "file": "03-grandparents-photo-album.jpg",
+          "alt": "Grandparents looking through a family photo album with their granddaughter",
+          "pos": "55% 30%"
+        },
+        {
+          "file": "04-generations-of-women.jpg",
+          "alt": "Four women from three generations of one family sitting together on a sofa",
+          "pos": "50% 36%"
+        }
+      ]
+    }
+  },
+  "categories": {
+    "senior-benefits": {
+      "nav_label": "Senior Benefits",
+      "title": "Senior Benefits | King Health",
+      "heading": "Senior benefits that bring clarity to the years ahead",
+      "lede": "We guide you through Medicare, final expense coverage and supplemental benefits with patience, so that every decision feels clear and every plan fits your budget.",
+      "card_text": "Medicare guidance, final expense coverage and supplemental benefits arranged with patience and explained in plain language.",
+      "overview": [
+        "Approaching Medicare is a meaningful milestone, and the choices that come with it deserve calm, careful attention. We help you understand how Original Medicare, Medicare Advantage, Medicare Supplement and prescription drug coverage relate to one another, and we compare the options available where you live so that your plan reflects your doctors, your prescriptions and your budget.",
+        "Beyond health coverage, many of our senior clients want to make thoughtful provision for their families. Final expense coverage and supplemental benefits such as dental, vision and hospital indemnity plans can round out that protection, and we explain each option clearly so that you can choose with confidence and without pressure."
+      ],
+      "help": {
+        "heading": "How we serve our senior clients",
+        "items": [
+          {
+            "title": "Unhurried explanation",
+            "text": "We take the time to walk through how each part of Medicare works, and we welcome family members who would like to join the conversation."
+          },
+          {
+            "title": "Careful plan comparison",
+            "text": "We review the plans available in your area against your physicians, your prescriptions and your monthly budget before making any recommendation."
+          },
+          {
+            "title": "Annual attention",
+            "text": "Plans and needs change from year to year, so we revisit your coverage during each enrollment season to confirm that it still serves you well."
+          }
+        ]
+      },
+      "form_intro": {
+        "heading": "Speak with us about your senior benefits",
+        "text": "Tell us a little about your situation, and we will arrange a conversation to review your options with patience and care."
+      }
+    },
+    "individual-benefits": {
+      "nav_label": "Individual Benefits",
+      "title": "Individual Benefits | King Health",
+      "heading": "Individual and family coverage designed around your life",
+      "lede": "From health insurance to life insurance and everyday dental and vision care, we help individuals and families assemble protection that is sound, sensible and affordable.",
+      "card_text": "Health, life, dental and vision coverage for individuals and families, compared carefully so that it fits the household budget.",
+      "overview": [
+        "Every household carries its own priorities, and the coverage that protects it should reflect them. We help individuals, couples and families compare health plans, select life insurance that provides for the people who depend on them, and add dental, vision and supplemental benefits that make everyday care more manageable.",
+        "Our approach begins with listening. Once we understand your family, your income and your goals, we compare options across carriers and present them clearly, so that you can see how each choice affects both your protection and your monthly budget."
+      ],
+      "help": {
+        "heading": "How we help individuals and families",
+        "items": [
+          {
+            "title": "A complete picture",
+            "text": "We consider your health coverage, life insurance and supplemental benefits together, so that each part of your plan complements the others."
+          },
+          {
+            "title": "Budget conscious guidance",
+            "text": "We look for the combination of coverage and cost that protects your household without asking more of your finances than is comfortable."
+          },
+          {
+            "title": "Support as life changes",
+            "text": "Marriage, a new child, a new home or a new career can all call for a fresh look, and we are glad to review your plan whenever your circumstances shift."
+          }
+        ]
+      },
+      "form_intro": {
+        "heading": "Speak with us about coverage for your household",
+        "text": "Share a few details about your family and your goals, and we will prepare a thoughtful comparison of the options that suit you."
+      }
+    },
+    "group-benefits": {
+      "nav_label": "Group Benefits",
+      "title": "Group Benefits | King Health",
+      "heading": "Group benefits that help you care for the people who build your business",
+      "lede": "We help employers design health, life, dental and vision benefits that attract and retain good people while respecting the realities of a business budget.",
+      "card_text": "Health, life, dental and vision benefits for employers, designed to support your team and respect your budget.",
+      "overview": [
+        "A thoughtful benefits package is among the most meaningful ways an employer can show care for a team. We work with business owners to understand their workforce, their goals and their budget, and we compare group health, group life, dental, vision and supplemental options so that the program you offer is both valued by employees and sustainable for the business.",
+        "We also handle much of the work that makes benefits feel complicated. From gathering census information and presenting proposals to supporting enrollment and answering employee questions, we serve as a steady partner throughout the plan year and at every renewal."
+      ],
+      "help": {
+        "heading": "How we partner with employers",
+        "items": [
+          {
+            "title": "Benefits shaped to your workforce",
+            "text": "We consider the size, needs and preferences of your team so that the program reflects the people it serves."
+          },
+          {
+            "title": "Sensible cost structures",
+            "text": "We explain employer paid and voluntary options clearly, helping you decide how to share costs in a way that works for the business and its employees."
+          },
+          {
+            "title": "Enrollment and renewal support",
+            "text": "We guide your employees through enrollment and return each renewal season to review the program, the market and any changes that may serve you better."
+          }
+        ]
+      },
+      "form_intro": {
+        "heading": "Speak with us about benefits for your team",
+        "text": "Tell us about your business and your goals for employee benefits, and we will arrange a conversation to explore the options together."
+      }
+    },
+    "retirement": {
+      "nav_label": "Retirement",
+      "title": "Retirement | King Health",
+      "heading": "Retirement strategies that bring confidence to the years you have worked toward",
+      "lede": "We help you consider annuities and indexed universal life as part of a retirement plan built for steady income, careful growth and lasting provision for your family.",
+      "card_text": "Annuities and indexed universal life explained clearly, so that your retirement plan supports dependable income and lasting provision.",
+      "overview": [
+        "Retirement is a season to enjoy, and it rests most comfortably on a plan that provides dependable income and preserves what you have built. We help you understand how fixed, fixed indexed and income annuities work, and how indexed universal life can combine permanent protection with the potential for cash value accumulation.",
+        "These are long term commitments, so we take care to explain each feature, cost and limitation before you decide. Our role is to help you see how an insurance based strategy may complement your savings, your pension or your other retirement resources, and to recommend only what suits your goals and your comfort."
+      ],
+      "help": {
+        "heading": "How we guide your retirement planning",
+        "items": [
+          {
+            "title": "Clarity before commitment",
+            "text": "We explain how crediting, surrender periods, income options and policy charges work, so that you understand every product before you choose it."
+          },
+          {
+            "title": "Income you can plan around",
+            "text": "We focus on strategies that can provide steady, predictable income and protect your savings from the swings of the market."
+          },
+          {
+            "title": "Provision for those who follow",
+            "text": "We help you consider how your retirement plan can also leave a meaningful legacy for your spouse, your children or the causes you care about."
+          }
+        ]
+      },
+      "form_intro": {
+        "heading": "Speak with us about your retirement plan",
+        "text": "Share a few details about your goals for retirement, and we will arrange a conversation to explore the strategies that may suit you."
+      }
+    }
+  },
+  "products": {
+    "medicare": {
+      "nav_label": "Medicare",
+      "category": "senior-benefits",
+      "title": "Medicare Guidance | King Health",
+      "heading": "Medicare guidance that brings calm to an important decision",
+      "lede": "We help you understand your Medicare choices and compare the plans available where you live, so that your coverage reflects your doctors, your prescriptions and your budget.",
+      "card_text": "Clear guidance on Original Medicare, Medicare Advantage, Medicare Supplement and prescription drug plans.",
+      "at_a_glance": [
+        "Medicare is the federal health insurance program for people who qualify by age or by certain disabilities or conditions. Original Medicare consists of Part A, which helps with hospital care, and Part B, which helps with doctor visits, outpatient services and preventive care. Many people pair Original Medicare with a Medicare Supplement plan, which helps with costs that Original Medicare leaves to you, and a Part D plan for prescription drugs.",
+        "Medicare Advantage, sometimes called Part C, is an alternative offered by private insurers approved by Medicare. These plans provide the benefits of Part A and Part B, often include prescription drug coverage, and may offer additional benefits such as dental, vision or hearing care, usually within a network of providers. King Health is not connected with or endorsed by the U.S. government or the federal Medicare program. We do not offer every plan available in your area, and you may always contact Medicare directly or visit Medicare.gov for a complete view of your options."
+      ],
+      "designed_for": [
+        "This guidance is designed for people approaching Medicare eligibility, those already enrolled who would like to review their coverage, and adult children who are helping a parent make sense of the choices. It is equally suited to someone who is retiring from employer coverage and to someone who simply wants to confirm that the current plan still fits."
+      ],
+      "how_it_works": [
+        "We begin by learning about your physicians, your prescriptions, the places you receive care and the budget you are comfortable with. With that understanding, we compare the Medicare Advantage, Medicare Supplement and prescription drug plans available in your area and explain how each would affect your access to care and your costs throughout the year.",
+        "Medicare has defined enrollment periods, including an initial window when you first become eligible, an annual enrollment period each fall when plan changes are permitted, and special enrollment periods triggered by certain life events. We help you understand which window applies to you, complete your enrollment accurately and revisit your plan each year as benefits and needs change."
+      ],
+      "faq": [
+        {
+          "q": "Should we choose Medicare Advantage or a Medicare Supplement plan?",
+          "a": "Each approach suits different priorities. Medicare Supplement plans pair with Original Medicare and offer broad freedom to see providers who accept Medicare, while Medicare Advantage plans often feature lower monthly premiums and added benefits within a network. We compare these approaches against your doctors, your travel habits and your budget before recommending a direction."
+        },
+        {
+          "q": "Is there a cost for your Medicare guidance?",
+          "a": "There is no fee for our guidance. We are compensated by the carriers whose plans we place, and the premium for a given plan is the same whether you enroll through us or directly. King Health is not connected with or endorsed by the U.S. government or the federal Medicare program. We do not offer every plan available in your area, and you may always contact Medicare directly or visit Medicare.gov for a complete view of your options."
+        },
+        {
+          "q": "Can we change plans after we enroll?",
+          "a": "In many cases you can. The annual enrollment period each fall allows changes to Medicare Advantage and prescription drug coverage, and certain life events open special enrollment periods. Changing a Medicare Supplement plan may involve health questions depending on your state and timing, so we review the rules that apply to you before any change."
+        }
+      ]
+    },
+    "final-expense": {
+      "nav_label": "Final Expense",
+      "category": "senior-benefits",
+      "title": "Final Expense Insurance | King Health",
+      "heading": "Final expense coverage that lets your family focus on what matters",
+      "lede": "Final expense insurance is a modest whole life policy designed to provide for final arrangements and related costs, giving your loved ones room to gather and remember together.",
+      "card_text": "Modest, permanent life insurance designed to provide for final arrangements so that your family can focus on one another.",
+      "at_a_glance": [
+        "Final expense insurance is a form of whole life insurance with a smaller benefit amount, intended to help with funeral and burial costs, outstanding medical bills and other final arrangements. Because it is permanent coverage, it remains in force for life as long as premiums are paid, and premiums generally stay level for the life of the policy.",
+        "The benefit is paid directly to the beneficiaries you name, who may use it in whatever way serves the family best. Many policies also build a modest cash value over time, and benefit amounts, underwriting and features vary by carrier and by state."
+      ],
+      "designed_for": [
+        "Final expense coverage is designed for older adults who would like to make thoughtful provision for their families without purchasing a large life insurance policy. It is often a good fit for people on a fixed income, people whose earlier coverage has ended, and people who simply want the reassurance of knowing that final arrangements are already provided for."
+      ],
+      "how_it_works": [
+        "Many final expense policies use simplified underwriting, which means acceptance is based on a short set of health questions rather than a medical examination. For applicants with more significant health history, guaranteed acceptance policies are also available, and these typically include a waiting period before the full benefit applies.",
+        "We help you choose a benefit amount that reflects your wishes and fits comfortably within your monthly budget, compare carriers whose underwriting suits your health profile, and complete the application with you. Once your policy is in place, we remain available to your family to help them file a claim when the time comes."
+      ],
+      "faq": [
+        {
+          "q": "Will we need a medical examination?",
+          "a": "Usually not. Most final expense policies rely on health questions alone, and guaranteed acceptance options ask no health questions at all, although those policies generally include a waiting period before the full benefit is available."
+        },
+        {
+          "q": "How do we decide on the right benefit amount?",
+          "a": "We consider the arrangements you envision, any other coverage or savings you already have and the premium that fits your budget. Our aim is to provide meaningful provision without asking more of your monthly income than is comfortable."
+        },
+        {
+          "q": "Can the benefit be used for expenses other than a funeral?",
+          "a": "Yes. The benefit is paid to your beneficiaries, who may use it for funeral costs, remaining medical bills, travel for family members or any other need that arises."
+        }
+      ]
+    },
+    "ancillary": {
+      "nav_label": "Ancillary",
+      "category": "shared",
+      "title": "Ancillary Coverage | King Health",
+      "heading": "Ancillary coverage that fills the spaces a primary plan leaves open",
+      "lede": "Dental, vision, hearing, accident, critical illness, hospital indemnity and cancer coverage can strengthen any plan, and we arrange these benefits for seniors, individuals and employers alike.",
+      "card_text": "Supplemental dental, vision, hearing, accident, critical illness, hospital indemnity and cancer coverage that strengthens your primary plan.",
+      "at_a_glance": [
+        "Ancillary coverage refers to supplemental benefits that work alongside your primary health insurance. Dental, vision and hearing plans help with routine and restorative care that medical coverage often excludes, while accident, critical illness, hospital indemnity and cancer policies pay cash benefits directly to you when a covered event occurs, which you may use for deductibles, household bills or any other need.",
+        "For seniors, these benefits can complement Original Medicare or a Medicare Supplement plan, neither of which generally includes routine dental, vision or hearing care. For individuals and families, they add a layer of financial steadiness to a health plan. For employers, they offer valued voluntary benefits that employees can elect, often at little or no cost to the business. Availability and benefit design vary by state and by carrier."
+      ],
+      "designed_for": [
+        "Ancillary coverage is designed for anyone who would like more complete protection than a primary health plan alone provides. Seniors often add dental, vision and hearing coverage, individuals and families frequently choose accident or hospital indemnity plans to soften unexpected expenses, and employers use these benefits to round out a competitive package without adding substantial cost."
+      ],
+      "how_it_works": [
+        "Dental, vision and hearing plans typically pay toward covered services at participating providers, with preventive care often covered most generously and some major services subject to waiting periods. Accident, critical illness, hospital indemnity and cancer plans work differently: when a covered event occurs, the plan pays a set cash benefit directly to you, regardless of what your health insurance pays.",
+        "We begin by reviewing the coverage you already have and identifying where supplemental benefits would provide the most value for the premium. For employers, we design voluntary offerings that employees can elect through payroll deduction. In every case, we compare carriers and benefit levels so that the protection you add is both useful and affordable."
+      ],
+      "faq": [
+        {
+          "q": "Do these plans replace our health insurance?",
+          "a": "No. Ancillary plans are designed to supplement your primary coverage rather than replace it. They fill specific needs such as routine dental care or provide cash benefits that help with costs your health plan does not cover."
+        },
+        {
+          "q": "Can we purchase ancillary coverage on its own?",
+          "a": "In most cases, yes. Seniors, individuals and families can usually purchase these plans individually, and employers can offer them to their teams as part of a group or voluntary benefits program."
+        },
+        {
+          "q": "How are cash benefits paid?",
+          "a": "Accident, critical illness, hospital indemnity and cancer plans generally pay benefits directly to you once a covered claim is approved. The funds are yours to use as you see fit, whether for medical bills, travel, childcare or everyday household expenses."
+        }
+      ]
+    },
+    "individual-health": {
+      "nav_label": "Individual Health",
+      "category": "individual-benefits",
+      "title": "Individual Health Insurance | King Health",
+      "heading": "Individual health coverage chosen with care for you and your family",
+      "lede": "We compare marketplace and private health plans so that you can choose coverage that protects your household and fits comfortably within your budget.",
+      "card_text": "Marketplace and private health plans for individuals and families, compared carefully for value and fit.",
+      "at_a_glance": [
+        "Individual health insurance covers people who do not receive coverage through an employer or a government program. Plans offered through the health insurance marketplace include essential health benefits such as preventive care, hospital care and prescription drugs, and they cannot deny coverage or charge more because of existing health conditions. Depending on household income, you may qualify for premium tax credits that reduce your monthly cost.",
+        "Private plans purchased outside the marketplace are also available, and some offer different network or pricing structures that may suit particular circumstances. Because the rules, benefits and protections differ between plan types, and because availability varies by state and by carrier, we explain each option clearly before you decide."
+      ],
+      "designed_for": [
+        "Individual health coverage is designed for people who are self employed, own a small business without a group plan, work for an employer that does not offer coverage, are between positions or are retiring before Medicare eligibility. It also serves families who would like to compare their employer plan against what the individual market can offer."
+      ],
+      "how_it_works": [
+        "We begin by understanding your household, your preferred doctors and hospitals, your prescriptions and your budget. We then compare the plans available in your area, explaining how premiums, deductibles, copays and networks interact so that you can see the full cost of each option rather than the monthly premium alone.",
+        "Marketplace plans may be purchased during the annual open enrollment period or during a special enrollment period that follows a qualifying life event, such as a move, a marriage, the birth of a child or the loss of other coverage. We help you determine your eligibility for savings, complete your enrollment and review your plan each year."
+      ],
+      "faq": [
+        {
+          "q": "Can we qualify for help with the cost of coverage?",
+          "a": "Many households do. Premium tax credits for marketplace plans are based on household income and size, and we will help you estimate whether you qualify and how much the credit may reduce your premium."
+        },
+        {
+          "q": "What if we need coverage outside the open enrollment period?",
+          "a": "A qualifying life event such as a move, a marriage, a new child or the loss of other coverage may open a special enrollment period. Some private plans also accept applications throughout the year, and we will review which options are available to you."
+        },
+        {
+          "q": "Will our current doctors be in network?",
+          "a": "Networks vary from plan to plan, so we check your preferred physicians and hospitals against each option before making a recommendation."
+        }
+      ]
+    },
+    "whole-life": {
+      "nav_label": "Whole Life",
+      "category": "individual-benefits",
+      "title": "Whole Life Insurance | King Health",
+      "heading": "Whole life insurance that provides for your family for a lifetime",
+      "lede": "Whole life insurance offers permanent protection, level premiums and guaranteed cash value growth, creating a foundation your family can rely on.",
+      "card_text": "Permanent protection with level premiums and guaranteed cash value growth, built to last a lifetime.",
+      "at_a_glance": [
+        "Whole life insurance is permanent coverage that remains in force for your entire life as long as premiums are paid. Premiums are generally level, which means they do not increase as you grow older, and the death benefit is paid to your beneficiaries income tax free in most circumstances.",
+        "Each policy also builds cash value at a guaranteed rate over time. Some whole life policies issued by mutual companies may also earn dividends, although dividends are not guaranteed. The cash value grows on a tax deferred basis and may be accessed through policy loans or withdrawals, which reduce the death benefit if they are not repaid."
+      ],
+      "designed_for": [
+        "Whole life insurance is designed for people who want protection that never expires, such as parents who wish to leave a lasting inheritance, business owners planning for succession, and anyone who values the predictability of level premiums and guaranteed cash value. It is also well suited to families who would like to provide for a loved one with lifelong needs."
+      ],
+      "how_it_works": [
+        "When you purchase a whole life policy, you select a death benefit and pay a level premium for the life of the policy or for a defined payment period. A portion of each premium supports the cost of insurance, and the remainder contributes to the cash value, which grows steadily according to the guarantees in your contract.",
+        "We compare whole life policies across carriers, considering the strength of each company, the guaranteed values, any dividend history and the premium that fits your budget. We then help you through underwriting and remain available to review your policy, beneficiaries and cash value as your life unfolds."
+      ],
+      "faq": [
+        {
+          "q": "How does whole life differ from term life?",
+          "a": "Term life covers a defined period and generally carries a lower premium, while whole life covers your entire lifetime and builds cash value. Many families combine these forms of coverage, and we help you decide which approach, or which combination, best fits your goals and your budget."
+        },
+        {
+          "q": "Can we use the cash value during our lifetime?",
+          "a": "Yes. You may borrow against the cash value or make withdrawals, subject to your policy terms. Outstanding loans and withdrawals reduce the death benefit, so we review the effect of any access with you beforehand."
+        },
+        {
+          "q": "Will our premium ever increase?",
+          "a": "Traditional whole life policies carry a level premium that is set when the policy is issued and does not rise with age."
+        }
+      ]
+    },
+    "term-life": {
+      "nav_label": "Term Life",
+      "category": "individual-benefits",
+      "title": "Term Life Insurance | King Health",
+      "heading": "Term life insurance that protects your family through the years that matter most",
+      "lede": "Term life insurance provides substantial protection for a defined period at an accessible cost, helping your family stay secure while they depend on your income.",
+      "card_text": "Substantial, affordable protection for the years when your family depends most on your income.",
+      "at_a_glance": [
+        "Term life insurance provides a death benefit for a defined period, often chosen to match the years of a mortgage, the years until children are grown or the years remaining until retirement. Premiums generally remain level throughout the term, and because the coverage is temporary, term life typically offers the most protection for the lowest premium.",
+        "Many term policies include a conversion option that allows you to exchange some or all of the coverage for a permanent policy without new medical underwriting, within the limits your contract sets. Some policies are also renewable at the end of the term, usually at a higher premium. Features and availability vary by carrier and by state."
+      ],
+      "designed_for": [
+        "Term life insurance is designed for people whose families rely on their income, including young parents, homeowners with a mortgage, couples planning for the future and business owners who want to protect a partner or a loan. It is especially valuable when a household needs a meaningful amount of protection at a premium that fits a growing family budget."
+      ],
+      "how_it_works": [
+        "You select a coverage amount and a term length that reflect your family's needs, and you pay a level premium for the duration of the term. If you pass away while the policy is in force, your beneficiaries receive the death benefit, generally free of income tax, to replace your income, pay off debts or fund future goals.",
+        "We help you determine an appropriate amount of coverage by considering your income, your debts and the goals you hold for your family. We then compare carriers whose underwriting suits your health profile, guide you through the application and remind you of conversion opportunities as the end of your term approaches."
+      ],
+      "faq": [
+        {
+          "q": "How much coverage does our family need?",
+          "a": "The right amount depends on your income, your debts, your children's future needs and the savings you already have. We work through these factors with you and recommend a figure that provides meaningful protection at a premium you can sustain."
+        },
+        {
+          "q": "What happens when the term ends?",
+          "a": "Depending on your policy, you may convert some or all of the coverage to a permanent policy, renew it at a higher premium, or allow it to end if your family no longer needs it. We review these choices with you well before the term concludes."
+        },
+        {
+          "q": "Is a medical examination required?",
+          "a": "Some policies require a brief examination, while others rely on health questions and records alone. We will explain the underwriting path for each carrier we recommend."
+        }
+      ]
+    },
+    "dental-vision": {
+      "nav_label": "Dental and Vision",
+      "category": "individual-benefits",
+      "title": "Dental and Vision Insurance | King Health",
+      "heading": "Dental and vision coverage that keeps everyday care within reach",
+      "lede": "Individual dental and vision plans help you and your family maintain healthy smiles and clear sight with predictable, manageable costs.",
+      "card_text": "Individual and family dental and vision plans that make routine care predictable and affordable.",
+      "at_a_glance": [
+        "Individual dental insurance generally covers preventive care such as cleanings and examinations most generously, with basic services such as fillings and major services such as crowns or bridges covered at progressively lower levels. Many plans include an annual maximum benefit and a waiting period before major services are covered.",
+        "Individual vision insurance typically helps with routine eye examinations and provides an allowance toward eyeglass frames, lenses or contact lenses. Dental and vision plans may be purchased separately or together, and benefits, networks and waiting periods vary by carrier and by state."
+      ],
+      "designed_for": [
+        "These plans are designed for individuals and families who do not have dental or vision benefits through an employer, retirees whose health plan does not include routine dental or vision care, and anyone who would like to budget for these services with greater predictability."
+      ],
+      "how_it_works": [
+        "You pay a monthly premium, and the plan pays a share of the cost of covered services, usually with the greatest savings when you visit providers within the plan's network. Some plans allow you to see any dentist or eye doctor, while others offer lower premiums in exchange for a defined network.",
+        "We compare plans by looking at your current dentist and eye doctor, the services you anticipate and the premium that fits your budget. If you are planning significant dental work, we pay close attention to waiting periods and annual maximums so that your plan serves you when you need it."
+      ],
+      "faq": [
+        {
+          "q": "Are there waiting periods before coverage begins?",
+          "a": "Preventive care is often covered right away, while basic and major services may carry waiting periods. Some plans waive these waiting periods for applicants with prior dental coverage, and we will point out those options where they are available."
+        },
+        {
+          "q": "Can we keep our current dentist?",
+          "a": "In many cases you can. We check whether your dentist and eye doctor participate in each plan's network, and we also identify plans that allow you to visit any provider."
+        },
+        {
+          "q": "Should we purchase dental and vision together?",
+          "a": "Bundling is often convenient and can be cost effective, but it is not required. We compare stand alone and combined plans so that you pay only for the coverage your family will use."
+        }
+      ]
+    },
+    "group-health": {
+      "nav_label": "Group Health",
+      "category": "group-benefits",
+      "title": "Group Health Insurance | King Health",
+      "heading": "Group health insurance that supports your team and sustains your business",
+      "lede": "We help employers select group health plans that provide valued coverage for employees and their families while keeping costs predictable for the business.",
+      "card_text": "Employer sponsored health plans designed to care for your team and keep business costs predictable.",
+      "at_a_glance": [
+        "Group health insurance is coverage an employer purchases for eligible employees and, often, their dependents. The employer typically contributes toward the premium, and employee contributions are usually made through payroll deduction on a pretax basis. Group plans generally offer broader benefits and more favorable rates than comparable individual coverage.",
+        "Employers may choose among several funding arrangements, including fully insured plans, level funded plans and health reimbursement arrangements, each with its own balance of predictability and flexibility. Eligibility, participation requirements and plan designs vary by carrier and by state, and we explain each option in plain terms."
+      ],
+      "designed_for": [
+        "Group health coverage is designed for small and growing businesses that want to attract and retain capable people, owners who would like to provide for their own families through the business, and established employers who would like to review their current program at renewal."
+      ],
+      "how_it_works": [
+        "We begin by learning about your workforce, your current benefits if any and the budget you have in mind. We gather the census information carriers require, request proposals across the market and present a clear comparison of plan designs, networks and employer and employee costs.",
+        "Once you select a program, we coordinate enrollment, help your employees understand their choices and serve as their point of contact for questions throughout the year. At each renewal, we review your program against the market and recommend adjustments that keep it valuable and sustainable."
+      ],
+      "faq": [
+        {
+          "q": "How small can a business be to offer group health coverage?",
+          "a": "Many carriers offer group plans to quite small businesses, including some with only a few employees. Minimum participation and contribution requirements vary by carrier and by state, and we will confirm what applies to your business."
+        },
+        {
+          "q": "How much must the employer contribute?",
+          "a": "Carriers typically require a minimum employer contribution toward employee coverage, and employers may choose to contribute more or to help with dependent coverage. We help you design a contribution strategy that fits your budget and your goals for the team."
+        },
+        {
+          "q": "Can we offer employees a choice among plan options?",
+          "a": "Many carriers allow employers to offer a choice of plans, which lets employees select the balance of premium and benefits that suits their own households. We will show you which arrangements are available."
+        }
+      ]
+    },
+    "group-life": {
+      "nav_label": "Group Life",
+      "category": "group-benefits",
+      "title": "Group Life Insurance | King Health",
+      "heading": "Group life insurance that extends your care to your employees' families",
+      "lede": "Group life insurance gives employees valued protection for their loved ones and gives employers an efficient way to strengthen their benefits program.",
+      "card_text": "Employer paid and voluntary life insurance that extends meaningful protection to your employees' families.",
+      "at_a_glance": [
+        "Group life insurance is term life coverage provided through an employer. Basic group life is often paid by the employer and may be offered as a flat amount or as a multiple of salary, while voluntary or supplemental group life allows employees to purchase additional coverage for themselves and often for a spouse or children through payroll deduction.",
+        "Group life is frequently paired with accidental death and dismemberment coverage, and many policies allow employees to continue or convert their coverage if they leave the company. Because enrollment is offered to the group, employees can often obtain a meaningful amount of coverage with simplified underwriting. Features and limits vary by carrier."
+      ],
+      "designed_for": [
+        "Group life insurance is designed for employers of every size who would like to offer a benefit that employees value highly at a modest cost to the business. It is particularly meaningful for teams with young families and for employers who want to complement a group health plan with broader protection."
+      ],
+      "how_it_works": [
+        "We help you decide on the structure of the basic benefit, whether to offer voluntary coverage and how the program should interact with your other benefits. We then compare carriers, coordinate enrollment and explain the coverage to your employees in clear terms so that they understand what they have.",
+        "Throughout the year, we support you with additions, changes and claims, and we review the program at renewal so that it remains competitive and continues to meet the needs of your team."
+      ],
+      "faq": [
+        {
+          "q": "Is employer paid group life taxable to employees?",
+          "a": "Employer paid group term life coverage above a certain amount may create imputed income for employees under federal tax rules. We explain how this works and coordinate with your payroll provider so that it is handled correctly."
+        },
+        {
+          "q": "Can employees keep their coverage if they leave?",
+          "a": "Many group life policies include portability or conversion provisions that allow departing employees to continue coverage on an individual basis. The specific terms depend on the carrier and the policy."
+        },
+        {
+          "q": "Do employees need to answer health questions?",
+          "a": "Basic coverage and amounts of voluntary coverage up to a guaranteed issue limit often require no health questions when elected during initial enrollment. Larger amounts may require evidence of insurability."
+        }
+      ]
+    },
+    "group-dental-vision": {
+      "nav_label": "Group Dental and Vision",
+      "category": "group-benefits",
+      "title": "Group Dental and Vision Insurance | King Health",
+      "heading": "Group dental and vision benefits your employees will use and appreciate",
+      "lede": "Group dental and vision plans are among the most valued and most frequently used employee benefits, and we help employers offer them in a way that suits the budget.",
+      "card_text": "Employer paid or voluntary dental and vision plans that your team will use and appreciate.",
+      "at_a_glance": [
+        "Group dental plans generally cover preventive care such as cleanings and examinations most generously, with basic and major services covered at progressively lower levels up to an annual maximum. Group vision plans typically cover routine eye examinations and provide allowances toward frames, lenses or contact lenses.",
+        "Employers may pay for these benefits in full, share the cost with employees or offer them on a voluntary basis that employees fund through payroll deduction. Group plans often feature richer benefits and shorter waiting periods than comparable individual plans, and designs vary by carrier and by state."
+      ],
+      "designed_for": [
+        "Group dental and vision coverage is designed for employers who want to round out a health plan with benefits employees use throughout the year, and for businesses that would like to offer meaningful benefits on a voluntary basis even before introducing a group health plan."
+      ],
+      "how_it_works": [
+        "We review your team's needs and your budget, then compare plan designs, networks and funding options across carriers. Whether you choose an employer paid, contributory or voluntary approach, we present the options clearly so that you can see how each would serve your employees.",
+        "We coordinate enrollment, help employees confirm that their dentists and eye doctors participate, and remain available for questions throughout the year. At renewal, we review usage and pricing to keep the program valuable and sustainable."
+      ],
+      "faq": [
+        {
+          "q": "Can we offer these benefits without paying for them?",
+          "a": "Yes. Voluntary dental and vision plans allow employees to purchase coverage at group rates through payroll deduction, often with minimal administrative effort for the employer."
+        },
+        {
+          "q": "Are there participation requirements?",
+          "a": "Many carriers set minimum participation levels, particularly for employer paid plans. We will confirm the requirements for each option and help you choose a structure that your team will support."
+        },
+        {
+          "q": "Do group plans have waiting periods?",
+          "a": "Waiting periods for major services are common, but group plans frequently shorten or waive them, especially for larger groups or employer paid programs. We compare these terms as part of our recommendation."
+        }
+      ]
+    },
+    "annuities": {
+      "nav_label": "Annuities",
+      "category": "retirement",
+      "title": "Annuities | King Health",
+      "heading": "Annuities that turn your savings into dependable retirement income",
+      "lede": "Fixed, fixed indexed and income annuities can protect your savings, grow on a tax deferred basis and provide income you can rely on for as long as you live.",
+      "card_text": "Fixed, fixed indexed and income annuities designed to protect savings and provide dependable retirement income.",
+      "at_a_glance": [
+        "An annuity is a contract with an insurance company in which you make a lump sum payment or a series of payments, and the company agrees to credit interest and, when you choose, to provide income. Fixed annuities credit a declared interest rate for a set period. Fixed indexed annuities credit interest based in part on the performance of a market index, subject to a cap or participation rate, while protecting your principal from index declines. Income annuities convert a sum of money into a stream of payments that may begin right away or at a future date and may last for life.",
+        "Earnings within an annuity grow tax deferred until withdrawn. Annuities are long term products, and most include a surrender period during which withdrawals above a certain amount incur charges; withdrawals may also be subject to income tax and, depending on your age, a federal tax penalty. Annuities are not bank deposits and are not insured by the FDIC, and their guarantees are backed by the claims paying ability of the issuing insurer."
+      ],
+      "designed_for": [
+        "Annuities are designed for people approaching or enjoying retirement who would like to protect a portion of their savings from market declines, create a dependable income stream to cover essential expenses, or accumulate savings on a tax deferred basis beyond what employer plans and individual retirement accounts allow."
+      ],
+      "how_it_works": [
+        "Most annuities have an accumulation phase, during which your money earns interest according to the contract, and an income phase, during which the annuity pays you. Some contracts allow you to add an income rider that provides lifetime withdrawals regardless of the account value, typically for an additional cost.",
+        "We begin by understanding your income needs, your other resources, your time horizon and your comfort with tradeoffs between growth, guarantees and access. We then compare contracts across carriers, explaining crediting methods, surrender schedules, fees and income options in plain language, and recommend a contract only when it suits your goals."
+      ],
+      "faq": [
+        {
+          "q": "Can we lose money in a fixed indexed annuity?",
+          "a": "The principal and credited interest in a fixed indexed annuity are protected from index declines. However, surrender charges, optional rider fees or withdrawals beyond the contract allowance can reduce the value, so we review these terms carefully before you commit."
+        },
+        {
+          "q": "Can we access our money if we need it?",
+          "a": "Most annuities allow a portion of the value to be withdrawn each year without a surrender charge, and many waive charges in certain circumstances such as confinement to a nursing facility. Larger withdrawals during the surrender period may incur charges and taxes, which we explain fully."
+        },
+        {
+          "q": "How is annuity income taxed?",
+          "a": "Earnings are taxed as ordinary income when withdrawn, and the treatment of income payments depends on how the annuity was funded. We recommend consulting your tax professional, and we are glad to coordinate with them."
+        }
+      ]
+    },
+    "indexed-universal-life": {
+      "nav_label": "Indexed Universal Life",
+      "category": "retirement",
+      "title": "Indexed Universal Life | King Health",
+      "heading": "Indexed universal life that combines lasting protection with the potential for growth",
+      "lede": "Indexed universal life provides permanent coverage and cash value that can grow with a market index, protected by a floor and moderated by a cap.",
+      "card_text": "Permanent life insurance with flexible premiums and cash value credited from a market index, protected by a floor.",
+      "at_a_glance": [
+        "Indexed universal life is permanent life insurance that pairs a death benefit with a cash value account. The cash value earns interest credited from the performance of a market index, such as a broad stock index, without being directly invested in the market. A floor protects the cash value from losses when the index declines, while a cap or participation rate limits the amount of interest credited in strong years.",
+        "Premiums are flexible within the limits of the policy, and the cash value grows on a tax deferred basis. It may be accessed through policy loans or withdrawals, which reduce the death benefit and the cash value if they are not repaid. Policy charges continue to apply each year regardless of index performance, and caps, floors, participation rates and riders vary by carrier and by product."
+      ],
+      "designed_for": [
+        "Indexed universal life is designed for people who want lifelong protection for their families along with the potential to build cash value that may supplement retirement income. It is often considered by established professionals, business owners and families who have already funded their employer retirement plans and would like an additional tax advantaged resource."
+      ],
+      "how_it_works": [
+        "Each premium you pay, after policy charges, is added to the cash value, which you may allocate between a fixed account and index accounts. At the end of each crediting period, interest is credited based on the index performance, never less than the floor and never more than the cap. Over time, this structure is designed to capture a portion of market growth while protecting the account from market losses.",
+        "Because indexed universal life is a long term strategy, careful design and consistent funding are essential to keeping the policy in force as intended. We illustrate how the policy may perform under a range of assumptions, explain every charge and feature clearly and review the policy with you regularly so that it stays aligned with your goals."
+      ],
+      "faq": [
+        {
+          "q": "Is our cash value invested in the stock market?",
+          "a": "No. Interest is credited based on the performance of an index, but your cash value is not invested directly in the market. This is what allows the floor to protect your account from index losses."
+        },
+        {
+          "q": "How can indexed universal life support retirement?",
+          "a": "Once sufficient cash value has accumulated, you may access it through policy loans or withdrawals to supplement retirement income. Because access affects the death benefit and the long term health of the policy, we plan these distributions carefully with you."
+        },
+        {
+          "q": "Are the illustrated values guaranteed?",
+          "a": "Illustrations show how a policy may perform under stated assumptions, and actual results will vary with index performance and policy charges. We review the guaranteed values alongside the illustrated values so that you understand the full range of outcomes."
+        }
+      ]
+    }
+  },
+  "about": {
+    "heading": "About King Health",
+    "lede": "King Health is an independent insurance advisory built on the belief that every family deserves protection chosen with care, explained with patience and priced within reach.",
+    "mission_heading": "Our mission",
+    "mission": "At King Health, we care for the people we serve the way they care for the people they love. Every family deserves the quiet confidence of knowing that those they cherish will be provided for, and we hold that trust as a privilege rather than a transaction. We listen before we recommend, we compare with diligence so that protection fits the budget as faithfully as it fits the need, and we remain beside our clients long after the paperwork is signed. Our purpose is to make the coverage every household deserves understandable, attainable and lasting, so that each family can meet the future with dignity, provision and peace of mind.",
+    "story_heading": "The story behind King Health",
+    "story": [
+      "Javon King founded King Health because he saw how often families made important coverage decisions without anyone taking the time to explain their choices or to look for an option they could comfortably afford. He built the advisory to offer something better: patient, personal counsel from someone who cares about a client's loved ones as much as the client does.",
+      "Today Javon leads King Health as its founder and principal advisor. He and our team work with seniors navigating Medicare, families protecting their futures, employers caring for their teams and retirees seeking dependable income. In every conversation, the commitment is the same: to understand what matters most to you, to compare your options with care and to recommend only what serves you well."
+    ],
+    "values_heading": "The King Health promise",
+    "values": [
+      {
+        "title": "Care that is personal",
+        "text": "We treat every client as we would treat our own family, taking the time to understand your circumstances and the people you are protecting."
+      },
+      {
+        "title": "Protection within reach",
+        "text": "We compare options across carriers so that the coverage you choose is sound, sensible and sustainable for your budget."
+      },
+      {
+        "title": "Counsel you can trust",
+        "text": "We explain every recommendation plainly, disclose how we are compensated and remain available to you for as long as you hold your coverage."
+      }
+    ],
+    "service_note": "King Health serves clients by phone, by video and in person by appointment. There is never a fee for our guidance, and we are always glad to include a spouse, an adult child or a trusted advisor in the conversation.",
+    "more": {
+      "kicker": "More from King Health",
+      "heading": "More from King Health",
+      "cards": [
+        {
+          "href": "reviews.html",
+          "title": "Client reviews",
+          "text": "Read what the families and employers we serve have published about working with us.",
+          "link": "Read client reviews"
+        },
+        {
+          "href": "blog.html",
+          "title": "Insights",
+          "text": "Clear explanations of Medicare, life insurance, employee benefits and retirement income.",
+          "link": "Read our insights"
+        },
+        {
+          "href": "join-the-team.html",
+          "title": "Join the Team",
+          "text": "Learn how licensed professionals can build an advisory practice with King Health.",
+          "link": "Explore careers"
+        }
+      ]
+    }
+  },
+  "carriers": {
+    "heading": "Our carrier partners",
+    "lede": "As an independent advisory, King Health works with a broad range of established insurance carriers so that our recommendations reflect your needs rather than any company's catalog.",
+    "intro": "The carriers below are organized by the type of coverage they offer through King Health, which allows us to compare options across the market and present the plans that best suit your circumstances and your budget.",
+    "note": "Carrier logos are shown for reference only and do not imply endorsement of King Health by any carrier. Every application is placed through King Health, and plan availability varies by state and by carrier.",
+    "sections": [
+      "Medicare",
+      "Final Expense",
+      "Individual Health",
+      "Individual Life",
+      "Dental and Vision",
+      "Group Benefits",
+      "Retirement"
+    ],
+    "logos": [],
+    "strip": {
+      "_comment": "Wave 2 Appointed carriers strip. List transparent PNG or SVG logo files under carriers.logos as objects {\"src\": \"media/carriers/file.png\", \"alt\": \"Carrier name exactly as the carrier writes it\"}. While the list is empty, review builds show placeholder tiles and release builds omit the strip.",
+      "label": "Appointed carriers",
+      "note_home": "We are appointed with each carrier shown, which allows us to compare their plans side by side on your behalf.",
+      "note_carriers": "Each carrier below has appointed King Health, and the sections that follow show which coverage lines we place with them.",
+      "list_label": "Carriers King Health is appointed with",
+      "placeholder": "Carrier logo",
+      "placeholder_sr": "Carrier logos have not been added yet.",
+      "pause": "Pause carrier logos",
+      "play": "Play carrier logos",
+      "home_link": "View carriers by coverage"
+    }
+  },
+  "contact": {
+    "heading": "Contact King Health",
+    "lede": "We would be glad to hear from you, whether you have a specific question or would simply like to begin a conversation about protecting the people you love.",
+    "next_heading": "What happens after you reach out",
+    "next": [
+      {
+        "title": "A personal conversation",
+        "text": "We contact you at a convenient time to learn about your family or business, the coverage you have today and what you would like to accomplish."
+      },
+      {
+        "title": "A careful comparison",
+        "text": "We compare options across carriers and present our recommendations clearly, explaining the protection, the costs and the tradeoffs of each choice."
+      },
+      {
+        "title": "Enrollment and lasting support",
+        "text": "When you are ready, we complete the application with you and remain your advisor for reviews, questions and claims for as long as you hold your coverage."
+      }
+    ],
+    "aside_links": [
+      {
+        "href": "reviews.html",
+        "text": "Read client reviews"
+      },
+      {
+        "href": "join-the-team.html",
+        "text": "Join the King Health team"
+      }
+    ]
+  },
+  "privacy": {
+    "heading": "Privacy statement",
+    "body": [
+      "King Health uses the information you submit only to respond to your request and to prepare coverage options for you. We do not sell your personal information, and we share it with an insurance carrier only when you ask us to submit an application on your behalf.",
+      "If you agree to receive text messages from King Health, message frequency varies and message and data rates may apply. You may reply STOP at any time to opt out or HELP for assistance, and consent to receive text messages is never a condition of purchase. Mobile information and text messaging consent are not shared with third parties for marketing purposes.",
+      "To review, correct or delete the information we hold about you, please contact us by phone or email, and we will respond promptly."
+    ],
+    "terms_sentence": "Your use of this site is also governed by our {link}.",
+    "terms_link": "Terms and Conditions"
+  },
+  "accessibility": {
+    "heading": "Accessibility statement",
+    "body": [
+      "King Health designs this site to meet the Web Content Accessibility Guidelines at level AA, including full keyboard navigation, visible focus indicators, sufficient color contrast in every theme and support for reduced motion preferences.",
+      "We review the site regularly as content changes, and we welcome feedback about any barrier you encounter.",
+      "If any part of the site is difficult to use, please call or email us. We will help you directly and correct the issue."
+    ]
+  },
+  "questions_band": {
+    "kicker": "Still have questions?",
+    "heading": "Speak with Javon King directly about the coverage you are weighing.",
+    "text": "Whether you are comparing plans, reviewing a policy you already hold or simply unsure where to begin, we will walk you through your options at no cost and without obligation.",
+    "route_consult_label": "Request a consultation",
+    "route_consult_action": "Send a message",
+    "route_call_label": "Call our office",
+    "route_reviews_label": "Read client reviews",
+    "route_reviews_action": "Visit the reviews page",
+    "route_explore_label": "Explore coverage",
+    "route_explore_action": "View every coverage category"
+  },
+  "reviews": {
+    "_comment": "Live Google reviews only. Nothing here is ever written to look like a review: no name, rating, quote, date or count is typed by us. Paste the GoHighLevel Reputation widget into the slot, or supply assets/reviews.json from an owner authorized Google Business Profile feed.",
+    "title": "Client reviews and testimonials | King Health",
+    "description": "Read reviews that the families and employers King Health serves have published on Google, shown here unedited.",
+    "kicker": "Client reviews",
+    "heading": "In our clients' own words",
+    "lede": "These reviews are published by our clients on Google, and we show them here unedited so that you can hear from the families and employers we serve before you speak with us.",
+    "profile_url": "https://www.google.com/maps?cid=9265971853131828090",
+    "write_review_url": "https://g.page/r/CXrLsKROWJeAEAI/review",
+    "summary_kicker": "Google rating",
+    "attribution": "Reviews from Google",
+    "read_all": "Read all reviews on Google",
+    "write": "Share your experience",
+    "new_tab": " (opens in a new tab)",
+    "score_placeholder": "The Google rating summary appears here once the review widget is connected.",
+    "card_placeholder": "Review slot, awaiting Google reviews",
+    "based_on": "based on {total} Google reviews",
+    "rated": "Rated {value} out of five",
+    "read_full": "Read the full review on Google",
+    "reply_summary": "Response from King Health",
+    "show_more": "Show more reviews",
+    "home_heading": "Client reviews",
+    "home_link": "Read all client reviews",
+    "badge_reviews": "{total} reviews",
+    "badge_aria": "Rated {value} out of five on Google, {total} reviews",
+    "band_count": "{total} reviews on Google",
+    "band_verified": "Verified reviews from King Health's Google Business Profile",
+    "google_label": "Google review",
+    "carousel": {
+      "label": "Client reviews from Google",
+      "prev": "Previous reviews",
+      "next": "Next reviews",
+      "dots_label": "Choose a set of reviews",
+      "dot": "Show reviews {from} to {to}",
+      "dot_one": "Show review {from}",
+      "status": "Showing reviews {from} to {to} of {total}",
+      "status_one": "Showing review {from} of {total}"
+    }
+  },
+  "join": {
+    "title": "Join the Team | King Health",
+    "description": "Licensed professionals, and those preparing for licensure, may apply to build an advisory practice with King Health.",
+    "kicker": "Careers",
+    "heading": "Join the King Health team",
+    "lede": "We welcome licensed professionals, and those preparing for licensure, who want to build an advisory practice on independence, patience and careful comparison.",
+    "look_kicker": "Who we look for",
+    "look_heading": "Advisors who put the household before the policy",
+    "look_items": [
+      {
+        "title": "Service first temperament",
+        "text": "You listen before you recommend, and you are comfortable explaining a plan plainly to a retiree, a young family or a business owner."
+      },
+      {
+        "title": "Respect for compliance",
+        "text": "You treat carrier guidelines, Medicare marketing rules and state regulations as the foundation of the work rather than an obstacle to it."
+      },
+      {
+        "title": "Discipline and follow through",
+        "text": "You keep careful records, return calls promptly and remain in touch with clients long after the application is placed."
+      },
+      {
+        "title": "Commitment to learning",
+        "text": "You continue to study products, underwriting and regulation, and you welcome feedback on your work."
+      }
+    ],
+    "provide_kicker": "What we provide",
+    "provide_heading": "The support of an established independent agency",
+    "what_we_provide": [
+      {
+        "title": "Carrier appointments",
+        "text": "Access to the carriers King Health is appointed with, with contracting support as you are appointed.",
+        "confirmed": false
+      },
+      {
+        "title": "Product and compliance training",
+        "text": "Structured instruction on the plans we offer and the rules that govern how they are presented.",
+        "confirmed": false
+      },
+      {
+        "title": "Mentorship",
+        "text": "Direct guidance from Javon King on client conversations, case design and service.",
+        "confirmed": false
+      },
+      {
+        "title": "Tools and systems",
+        "text": "Quoting resources and a client relationship system that keep your work organized.",
+        "confirmed": false
+      },
+      {
+        "title": "A professional presence",
+        "text": "Materials and a web presence that represent you and the agency consistently.",
+        "confirmed": false
+      }
+    ],
+    "licensing_kicker": "Licensing and expectations",
+    "licensing_heading": "What we ask of every advisor",
+    "licensing": [
+      "Advisors hold, or are actively pursuing, a resident producer license with the lines of authority appropriate to the coverage they will offer, and maintain any nonresident licenses required for the states in which they serve clients.",
+      "Before presenting Medicare plans, advisors complete each carrier's required annual certification, along with any industry certification the carriers specify.",
+      "Carrier appointments are subject to each carrier's own contracting, background and credit review, and King Health cannot guarantee that any carrier will appoint a particular applicant.",
+      "Advisors complete the continuing education their state requires and keep their license in good standing at all times."
+    ],
+    "engagement_label": "Engagement type:",
+    "engagement_type": "",
+    "engagement_placeholder": "[independent contractor or employee, to be confirmed by King Health]",
+    "apply_kicker": "Apply",
+    "apply_heading": "Tell us about yourself",
+    "apply_text": "Share a few details about your background and the work you would like to do, and we will contact you personally to arrange a conversation.",
+    "fields": {
+      "state": "State of residence",
+      "license_status": "Licensing",
+      "license_options": [
+        "Licensed in life and health",
+        "Licensed in life only",
+        "Licensed in health only",
+        "Currently preparing for my license",
+        "Not yet licensed"
+      ],
+      "lines_of_interest": "Coverage you would like to offer",
+      "lines_options": [
+        "Medicare",
+        "Final Expense",
+        "Individual Health",
+        "Life Insurance",
+        "Group Benefits",
+        "Retirement"
+      ],
+      "experience": "Experience",
+      "experience_options": [
+        "New to insurance",
+        "Some experience in insurance or financial services",
+        "Experienced insurance professional"
+      ],
+      "profile_url": "LinkedIn or professional profile",
+      "message": "Anything you would like us to know",
+      "submit": "Submit my application"
+    },
+    "success_heading": "Thank you. Your application has reached us.",
+    "success_text": "We will review your background carefully and contact you personally to arrange a conversation.",
+    "eeo": "King Health considers every applicant without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, age, disability, veteran status or any other characteristic protected by law. Submitting an application does not create an offer of engagement or a guarantee of carrier appointment."
+  },
+  "blog": {
+    "title": "Insights | King Health blog",
+    "description": "Practical explanations of Medicare, life insurance, employee benefits and retirement income from King Health.",
+    "kicker": "The King Health journal",
+    "heading": "Insights",
+    "lede": "Practical explanations of Medicare, life insurance, employee benefits and retirement income, written so that you can make each decision with confidence.",
+    "list_heading": "Articles and updates",
+    "filter_label": "Filter articles by topic",
+    "filter_all": "All",
+    "announce_all": "Showing all articles",
+    "announce_one": "Showing {label} articles",
+    "categories": {
+      "medicare": "Medicare",
+      "life": "Life",
+      "group": "Group",
+      "retirement": "Retirement",
+      "news": "Agency news"
+    },
+    "gbp_types": {
+      "update": "Update",
+      "offer": "Offer",
+      "event": "Event"
+    },
+    "draft_label": "Draft",
+    "read_more": "Read the article",
+    "in_preparation": "Full article in preparation",
+    "event_tba": "Date to be announced",
+    "offer_ongoing": "Ongoing",
+    "offer_until": "Available until {date}",
+    "rail_author": "Written by Javon King, independent insurance advisor",
+    "rail_cta": "Ask about this topic",
+    "keypoints_kicker": "Key points",
+    "related_heading": "Related reading",
+    "disclaimer": "This article is general and educational. It does not describe the terms of any specific policy, and it is not legal, tax or investment advice. Plan availability and benefits vary by carrier and by state.",
+    "category_form_map": {
+      "medicare": "Senior Benefits",
+      "life": "Individual Benefits",
+      "group": "Group Benefits",
+      "retirement": "Retirement",
+      "news": "General Inquiry"
+    },
+    "_posts_comment": "OFFER COMPLIANCE: an Offer post may promote only something free and non monetary, such as a complimentary coverage review or an information session. It never offers a discount, gift, rebate, premium reduction or inducement tied to buying a policy; state anti rebating laws and Medicare marketing rules forbid it. The summary field is the text cross posted to Google Business Profile: keep it within Google's character limit and never include a phone number in it. gbp_type is update, offer or event. cta_type is learn_more, sign_up or call_now. published is an ISO date used only in the time element and structured data, never as visible text. Drafts are excluded from release builds.",
+    "posts": [
+      {
+        "slug": "autumn-medicare-enrollment",
+        "title": "How the autumn Medicare enrollment window works",
+        "category": "medicare",
+        "gbp_type": "update",
+        "summary": "Each autumn, Medicare opens a window in which beneficiaries may review their coverage and change plans for the coming year. Understanding what can change, and what your plan's annual notice tells you, makes that review far less stressful.",
+        "body": [
+          {
+            "type": "p",
+            "text": "Medicare coverage is not a decision made once and then forgotten. Plans change their premiums, their networks and the medications they cover from one year to the next, and each autumn Medicare sets aside a period in which beneficiaries may respond to those changes."
+          },
+          {
+            "type": "h2",
+            "text": "What may change during the autumn window"
+          },
+          {
+            "type": "p",
+            "text": "During this period you may move from Original Medicare to a Medicare Advantage plan, return from Medicare Advantage to Original Medicare, switch from one Medicare Advantage plan to another, or join, change or drop a prescription drug plan. Any change you make takes effect at the start of the new year."
+          },
+          {
+            "type": "h2",
+            "text": "Why the annual notice matters"
+          },
+          {
+            "type": "p",
+            "text": "Before the window opens, your plan sends an Annual Notice of Change describing what will differ next year. It is easy to set aside, yet it is the single most useful document in the review, because it shows whether your doctors, your pharmacy and your prescriptions will be treated the same way."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Review your plan's annual notice as soon as it arrives.",
+              "Confirm that your doctors and pharmacy remain in network.",
+              "Compare the total yearly cost of your medications, not only the premium.",
+              "Remember that a change takes effect at the start of the new year."
+            ]
+          },
+          {
+            "type": "h2",
+            "text": "A second opportunity early in the year"
+          },
+          {
+            "type": "p",
+            "text": "Those enrolled in a Medicare Advantage plan also have a separate window early in the year in which they may make one change, either to another Medicare Advantage plan or back to Original Medicare. It is a useful safeguard if a new plan does not serve you as expected."
+          },
+          {
+            "type": "h2",
+            "text": "How we help"
+          },
+          {
+            "type": "p",
+            "text": "We compare the plans we offer in your area side by side, review your medications and providers with you, and explain the tradeoffs plainly, so that the plan you choose suits the year ahead rather than the year behind."
+          }
+        ],
+        "image": "doctor-patient-smile",
+        "cta_type": "learn_more",
+        "cta_url": "",
+        "status": "draft",
+        "published": ""
+      },
+      {
+        "slug": "term-or-whole-life",
+        "title": "Term or whole life: choosing the protection that fits your household",
+        "category": "life",
+        "gbp_type": "update",
+        "summary": "Term coverage protects a defined span of years at a modest cost, while whole life builds permanent protection and cash value. The right choice depends on what you are protecting, for how long and on what budget.",
+        "body": [],
+        "image": "father-baby-garden",
+        "cta_type": "learn_more",
+        "cta_url": "",
+        "status": "draft",
+        "published": ""
+      },
+      {
+        "slug": "small-employer-group-health",
+        "title": "What a small employer should weigh before offering group health benefits",
+        "category": "group",
+        "gbp_type": "update",
+        "summary": "Group coverage can help a small business attract and keep good people, but the decision rests on participation requirements, contribution strategy and the needs of the team. We explain how to approach each consideration.",
+        "body": [],
+        "image": "group-diverse-meeting",
+        "cta_type": "learn_more",
+        "cta_url": "",
+        "status": "draft",
+        "published": ""
+      },
+      {
+        "slug": "how-iul-credits-interest",
+        "title": "How an indexed universal life policy credits interest",
+        "category": "retirement",
+        "gbp_type": "update",
+        "summary": "An indexed universal life policy links its interest credits to a market index while protecting the cash value with a floor and limiting gains with a cap. We explain how those parts work together and what to ask before you buy.",
+        "body": [],
+        "image": "senior-signing",
+        "cta_type": "learn_more",
+        "cta_url": "",
+        "status": "draft",
+        "published": ""
+      },
+      {
+        "slug": "medicare-information-session",
+        "title": "A Medicare information session for families",
+        "category": "news",
+        "gbp_type": "event",
+        "summary": "We are planning an informal session in which families may learn how Medicare is structured and bring their own questions. The date and location will be announced here.",
+        "body": [],
+        "image": "advisor-lounge-meeting",
+        "cta_type": "sign_up",
+        "cta_url": "",
+        "event": {
+          "title": "A Medicare information session for families",
+          "starts": "",
+          "ends": ""
+        },
+        "status": "draft",
+        "published": ""
+      },
+      {
+        "slug": "complimentary-coverage-review",
+        "title": "A complimentary coverage review",
+        "category": "news",
+        "gbp_type": "offer",
+        "summary": "We offer every household and employer a review of the coverage they already hold, at no cost and with no obligation, so that gaps and overlaps are clear before any decision is made.",
+        "body": [],
+        "image": "advisor-client-meeting",
+        "cta_type": "learn_more",
+        "cta_url": "",
+        "offer": {
+          "title": "A complimentary coverage review",
+          "valid_from": "",
+          "valid_to": "",
+          "terms": "Offered at no cost and with no obligation to purchase."
+        },
+        "status": "draft",
+        "published": ""
+      }
+    ]
+  },
+  "terms": {
+    "_comment": "Outline for counsel. COUNSEL REVIEW REQUIRED before publication. Set effective_date and governing_state, then remove counsel_review_pending.",
+    "heading": "Terms and Conditions",
+    "kicker": "Legal",
+    "lede": "These terms govern your use of this website and the information and services offered through it.",
+    "effective_label": "Effective",
+    "effective_date": "",
+    "effective_placeholder": "[effective date]",
+    "governing_state": "",
+    "governing_placeholder": "[State to be specified by counsel]",
+    "counsel_review_pending": true,
+    "review_notice": "This document is pending legal review.",
+    "description": "The terms that govern your use of the King Health website and the information and services offered through it.",
+    "sections": [
+      {
+        "h": "Acceptance of these terms",
+        "p": [
+          "By accessing or using this website, you agree to be bound by these Terms and Conditions and by our Privacy statement. If you do not agree with these terms, please do not use this website."
+        ]
+      },
+      {
+        "h": "About King Health",
+        "p": [
+          "King Health is an independent insurance agency owned by Javon King. License number: {license_number}. Licensed in: {licensed_in}.",
+          "King Health represents multiple insurance carriers and is not itself an insurer. Policies are issued, underwritten and administered by the carriers we represent, and each carrier is responsible for the obligations described in its own policy documents."
+        ]
+      },
+      {
+        "h": "No coverage through this website",
+        "p": [
+          "Nothing on this website binds, changes or cancels any insurance coverage. Coverage begins only when a carrier approves an application and issues a policy. Submitting a form on this website is a request to be contacted, and it is not an application for coverage."
+        ]
+      },
+      {
+        "h": "Educational information only",
+        "p": [
+          "The content of this website is general and educational. It is not legal, tax or investment advice, and it does not describe the terms of any specific policy. Where this website and a policy differ, the policy documents issued by the carrier control."
+        ]
+      },
+      {
+        "h": "Quotes, eligibility and underwriting",
+        "p": [
+          "Any premium or benefit discussed with you before a policy is issued is an estimate. Eligibility, rates and benefits are determined by each carrier, vary by state and may depend on underwriting, and a carrier may decline an application."
+        ]
+      },
+      {
+        "h": "Medicare information",
+        "p": [
+          "King Health is not connected with or endorsed by the United States government or the federal Medicare program. The Medicare plans we discuss are limited to those offered by the carriers King Health represents in your area."
+        ],
+        "tpmo": true
+      },
+      {
+        "h": "Communications and consent",
+        "p": [
+          "When you submit a form, we may contact you by phone, email or text message in keeping with the consents you give on that form. Consent to be contacted is not a condition of purchase. You may withdraw your consent at any time by telling us by phone or email, or by replying STOP to any text message."
+        ]
+      },
+      {
+        "h": "Text message terms",
+        "p": [
+          "If you choose to receive text messages, the program and its terms are as follows, exactly as stated on our forms: By checking this box, I agree to receive text messages from King Health about my inquiry, including follow up and appointment reminders, at the phone number provided. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent to receive text messages is not a condition of purchase.",
+          "Mobile carriers are not liable for delayed or undelivered messages. Our handling of mobile information is described in our {privacy_link}."
+        ]
+      },
+      {
+        "h": "Information you provide",
+        "p": [
+          "You agree that the information you submit through this website is accurate and complete to the best of your knowledge. We rely on what you provide in order to compare plans and to prepare recommendations for you."
+        ]
+      },
+      {
+        "h": "Reviews and third party content",
+        "p": [
+          "Reviews shown on this website are published by their authors on Google and are displayed unedited. King Health does not pay for reviews and does not solicit reviews in exchange for anything of value. Google's own terms govern that content."
+        ]
+      },
+      {
+        "h": "Links to other sites",
+        "p": [
+          "This website may link to carrier websites and other third party sites. Those sites are governed by their own terms and privacy practices, and a link does not imply that King Health endorses them."
+        ]
+      },
+      {
+        "h": "Intellectual property",
+        "p": [
+          "The text, design and photography arrangement of this website belong to King Health or are used under license. Carrier names and logos belong to their respective owners and are shown for reference only."
+        ]
+      },
+      {
+        "h": "Acceptable use",
+        "p": [
+          "You agree not to use this website for any unlawful purpose, not to scrape or copy its content by automated means, not to interfere with its operation and not to misrepresent your identity in any submission."
+        ]
+      },
+      {
+        "h": "Applications to join King Health",
+        "p": [
+          "Submitting an application through our Join the Team page creates no offer, no engagement and no guarantee of carrier appointment. King Health makes no representation of income to any applicant."
+        ]
+      },
+      {
+        "h": "Disclaimer of warranties",
+        "p": [
+          "This website is provided as is and as available, without warranties of any kind, whether express or implied, to the fullest extent the law allows."
+        ]
+      },
+      {
+        "h": "Limitation of liability",
+        "p": [
+          "To the extent the law allows, King Health is not liable for any indirect, incidental or consequential loss arising from your use of this website or from your reliance on its general information."
+        ]
+      },
+      {
+        "h": "Indemnification",
+        "p": [
+          "You agree to indemnify and hold harmless King Health and its owner from claims arising out of your misuse of this website or your breach of these terms."
+        ]
+      },
+      {
+        "h": "Privacy and accessibility",
+        "p": [
+          "Our {privacy_link} explains how we collect and use the information you share with us, and our {accessibility_link} describes our commitment to making this website usable for everyone."
+        ]
+      },
+      {
+        "h": "Governing law",
+        "p": [
+          "These terms are governed by the laws of {governing_state}, without regard to its conflict of law principles."
+        ]
+      },
+      {
+        "h": "Changes to these terms",
+        "p": [
+          "We may update these terms from time to time. The effective date shown at the top of this page identifies the version currently in force, and your continued use of this website after a change constitutes acceptance of the updated terms."
+        ]
+      },
+      {
+        "h": "Contact",
+        "p": [
+          "Questions about these terms are welcome by phone at {phone} or by email at {email}."
+        ]
+      }
+    ]
+  },
+  "seo": {
+    "_comment": "Wave 4 search engine optimization (SPEC_WAVE4_SEO_2026_10_25.md, section H overrides). Titles must stay at sixty characters or fewer and descriptions between one hundred twenty and one hundred sixty five, with no dashes or hyphens. Review builds are noindex; run build.py --release only for launch.",
+    "base_url": "https://kinghealthdirect.com",
+    "_base_url_comment": "He may move to a different website later. Change this one value and rebuild.",
+    "primary_city": "Newark, NJ",
+    "service_areas": [
+      "Newark, NJ",
+      "New Jersey",
+      "North Carolina"
+    ],
+    "_service_areas_comment": "Licensed states confirmed by the client on 2026-10-25: New Jersey (license 1636452) and North Carolina. Only list states where Javon is licensed.",
+    "service_areas_confirmed": [
+      "Newark, NJ",
+      "New Jersey",
+      "North Carolina"
+    ],
+    "service_areas_line": "Serving families and employers in Newark and across New Jersey and North Carolina.",
+    "service_areas_label": "Areas",
+    "business_type": "InsuranceAgency",
+    "default_og_image": "assets/og/king-health-og.jpg",
+    "_default_og_image_comment": "Generated at build time (1200 by 630) from the hero_home photo and the King Health lockup when missing. Delete the file to regenerate it.",
+    "og_source_slot": "hero_home",
+    "google_site_verification": "",
+    "_google_site_verification_comment": "The content token of the Search Console HTML tag. Emitted only when filled.",
+    "gbp_url": "https://www.google.com/maps?cid=9265971853131828090",
+    "founder_job_title": "Independent Insurance Advisor",
+    "pages": {
+      "index.html": {
+        "seo_title": "King Health | Independent Insurance Advisor in Newark, NJ",
+        "seo_description": "King Health is an independent insurance advisor in Newark, New Jersey, comparing Medicare, life, health and group plans across carriers. Call us today."
+      },
+      "senior-benefits.html": {
+        "seo_title": "Senior Benefits in NJ and North Carolina | King Health",
+        "seo_description": "Senior benefits guidance in Newark and across New Jersey, covering Medicare, final expense and supplemental plans explained with patience. Call us to begin."
+      },
+      "individual-benefits.html": {
+        "seo_title": "Individual Insurance in NJ and North Carolina | King Health",
+        "seo_description": "Health, life, dental and vision coverage for individuals and families in Newark and across New Jersey, compared across carriers. Call King Health to start."
+      },
+      "group-benefits.html": {
+        "seo_title": "Group Employee Benefits in NJ and NC | King Health",
+        "seo_description": "Group health, life, dental and vision benefits for New Jersey employers, designed to attract good people within a sensible budget. Call King Health today."
+      },
+      "retirement.html": {
+        "seo_title": "Retirement Planning in NJ and North Carolina | King Health",
+        "seo_description": "Retirement income planning in Newark and across New Jersey with annuities and indexed universal life, chosen for steady income. Call King Health to begin."
+      },
+      "medicare.html": {
+        "seo_title": "Medicare Plans in NJ and North Carolina | King Health",
+        "seo_description": "Medicare guidance in Newark and across New Jersey: we compare the plans available where you live against your doctors and prescriptions. Call us to review."
+      },
+      "final-expense.html": {
+        "seo_title": "Final Expense Insurance in NJ and NC | King Health",
+        "seo_description": "Final expense insurance in Newark and across New Jersey, a modest whole life policy that eases final arrangements for your family. Call King Health to talk."
+      },
+      "ancillary.html": {
+        "seo_title": "Ancillary Coverage in NJ and North Carolina | King Health",
+        "seo_description": "Dental, vision, hearing, accident, critical illness and hospital indemnity coverage for New Jersey households and employers. Call King Health to compare."
+      },
+      "individual-health.html": {
+        "seo_title": "Individual Health Plans in NJ and NC | King Health",
+        "seo_description": "Individual health insurance in Newark and across New Jersey, comparing marketplace and private plans that fit your household budget. Call King Health today."
+      },
+      "whole-life.html": {
+        "seo_title": "Whole Life Insurance in NJ and North Carolina | King Health",
+        "seo_description": "Whole life insurance in Newark and across New Jersey, with permanent protection, level premiums and guaranteed cash value. Call King Health to compare plans."
+      },
+      "term-life.html": {
+        "seo_title": "Term Life Insurance in NJ and North Carolina | King Health",
+        "seo_description": "Term life insurance in Newark and across New Jersey, sized to the years your family depends on your income and compared across carriers. Call King Health."
+      },
+      "dental-vision.html": {
+        "seo_title": "Dental and Vision Plans in NJ and NC | King Health",
+        "seo_description": "Individual dental and vision plans in Newark and across New Jersey, with predictable costs for healthy smiles and clear sight. Call King Health to compare."
+      },
+      "group-health.html": {
+        "seo_title": "Group Health Insurance in NJ and NC | King Health",
+        "seo_description": "Group health insurance for New Jersey employers, chosen to give employees valued coverage while keeping costs predictable. Call King Health to plan yours."
+      },
+      "group-life.html": {
+        "seo_title": "Group Life Insurance in NJ and North Carolina | King Health",
+        "seo_description": "Group life insurance for New Jersey employers, an efficient way to protect employees' families and strengthen your benefits program. Call King Health today."
+      },
+      "group-dental-vision.html": {
+        "seo_title": "Group Dental and Vision in NJ and NC | King Health",
+        "seo_description": "Group dental and vision plans for New Jersey employers, among the most valued and most used employee benefits, priced to suit you. Call King Health today."
+      },
+      "annuities.html": {
+        "seo_title": "Annuities in New Jersey and North Carolina | King Health",
+        "seo_description": "Fixed, fixed indexed and income annuities in Newark and across New Jersey, built to protect savings and provide dependable income. Call King Health to review."
+      },
+      "indexed-universal-life.html": {
+        "seo_title": "Indexed Universal Life in NJ and NC | King Health",
+        "seo_description": "Indexed universal life in Newark and across New Jersey: permanent coverage with cash value linked to an index, a floor and a cap. Call us to learn more."
+      },
+      "about.html": {
+        "seo_title": "About King Health | Independent Advisor in Newark, NJ",
+        "seo_description": "King Health is an independent insurance advisory in Newark, New Jersey, founded by Javon King to help families choose protection with care. Call to meet us."
+      },
+      "carriers.html": {
+        "seo_title": "Insurance Carriers We Represent | King Health",
+        "seo_description": "King Health in Newark, New Jersey works with a broad range of established carriers, so our recommendations follow your needs. Call to ask who serves your area."
+      },
+      "contact.html": {
+        "seo_title": "Contact King Health | Insurance Advisor in Newark, NJ",
+        "seo_description": "Contact King Health in Newark, New Jersey by phone or through our short request form, and we will arrange a conversation at a time that suits you. Call today."
+      },
+      "reviews.html": {
+        "seo_title": "Client Reviews | King Health",
+        "seo_description": "Read the reviews that families and employers in Newark and across New Jersey have published about King Health on Google, shown unedited. Call to speak with us."
+      },
+      "join-the-team.html": {
+        "seo_title": "Join the Team | Insurance Careers at King Health",
+        "seo_description": "Licensed insurance professionals in New Jersey, and those preparing for licensure, may apply to build an advisory practice with King Health. Apply or call us."
+      },
+      "blog.html": {
+        "seo_title": "Insurance Insights and Agency News | King Health",
+        "seo_description": "Practical explanations of Medicare, life insurance, employee benefits and retirement income from King Health in Newark, New Jersey. Call with any questions."
+      },
+      "terms.html": {
+        "seo_title": "Terms and Conditions | King Health",
+        "seo_description": "The terms that govern your use of the King Health website in Newark, New Jersey, and the information and services offered through it. Call us with questions."
+      },
+      "privacy.html": {
+        "seo_title": "Privacy Statement | King Health",
+        "seo_description": "How King Health in Newark, New Jersey collects, uses and protects the information you share through this website and our request forms. Call us with questions."
+      },
+      "accessibility.html": {
+        "seo_title": "Accessibility Statement | King Health",
+        "seo_description": "King Health in Newark, New Jersey is committed to a website everyone can use. Read our accessibility statement, and call us if anything is hard to reach."
+      },
+      "404.html": {
+        "seo_title": "Page Not Found | King Health",
+        "seo_description": "The page you were looking for could not be found on the King Health website. Return home to explore coverage in New Jersey, or call and we will help directly."
+      },
+      "blog-autumn-medicare-enrollment.html": {
+        "seo_title": "The Autumn Medicare Enrollment Window | King Health",
+        "seo_description": "How the autumn Medicare enrollment window works for New Jersey beneficiaries, what can change and how to prepare, from King Health in Newark. Call to review."
+      },
+      "blog-autumn-medicare-enrollment-window.html": {
+        "seo_title": "The Autumn Medicare Enrollment Window | King Health",
+        "seo_description": "How the autumn Medicare enrollment window works for New Jersey beneficiaries, what can change and how to prepare, from King Health in Newark. Call to review."
+      },
+      "blog-term-or-whole-life.html": {
+        "seo_title": "Term or Whole Life: Choosing Coverage | King Health",
+        "seo_description": "Term or whole life? King Health in Newark, New Jersey explains how each protects your household and how to choose the fit for your family. Call to talk it over."
+      },
+      "blog-small-employer-group-health.html": {
+        "seo_title": "Group Health for Small Employers | King Health",
+        "seo_description": "What a small New Jersey employer should weigh before offering group health benefits, explained by King Health in Newark. Call us to plan your program."
+      },
+      "blog-how-iul-credits-interest.html": {
+        "seo_title": "How Indexed Universal Life Credits Interest | King Health",
+        "seo_description": "How an indexed universal life policy credits interest through caps and floors, explained for New Jersey families by King Health in Newark. Call to learn more."
+      },
+      "blog-medicare-information-session.html": {
+        "seo_title": "A Medicare Information Session for Families | King Health",
+        "seo_description": "A Medicare information session for families in Newark and across New Jersey, hosted by King Health to explain your choices plainly. Call us to reserve a place."
+      },
+      "blog-complimentary-coverage-review.html": {
+        "seo_title": "A Complimentary Coverage Review | King Health",
+        "seo_description": "A complimentary coverage review from King Health in Newark, New Jersey: we look over your current protection and explain your options. Call us to arrange one."
+      }
+    }
+  }
+}

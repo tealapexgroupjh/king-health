@@ -1,0 +1,180 @@
+{
+  "_readme": "Photo slot map for build.py. Each slot names a file in site/media/photos (extension optional). A slot may also be an object {\"file\": ..., \"position\": ..., \"alt\": ...} to override the defaults recorded under files. When a card would repeat a photo already shown on the same page, the build swaps in a sibling photo from the same category automatically. Add alt text and an object-position under files for every new photo. Optional banner_position under files sets the vertical focal point used only in the wide, short page banners.",
+  "slots": {
+    "hero_home": "family-lakeside-homes",
+    "about_strip": "advisor-family-table",
+    "about_portrait_placeholder": "advisor-client-meeting",
+    "banner_about": "advisor-family-table",
+    "banner_contact": "advisor-lounge-meeting",
+    "banner_carriers": "group-boardroom",
+    "banner_privacy": "family-lawn-walk",
+    "banner_accessibility": "family-lawn-walk",
+    "banner_senior-benefits": "senior-caregiver-visit",
+    "card_senior-benefits": "senior-caregiver-visit",
+    "banner_individual-benefits": "father-baby-garden",
+    "card_individual-benefits": "parents-baby-dusk",
+    "banner_group-benefits": "group-office-celebrate",
+    "card_group-benefits": "group-team-table",
+    "banner_retirement": "advisor-seniors-review",
+    "card_retirement": "advisor-seniors-review",
+    "banner_medicare": "doctor-patient-smile",
+    "card_medicare": "senior-caregiver-visit",
+    "banner_final-expense": "family-lawn-walk",
+    "card_final-expense": "advisor-seniors-review",
+    "banner_ancillary": "dental-visit",
+    "card_ancillary": "vision-fitting-smile",
+    "banner_individual-health": "doctor-consult-desk",
+    "card_individual-health": "pediatric-visit",
+    "banner_whole-life": "family-outdoor-warm",
+    "card_whole-life": "father-baby-garden",
+    "banner_term-life": "parents-baby-dusk",
+    "card_term-life": "family-outdoor-warm",
+    "banner_dental-vision": "vision-fitting-smile",
+    "card_dental-vision": "dental-visit",
+    "banner_group-health": "group-diverse-meeting",
+    "card_group-health": "doctor-patient-review",
+    "banner_group-life": "group-team-highfive",
+    "card_group-life": "group-boardroom",
+    "banner_group-dental-vision": "group-team-table",
+    "card_group-dental-vision": "vision-exam",
+    "banner_annuities": "senior-signing",
+    "card_annuities": "advisor-lounge-meeting",
+    "banner_indexed-universal-life": "family-kitchen-plan",
+    "card_indexed-universal-life": "advisor-client-meeting",
+    "banner_reviews": {
+      "file": "senior-family-table",
+      "banner_position": "62% 30%"
+    },
+    "banner_join": {
+      "file": "group-consult",
+      "banner_position": "40% 30%"
+    },
+    "banner_blog": {
+      "file": "hands-house-dark",
+      "banner_position": "72% 40%"
+    },
+    "banner_terms": "family-lawn-walk"
+  },
+  "files": {
+    "advisor-client-meeting.jpg": {
+      "alt": "An advisor in a dark suit reviewing paperwork with a client at a bright office desk",
+      "position": "62% 32%"
+    },
+    "advisor-family-table.jpg": {
+      "alt": "An advisor reviewing plans with a family around a table in a sunny home",
+      "position": "50% 38%"
+    },
+    "advisor-lounge-meeting.jpg": {
+      "alt": "Clients meeting with an advisor in a calm, bright lounge",
+      "position": "55% 40%"
+    },
+    "advisor-seniors-review.jpg": {
+      "alt": "An advisor reviewing documents with an older couple at home",
+      "position": "45% 30%",
+      "banner_position": "50% 28%"
+    },
+    "family-kitchen-plan.jpg": {
+      "alt": "A family planning together with an advisor in their kitchen",
+      "position": "55% 40%"
+    },
+    "family-lakeside-homes.jpg": {
+      "alt": "A mother and her children by the water in front of their lakeside neighborhood at golden hour",
+      "position": "50% 42%"
+    },
+    "family-lawn-walk.jpg": {
+      "alt": "A family of three generations walking together across a green lawn",
+      "position": "50% 62%",
+      "banner_position": "50% 46%"
+    },
+    "family-outdoor-warm.jpg": {
+      "alt": "Parents embracing their baby outdoors in warm evening light",
+      "position": "50% 30%",
+      "banner_position": "50% 58%"
+    },
+    "father-baby-garden.jpg": {
+      "alt": "A father holding his baby in a garden",
+      "position": "40% 32%",
+      "banner_position": "50% 30%"
+    },
+    "hands-house-dark.jpg": {
+      "alt": "Hands holding a small model house",
+      "position": "50% 40%"
+    },
+    "parents-baby-dusk.jpg": {
+      "alt": "Young parents holding their baby outdoors at dusk",
+      "position": "45% 30%",
+      "banner_position": "50% 64%"
+    },
+    "senior-signing.jpg": {
+      "alt": "A retired client reviewing and signing documents with an advisor",
+      "position": "50% 45%",
+      "banner_position": "50% 0%"
+    },
+    "dental-visit.jpg": {
+      "alt": "A dental hygienist standing beside a patient in a bright treatment room",
+      "position": "40% 28%",
+      "banner_position": "50% 22%"
+    },
+    "doctor-consult-desk.jpg": {
+      "alt": "A physician listening to a patient across her desk",
+      "position": "55% 28%",
+      "banner_position": "55% 12%"
+    },
+    "doctor-patient-review.jpg": {
+      "alt": "A doctor reviewing a chart with a patient in a clinic",
+      "position": "50% 26%"
+    },
+    "doctor-patient-smile.jpg": {
+      "alt": "A doctor speaking warmly with a smiling older patient",
+      "position": "50% 32%",
+      "banner_position": "50% 22%"
+    },
+    "group-boardroom.jpg": {
+      "alt": "Colleagues reviewing documents together around a boardroom table",
+      "position": "50% 35%"
+    },
+    "group-consult.jpg": {
+      "alt": "A team meeting with an advisor in a bright office",
+      "position": "50% 35%"
+    },
+    "group-diverse-meeting.jpg": {
+      "alt": "A diverse team meeting around a conference table",
+      "position": "50% 35%"
+    },
+    "group-office-celebrate.jpg": {
+      "alt": "Coworkers sharing a high five at a desk in a bright office",
+      "position": "50% 30%"
+    },
+    "group-team-highfive.jpg": {
+      "alt": "Colleagues celebrating together in a warmly lit office",
+      "position": "50% 28%",
+      "banner_position": "50% 36%"
+    },
+    "group-team-table.jpg": {
+      "alt": "A small team working together around a shared table",
+      "position": "50% 38%"
+    },
+    "pediatric-visit.jpg": {
+      "alt": "A doctor speaking with a young girl during a checkup",
+      "position": "50% 38%"
+    },
+    "senior-caregiver-visit.jpg": {
+      "alt": "A caregiver checking in with an older woman in her living room",
+      "position": "50% 32%",
+      "banner_position": "50% 30%"
+    },
+    "senior-family-table.jpg": {
+      "alt": "An older woman sharing a table with her family at home",
+      "position": "55% 32%"
+    },
+    "vision-exam.jpg": {
+      "alt": "An optometrist examining a patient's eyes with a slit lamp",
+      "position": "50% 32%"
+    },
+    "vision-fitting-smile.jpg": {
+      "alt": "A smiling man being fitted for new lenses at an eye care clinic",
+      "position": "50% 30%",
+      "banner_position": "50% 42%"
+    }
+  }
+}
