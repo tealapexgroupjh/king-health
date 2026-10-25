@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CommandString</key>
+	<string>clear; exec /bin/bash "/Users/tealapexgroup/TealApexGroup_Dev/01_Projects/Javon/King_Health/START_SERVER.command"</string>
+	<key>RunCommandAsShell</key>
+	<false/>
+	<key>name</key>
+	<string>Teal Apex</string>
+	<key>shellExitAction</key>
+	<integer>1</integer>
+	<key>type</key>
+	<string>Window Settings</string>
+</dict>
+</plist>

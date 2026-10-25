@@ -1308,3 +1308,78 @@ body > .site-footer { flex-shrink: 0; margin-top: auto; }
   .legal-doc { max-width: none; }
   .legal-sec { break-inside: avoid-page; }
 }
+
+/* ============================== WAVE 6 (2026-10-25) ==============================
+   Why King Health: photo to the right, commitments as numbered rows. Contact page questions. Medicare disclaimer strip. */
+.why-split { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr); gap: clamp(32px, 5vw, 72px); align-items: stretch; }
+.why-copy { display: flex; flex-direction: column; justify-content: center; }
+.why-split .why-head { display: block; margin-bottom: clamp(22px, 2.6vw, 32px); }
+.why-split .why-head .band-lede { margin-top: 14px; max-width: 48ch; }
+.why-split .why-grid { grid-template-columns: minmax(0, 1fr); gap: 0; border-top: 1px solid color-mix(in srgb, var(--band-ink) 16%, transparent); }
+.why-split .why-card { display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); column-gap: 18px; align-items: baseline;
+  padding: 18px 8px 18px 0; background: none; border: 0; border-bottom: 1px solid color-mix(in srgb, var(--band-ink) 16%, transparent); border-radius: 0; }
+.why-split .why-card::before { grid-row: 1 / span 2; margin: 0; font-size: 28px; }
+.why-split .why-card::after { top: auto; bottom: -1px; left: 0; right: auto; width: 100%; transform: scaleX(0); }
+.why-split .why-card:hover { transform: none; background: color-mix(in srgb, var(--band-ink) 4%, transparent); }
+.why-split .why-card:hover::after { transform: scaleX(1); }
+.why-split .why-card h3 { font-size: 19px; }
+.why-split .why-card p { margin-top: 6px; font-size: 15.5px; max-width: 52ch; }
+.why-photo { position: relative; margin: 0; min-height: 420px; overflow: hidden; border-radius: 2px; }
+.why-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.why-photo::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--band-ink) 18%, transparent);
+  background: linear-gradient(180deg, transparent 55%, color-mix(in srgb, var(--band-bg) 35%, transparent) 100%); }
+.why-photo::before { content: ""; position: absolute; z-index: 1; left: 18px; top: 18px; width: 56px; height: 56px; pointer-events: none;
+  border-top: 2px solid var(--accent); border-left: 2px solid var(--accent); }
+.contact-faq { margin-top: 32px; }
+.contact-faq .cfaq-sub { margin-top: 6px; font-size: clamp(20px, 1.7vw, 24px); }
+.tpmo-sec.section { padding: 28px 0 0; }
+@media (max-width: 960px) {
+  .why-split { grid-template-columns: minmax(0, 1fr); }
+  .why-photo { min-height: 0; aspect-ratio: 16 / 10; order: -1; }
+}
+@media (max-width: 760px) {
+  .why-split .why-card { grid-template-columns: 2.6rem minmax(0, 1fr); column-gap: 12px; }
+  .why-split .why-card::before { font-size: 24px; }
+}
+@media (prefers-reduced-motion: reduce) { .why-split .why-card::after { transform: scaleX(0); } }
+
+/* 2026-10-25: an icon in each Why King Health panel, opposite the numeral */
+.why-ic { position: absolute; top: 22px; right: 22px; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%;
+  color: var(--band-kicker); border: 1px solid color-mix(in srgb, var(--band-kicker) 45%, transparent);
+  background: color-mix(in srgb, var(--band-kicker) 10%, transparent); transition: transform .45s cubic-bezier(.2,.7,.2,1), background-color .45s ease; }
+.why-ic .ic { width: 24px; height: 24px; }
+.why-card:hover .why-ic { transform: translateY(-2px); background: color-mix(in srgb, var(--band-kicker) 18%, transparent); }
+@media (max-width: 760px) { .why-ic { top: 18px; right: 18px; width: 40px; height: 40px; } .why-ic .ic { width: 21px; height: 21px; } }
+@media (prefers-reduced-motion: reduce) { .why-card:hover .why-ic { transform: none; } }
+.why-ic .ic { stroke-width: 1.8; }
+
+/* 2026-10-25: the hero and page banners used a fixed height tied to the window height (vh) with the green card pinned to the
+   bottom and growing upward. In shorter windows, or where text wraps more, the card ran into the menu bar. The section now
+   grows with its card and always keeps clear space above it. */
+@media (min-width: 761px) {
+  .hero, .banner { height: auto; display: flex; flex-direction: column; justify-content: flex-end; padding-top: clamp(88px, 10vh, 120px); }
+  .hero { min-height: clamp(420px, 52vh, 560px); }
+  .banner { min-height: clamp(320px, 42vh, 430px); }
+  .hero .container, .banner .container { height: auto; }
+  .hero-band, .banner .hero-band { position: relative; left: auto; bottom: auto; }
+  .hero-band { margin-bottom: -56px; }
+  .banner .hero-band { margin-bottom: -44px; }
+}
+
+/* 2026-10-25: FAQ page. Reuses the legal index; groups separated by a rule with a link to the matching coverage page. */
+.faqp-wrap { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: clamp(32px, 5vw, 80px); align-items: start; }
+.faqp-body { max-width: 52rem; }
+.faqp-group { scroll-margin-top: calc(var(--hd-h) + var(--sn-h) + 20px); }
+.faqp-group + .faqp-group { margin-top: clamp(40px, 5vw, 64px); }
+.faqp-head { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; margin-bottom: 14px; }
+.faqp-head h2 { font-size: clamp(22px, 2vw, 28px); letter-spacing: -0.025em; }
+.faqp-more { font-size: 15px; }
+.faqp .faq button { font-size: 17px; padding: 18px 0; }
+@media (max-width: 960px) {
+  .faqp-wrap { grid-template-columns: minmax(0, 1fr); }
+  .faqp-toc { position: static; }
+}
+/* 2026-10-25: FAQ joined the footer links; keep them on one row on desktop */
+@media (min-width: 1101px) { .ft-links { flex: 1 1 auto; gap: 0 22px; } }
+@media (min-width: 1240px) { .ft-links { flex-wrap: nowrap; white-space: nowrap; gap: 0 20px; } }

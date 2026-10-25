@@ -97,7 +97,7 @@ def d1_findings():
     for name, d in docs.items():
         body = re.sub(r"<head\b.*?</head>|<script\b.*?</script>|<!--.*?-->", " ", d, flags=re.S)
         body = re.sub(r'<div class="tpmo" data-lint-exempt="tpmo">.*?</div>', " ", body, flags=re.S)
-        body = re.sub(r'<(\w+)\b[^>]*\bdata-lint-exempt="(?:rating|license)"[^>]*>.*?</\1>', " ", body, flags=re.S)  # Google rating data, license number
+        body = re.sub(r'<(\w+)\b[^>]*\bdata-lint-exempt="(?:rating|license|date)"[^>]*>.*?</\1>', " ", body, flags=re.S)  # Google rating data, license number
         body = re.sub(r'<div class="rv-grid[^"]*" data-rv-grid>.*?</div>\s*(?=<button|</div>)', " ", body, flags=re.S)
         attrs = " ".join(m.group(2) for m in re.finditer(r'\b(alt|aria-label|title|placeholder)="([^"]*)"', body))
         txt = ALLOWED_DIGITS.sub(" ", html.unescape(re.sub(r"<[^>]+>", " ", body) + " " + attrs))

@@ -85,6 +85,11 @@
         "href": "about.html"
       },
       {
+        "key": "faq",
+        "label": "FAQ",
+        "href": "faq.html"
+      },
+      {
         "key": "carriers",
         "label": "Carriers",
         "href": "carriers.html"
@@ -111,8 +116,8 @@
     }
   },
   "home": {
-    "hero_heading": "Protection for the people you love, chosen with care and priced within reach.",
-    "hero_lede": "King Health is an independent advisory that compares coverage across carriers so that seniors, families and employers can secure the protection they need at a cost they can sustain.",
+    "hero_heading": "Protection for the people you love, chosen together and priced within reach.",
+    "hero_lede": "We take the time to understand what matters most to you, compare options across multiple carriers, and help you choose coverage that feels right for your family and your budget. And when questions come up later, we are always just a call away.",
     "category_intro": {
       "heading": "Coverage for every season of life",
       "text": "Whether you are approaching Medicare, providing for a growing household, caring for a team of employees or preparing for a comfortable retirement, we bring the same patience and the same careful comparison to every conversation."
@@ -122,19 +127,22 @@
       "items": [
         {
           "title": "Independent counsel",
-          "text": "Because we are not bound to any carrier, our recommendations are shaped by your circumstances and your budget rather than by a sales quota."
+          "text": "Because we are not bound to any carrier, our recommendations are shaped by your circumstances and your budget rather than by a sales quota.",
+          "icon": "why-counsel"
         },
         {
           "title": "Affordability as a discipline",
-          "text": "We compare plans side by side and explain the tradeoffs plainly, so that the coverage you choose protects your family without straining your monthly finances."
+          "text": "We compare plans side by side and explain the tradeoffs plainly, so that the coverage you choose protects your family without straining your monthly finances.",
+          "icon": "why-affordability"
         },
         {
           "title": "A relationship that endures",
-          "text": "We remain beside you after enrollment, reviewing your coverage as your life changes and helping with questions whenever they arise."
+          "text": "We remain beside you after enrollment, reviewing your coverage as your life changes and helping with questions whenever they arise.",
+          "icon": "why-relationship"
         }
       ],
       "kicker": "The King Health standard",
-      "lede": "Three commitments govern every recommendation we make, from the first side by side comparison through the years of service that follow enrollment."
+      "lede": "We take the time to listen, we explain every option in plain language, and we stay close long after you enroll. These are the promises we keep with every family and every business we serve."
     },
     "about_strip": {
       "heading": "Advice offered the way we would offer it to our own family",
@@ -175,7 +183,26 @@
           "pos": "50% 36%"
         }
       ]
-    }
+    },
+    "faq_heading": "Working with King Health, answered",
+    "faq": [
+      {
+        "q": "Is there a cost for your guidance?",
+        "a": "There is no fee for our guidance. We are compensated by the carriers whose plans we place, and the premium for a given plan is the same whether you enroll through us or directly."
+      },
+      {
+        "q": "What does it mean that King Health is independent?",
+        "a": "We are not employed by a single insurance company. We represent multiple carriers, which allows us to compare plans side by side and recommend the one that fits your circumstances and your budget rather than a sales quota."
+      },
+      {
+        "q": "Which states do you serve?",
+        "a": "King Health is licensed in New Jersey and North Carolina, so we can advise and place coverage for residents of either state. Conversations can take place by phone or at our office in Newark."
+      },
+      {
+        "q": "What happens after we submit this form?",
+        "a": "We review your request and reach out personally to arrange a conversation at a time that suits you. Submitting the form is a request to be contacted rather than an application for coverage, and it carries no obligation."
+      }
+    ]
   },
   "categories": {
     "senior-benefits": {
@@ -830,7 +857,26 @@
           "link": "Explore careers"
         }
       ]
-    }
+    },
+    "faq_heading": "About King Health, answered",
+    "faq": [
+      {
+        "q": "Who owns King Health?",
+        "a": "King Health LLC is owned by Javon King, an independent insurance advisor licensed in New Jersey and North Carolina, and is based in Newark."
+      },
+      {
+        "q": "Is King Health an insurance company?",
+        "a": "King Health is an independent agency rather than an insurer. Policies are issued, underwritten and administered by the carriers we represent, and each carrier is responsible for the obligations described in its own policy documents."
+      },
+      {
+        "q": "Do you stay involved after we enroll?",
+        "a": "We do. We remain beside you after enrollment, reviewing your coverage as your life changes and helping with questions whenever they arise."
+      },
+      {
+        "q": "Is there a cost for your guidance?",
+        "a": "There is no fee for our guidance. We are compensated by the carriers whose plans we place, and the premium for a given plan is the same whether you enroll through us or directly."
+      }
+    ]
   },
   "carriers": {
     "heading": "Our carrier partners",
@@ -895,7 +941,7 @@
     "lede": "How King Health LLC collects, uses, discloses and safeguards your information, including information related to SMS communications.",
     "description": "How King Health LLC collects, uses, discloses and safeguards your information, including SMS communications.",
     "effective_label": "Effective",
-    "effective_date": "",
+    "effective_date": "October 25, 2026",
     "effective_placeholder": "[effective date]",
     "support_email": "Admin@kinghealthdirect.com",
     "source_note": "Wording adopted from the privacy policy published on the original kinghealthdirect.com site, reformatted; insurance carrier sharing line carried over from the previous site statement.",
@@ -1396,7 +1442,7 @@
     "kicker": "Legal",
     "lede": "The terms that govern your use of the King Health website, its services and its SMS messaging program.",
     "effective_label": "Effective",
-    "effective_date": "",
+    "effective_date": "October 25, 2026",
     "effective_placeholder": "[effective date]",
     "governing_state": "",
     "governing_placeholder": "[State to be specified by counsel]",
@@ -1905,7 +1951,40 @@
       "blog-complimentary-coverage-review.html": {
         "seo_title": "A Complimentary Coverage Review | King Health",
         "seo_description": "A complimentary coverage review from King Health in Newark, New Jersey: we look over your current protection and explain your options. Call us to arrange one."
+      },
+      "faq.html": {
+        "seo_title": "Frequently Asked Questions | King Health",
+        "seo_description": "Answers about Medicare, life, health, group benefits and retirement coverage from King Health, an independent insurance advisory in Newark, New Jersey."
       }
     }
+  },
+  "carriers_faq": {
+    "heading": "Carriers, answered",
+    "faq": [
+      {
+        "q": "Which carriers do you work with?",
+        "a": "The carriers available to you depend on the coverage line and on where you live. We confirm which carriers serve your area during our conversation and compare their plans for you side by side."
+      },
+      {
+        "q": "Will our premium be higher because we enroll through you?",
+        "a": "No. The premium for a given plan is the same whether you enroll through us or directly with the carrier, and there is no fee for our guidance."
+      },
+      {
+        "q": "Who issues and services our policy?",
+        "a": "Policies are issued, underwritten and administered by the carrier you choose. We remain your point of contact for questions and reviews, and we help you work with the carrier whenever you need it."
+      },
+      {
+        "q": "Can you review a policy we already hold?",
+        "a": "We are glad to review coverage you already hold and compare it with the options available today, so that you can decide with a clear picture of the tradeoffs."
+      }
+    ]
+  },
+  "faq_page": {
+    "heading": "Frequently Asked Questions",
+    "kicker": "Questions and answers",
+    "lede": "Clear answers to the questions families, retirees and employers ask us most, gathered in one place and organized by the coverage you are exploring.",
+    "index_label": "Browse by topic",
+    "form_heading": "Still have a question?",
+    "form_text": "Share it with us, and we will reach out personally with an answer and, if it helps, a time to talk it through. There is never any cost or obligation for our guidance."
   }
 }

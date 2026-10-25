@@ -53,7 +53,9 @@
       "file": "hands-house-dark",
       "banner_position": "72% 40%"
     },
-    "banner_terms": "family-lawn-walk"
+    "banner_terms": "family-lawn-walk",
+    "why_home": "advisor-lounge-meeting",
+    "banner_faq": "advisor-client-meeting"
   },
   "files": {
     "advisor-client-meeting.jpg": {

@@ -111,10 +111,11 @@ CATEGORY_OPTIONS = [c["label"] for c in CATS] + [GENERAL]
 # --------------------------------------------------------------------------------------
 # Page keys accepted by site.hidden_pages, and the file each one owns. Hiding "blog" also skips every blog-*.html article.
 HIDEABLE_PAGES = {"reviews": "reviews.html", "join-the-team": "join-the-team.html", "blog": "blog.html",
-                  "terms": "terms.html", "carriers": "carriers.html", "about": "about.html"}
+                  "terms": "terms.html", "carriers": "carriers.html", "about": "about.html", "faq": "faq.html"}
 HIDDEN = set()  # filled once by set_hidden_pages() before any page is rendered
 SITE_NAV_DEFAULT = {"label": "King Health", "label_href": "index.html", "items": [
     {"key": "about", "label": "About Us", "href": "about.html"},
+    {"key": "faq", "label": "FAQ", "href": "faq.html"},
     {"key": "carriers", "label": "Carriers", "href": "carriers.html"},
     {"key": "reviews", "label": "Client Reviews", "href": "reviews.html"},
     {"key": "blog", "label": "Blog", "href": "blog.html"},
@@ -122,7 +123,7 @@ SITE_NAV_DEFAULT = {"label": "King Health", "label_href": "index.html", "items":
     "cta": {"label": "Contact Us", "href": "contact.html"}}
 # page id (body data-page) -> the site nav key it marks as current. Terms, privacy and accessibility mark nothing.
 SITE_NAV_CURRENT = {"home": "home", "about": "about", "carriers": "carriers", "reviews": "reviews", "blog": "blog",
-                    "article": "blog", "join": "join-the-team", "contact": "contact"}
+                    "article": "blog", "join": "join-the-team", "contact": "contact", "faq": "faq"}
 
 
 def set_hidden_pages(C):
@@ -1027,6 +1028,73 @@ def consult_faq_aside(faq, heading, phone):
         <p class="fine">Prefer to talk it through? Call <a href="#" data-config="phone-link"><span data-config="phone">%s</span></a> and we will answer in person.</p>
       </aside>""" % (esc(heading), "".join(items), esc(phone))
 
+
+def contact_faq_html(C):
+    """2026-10-25: the general questions also appear on the Contact page, under the direct contact list in its aside."""
+    h = C["home"]
+    if not h.get("faq"):
+        return ""
+    block = consult_faq_aside(h["faq"], h.get("faq_heading", ""), C["site"].get("phone", PHONE_DEFAULT))
+    inner = block.split(">", 1)[1].rsplit("</aside>", 1)[0]
+    inner = inner.replace('id="cfaq-title"', 'id="cfaq-title" class="cfaq-sub"')
+    return '<div class="contact-faq" aria-labelledby="cfaq-title">%s</div>' % inner
+
+
+def faq_page_groups(C, flat=False):
+    """2026-10-25: every question on the site, grouped by topic for faq.html. A question already shown in an earlier group is
+    not repeated. With flat=True, returns the de-duplicated list of {q, a} for the FAQPage structured data."""
+    seen, groups = set(), []
+    def take(title, gid, faqs, href=""):
+        items = [qa for qa in (faqs or []) if qa["q"] not in seen]
+        for qa in items:
+            seen.add(qa["q"])
+        if items:
+            groups.append({"id": gid, "title": title, "href": href, "items": items})
+    take("Working with King Health", "general", C["home"].get("faq"))
+    if page_live("about"):
+        take("About King Health", "about", C["about"].get("faq"), "about.html")
+    for cat in CATS:
+        cc = C["categories"][cat["slug"]]
+        merged = list(cc.get("faq", []))
+        for p in cat["products"]:
+            merged += C["products"][p].get("faq", [])
+        take(clabel(C, cat), cat["slug"], merged, "%s.html" % cat["slug"])
+    if page_live("carriers"):
+        take("Carriers", "carriers", C.get("carriers_faq", {}).get("faq"), "carriers.html")
+    if flat:
+        return [qa for g in groups for qa in g["items"]]
+    return groups
+
+
+def build_faq(C, P):
+    """2026-10-25: the FAQ page. A topic index on the left, grouped accordions on the right, the universal form below."""
+    f = C["faq_page"]
+    groups = faq_page_groups(C)
+    toc = "".join('<li><a href="#faq-%s">%s</a></li>' % (g["id"], esc(g["title"])) for g in groups)
+    blocks, n = [], 0
+    for g in groups:
+        lis = []
+        for qa in g["items"]:
+            n += 1
+            lis.append('<li><h3><button type="button" aria-expanded="false" aria-controls="fq-a%d" id="fq-q%d">%s<span class="pm" aria-hidden="true"></span></button></h3>'
+                       '<div class="ans" id="fq-a%d" role="region" aria-labelledby="fq-q%d" hidden><p>%s</p></div></li>' % (n, n, esc(qa["q"]), n, n, esc(qa["a"])))
+        more = ('<a class="tlink faqp-more" href="%s"><span>Explore %s</span></a>' % (g["href"], esc(g["title"]))) if g["href"] and g["id"] not in ("about", "carriers") else ""
+        blocks.append('<section class="faqp-group" id="faq-%s" aria-labelledby="faq-%s-h"><div class="faqp-head"><h2 id="faq-%s-h">%s</h2>%s</div><ul class="faq" data-faq>%s</ul></section>'
+                      % (g["id"], g["id"], g["id"], esc(g["title"]), more, "".join(lis)))
+    body = banner(P, "banner_faq", f["heading"], f["lede"], kicker=f.get("kicker", "FAQ"))
+    body += """  <section class="section after-band faqp" aria-label="%s">
+    <div class="container faqp-wrap">
+      <nav class="legal-toc faqp-toc reveal" aria-label="%s">
+        <p class="kicker">%s</p>
+        <ol>%s</ol>
+      </nav>
+      <div class="faqp-body reveal">%s</div>
+    </div>
+  </section>
+""" % (esc(f["heading"]), esc(f.get("index_label", "Topics")), esc(f.get("index_label", "Topics")), toc, "\n        ".join(blocks))
+    body += universal_form(C, f["form_heading"], f["form_text"])
+    return page(C, f["heading"], f["lede"], "faq", body, active="faq")
+
 def license_value(site, key):
     """Optional content.json site keys; a visible blank until the client supplies them (the spec's placeholder)."""
     v = (site.get(key) or "").strip()
@@ -1037,7 +1105,7 @@ def footer(C):
     """Compact footer (client feedback): one slim row, a gold hairline, one legal row, disclosures behind a toggle."""
     s = C["site"]
     links = [("%s.html" % cat["slug"], clabel(C, cat)) for cat in CATS]
-    links += [("about.html", "About Us"), ("carriers.html", "Carriers"), ("contact.html", "Contact Us")]
+    links += [("about.html", "About Us"), ("faq.html", "FAQ"), ("carriers.html", "Carriers"), ("contact.html", "Contact Us")]
     links = [(h, l) for h, l in links if href_live(h)]
     terms = '\n      <a href="terms.html">Terms</a>' if page_live("terms") else ""
     return """<footer class="site-footer">
@@ -1375,10 +1443,12 @@ def trio(items, heading, hid, gold=False, tint=False, note=""):
 
 
 
-def why_band(w):
+def why_band(w, photo=""):
     """Wave 5: the Why King Health commitments as a deep band with numbered panels (numerals come from CSS counters)."""
-    cells = "".join('<article class="why-card"><h3>%s</h3><p>%s</p></article>' % (esc(i["title"]), esc(i["text"])) for i in w["items"])
-    return """  <section class="section band why-band" aria-labelledby="why-title">
+    cells = "".join('<article class="why-card">%s<h3>%s</h3><p>%s</p></article>' % (
+        ('<span class="why-ic" aria-hidden="true">%s</span>' % icon(i["icon"])) if i.get("icon") else "", esc(i["title"]), esc(i["text"])) for i in w["items"])
+    if not photo:
+        return """  <section class="section band why-band" aria-labelledby="why-title">
     <div class="container">
       <div class="why-head reveal">
         <div><p class="kicker">%s</p><h2 class="h2" id="why-title">%s</h2></div>
@@ -1388,6 +1458,21 @@ def why_band(w):
     </div>
   </section>
 """ % (esc(w.get("kicker", "The King Health standard")), esc(w["heading"]), esc(w.get("lede", "")), cells)
+    return """  <section class="section band why-band" aria-labelledby="why-title">
+    <div class="container">
+      <div class="why-split">
+        <div class="why-copy">
+          <div class="why-head reveal">
+            <p class="kicker">%s</p><h2 class="h2" id="why-title">%s</h2>
+            <p class="band-lede">%s</p>
+          </div>
+          <div class="why-grid reveal">%s</div>
+        </div>
+        <figure class="why-photo reveal">%s</figure>
+      </div>
+    </div>
+  </section>
+""" % (esc(w.get("kicker", "The King Health standard")), esc(w["heading"]), esc(w.get("lede", "")), cells, photo)
 
 def photo_card(P, slot, href, title, text, link_text, used, alternates, ic=""):
     return """<article class="card card-photo%s reveal">
@@ -1439,7 +1524,7 @@ def build_home(C, P):
   </section>
 """ % (esc(h["category_intro"]["heading"]), esc(h["category_intro"]["text"]), "".join(cards))
     body += carrier_strip(C, "home")
-    body += why_band(h["why"])
+    body += why_band(h["why"])  # 2026-10-25: client kept the three panel layout; why_band(w, photo) still supports a photo
     body += """  <section class="section tint" aria-labelledby="strip-title">
     <div class="container split strip">
       <div class="split-media reveal">%s</div>
@@ -1461,7 +1546,7 @@ def build_home(C, P):
   </section>
 """ % (esc(h["chart"]["title"]), esc(h["chart"]["caption"]), chart(HOME_CHART, h["chart"]["title"], ""))
     body += home_reviews(C)
-    body += universal_form(C, h["form_intro"]["heading"], h["form_intro"]["text"])
+    body += universal_form(C, h["form_intro"]["heading"], h["form_intro"]["text"], faq=h.get("faq"), faq_heading=h.get("faq_heading", ""))
     return page(C, "King Health | Insurance Advisory You Can Trust", h["hero_lede"], "home", body)
 
 
@@ -1538,12 +1623,13 @@ def build_product(C, P, p):
   </section>
 """ % paras(pc.get("how_it_works", []))
     group = (not shared) and cat["slug"] == "group-benefits"
-    body += faq_block(pc.get("faq", []), "Questions employers ask" if group else "Questions families ask",
-                      "If your question is not answered here, we are glad to take it directly by phone or email.",
-                      after=('\n    <div class="container">%s</div>' % tpmo_block(C)) if p == "medicare" else "")
+    # 2026-10-25: the product questions now sit beside the form (consult_faq_aside); faq_block stays available for other pages.
+    if p == "medicare":
+        body += '  <section class="section tpmo-sec" aria-label="Medicare disclaimer">\n    <div class="container">%s</div>\n  </section>\n' % tpmo_block(C)
     body += universal_form(C, "Speak with us about %s" % plabel(C, p),
                            "Share a few details, and we will reach out personally to arrange a conversation at a time that suits you. There is never any cost or obligation for our guidance.",
-                           preset_cat=cat["label"], preset_cov=FORM_LABEL[p], follow_from=shared)
+                           preset_cat=cat["label"], preset_cov=FORM_LABEL[p], follow_from=shared,
+                           faq=pc.get("faq"), faq_heading=pc.get("faq_heading", "%s, answered" % plabel(C, p)))
     if shared:
         sub = "".join(subnav(C, CAT_BY_KEY[k], p, hidden=(k != "senior")) for k in ANCILLARY_FROM)
     else:
@@ -1597,7 +1683,7 @@ def build_about(C, P):
   </section>
 """ % (esc(more["kicker"]), esc(more["heading"]), max(len(cards), 2), "".join(text_card(c["href"], c["title"], c["text"], c["link"]) for c in cards))
     h = C["home"]["form_intro"]
-    body += universal_form(C, h["heading"], h["text"])
+    body += universal_form(C, h["heading"], h["text"], faq=a.get("faq"), faq_heading=a.get("faq_heading", ""))
     return page(C, a.get("heading") or "About Us", a["lede"], "about", body, active="about")
 
 
@@ -1632,8 +1718,10 @@ def build_carriers(C, P):
     </div>
   </section>
 """ % ("after-strip" if strip_html else "after-band", esc(c.get("intro", "")), "\n      ".join(rows), esc(c.get("note", "")))
+    cf = C.get("carriers_faq", {})
     body += universal_form(C, "Ask which carriers serve your area",
-                           "Tell us where you live and what you would like to protect, and we will explain which carriers we can offer you and how their plans compare.")
+                           "Tell us where you live and what you would like to protect, and we will explain which carriers we can offer you and how their plans compare.",
+                           faq=cf.get("faq"), faq_heading=cf.get("heading", ""))
     return page(C, c.get("heading") or "Carriers", c["lede"], "carriers", body, active="carriers")
 
 
@@ -1650,7 +1738,7 @@ def build_contact(C, P):
             '<a class="tlink" href="%s"><span>%s</span></a>' % (esc(l["href"]), esc(l["text"])) for l in aside_links)
     body += universal_form(C, "Tell us how we can help",
                            "Required fields help us prepare before we call, and everything else is optional.",
-                           aside=aside, after_band=True, aside_extra=extra)
+                           aside=aside, after_band=True, aside_extra=extra + contact_faq_html(C))
     body += """  <section class="section" aria-labelledby="next-title">
     <div class="container stages-wrap">
       <div class="stages-intro reveal"><h2 class="h2" id="next-title">%s</h2></div>
@@ -1708,7 +1796,7 @@ def build_legal_doc(C, P, key):
           <dl class="legal-defs">
             <div><dt>Email</dt><dd>%s</dd></div>
             <div><dt>Phone</dt><dd>%s</dd></div>
-            <div><dt>License</dt><dd><span data-lint-exempt="license">New Jersey %s</span></dd></div>
+            <div><dt>License</dt><dd><span data-lint-exempt="license">%s</span></dd></div>
           </dl>
         </div>""" % (mail, subs["{phone}"], license_value(s, "license_number"))
     toc, secs = [], []
@@ -1748,7 +1836,7 @@ def build_legal_doc(C, P, key):
           <p class="legal-entity">King Health LLC</p>
           <p class="legal-title">%(h)s</p>
           <dl>
-            <div><dt>%(el)s</dt><dd class="terms-eff">%(eff)s</dd></div>
+            <div><dt>%(el)s</dt><dd class="terms-eff"><span data-lint-exempt="date">%(eff)s</span></dd></div>
             <div><dt>Applies to</dt><dd>%(dom)s and King Health services</dd></div>
           </dl>
         </header>
@@ -2668,6 +2756,9 @@ def json_ld(C, name, title, desc, og):
             graph.append(ld_faq(pc["faq"]))
     elif kind == "article" and ref:
         graph.append(ld_article(C, name, ref))
+    elif kind == "faq":
+        graph.append(ld_breadcrumb(C, [("Home", "index.html"), ("FAQ", name)]))
+        graph.append(ld_faq(faq_page_groups(C, flat=True)))
     elif kind == "reviews":  # C: CollectionPage only, never a rating
         graph.append({"@type": "CollectionPage", "@id": abs_url(C, name), "url": abs_url(C, name), "name": title,
                       "description": desc, "isPartOf": {"@id": abs_url(C, "#website")}, "about": {"@id": abs_url(C, "#organization")}})
@@ -2797,7 +2888,7 @@ def visible_text(doc):
     # Wave 2, A8.4: the mandated Medicare disclaimer is exempt from the numeral rule.
     doc = re.sub(r'<div class="tpmo" data-lint-exempt="tpmo">.*?</div>', " ", doc, flags=re.S)
     # Google rating figures (average, count) are the platform's data read from reviews.json, not site copy.
-    doc = re.sub(r'<(\w+)\b[^>]*\bdata-lint-exempt="(?:rating|license)"[^>]*>.*?</\1>', " ", doc, flags=re.S)
+    doc = re.sub(r'<(\w+)\b[^>]*\bdata-lint-exempt="(?:rating|license|date)"[^>]*>.*?</\1>', " ", doc, flags=re.S)
     attrs = " ".join(m.group(2) for m in re.finditer(r'\b(alt|aria-label|title|placeholder)="([^"]*)"', doc))
     return html.unescape(re.sub(r"<[^>]+>", " ", doc) + " " + attrs)
 
@@ -2869,7 +2960,7 @@ def main():
     pages["privacy.html"] = build_legal_doc(C, P, "privacy")  # 2026-10-25: formal layout; build_legal kept for reference
     pages["accessibility.html"] = build_legal(C, P, "accessibility", "Accessibility")
     # Hideable pages (Wave 2 pages plus About and Carriers): a key in site.hidden_pages skips the page entirely.
-    hideable = (("about", build_about), ("carriers", build_carriers), ("reviews", build_reviews),
+    hideable = (("about", build_about), ("faq", build_faq), ("carriers", build_carriers), ("reviews", build_reviews),
                 ("join-the-team", build_join), ("blog", build_blog), ("terms", lambda C, P: build_legal_doc(C, P, "terms")))  # build_terms kept for reference
     for key, builder in hideable:
         if page_live(key):
@@ -2891,8 +2982,13 @@ def main():
     seo_lint(C, pages)
     write_crawl_files(C, pages)
     print("Mode:", "release" if RELEASE else "review (placeholders and drafts shown)")
+    # 2026-10-25: version the stylesheet and scripts by content so a browser never keeps a stale copy after a rebuild.
+    import hashlib
+    asset_v = hashlib.md5((css + js + bridge).encode("utf-8")).hexdigest()[:10]
     for name, doc in pages.items():
         lint(name, doc)
+        for a in ("assets/site.css", "assets/site.js", "assets/kh-ghl-bridge.js"):
+            doc = doc.replace('"%s"' % a, '"%s?v=%s"' % (a, asset_v))
         with open(os.path.join(SITE, name), "w", encoding="utf-8") as f:
             f.write(doc)
     check_contrast()
