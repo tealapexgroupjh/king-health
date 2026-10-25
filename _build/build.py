@@ -2561,6 +2561,7 @@ def apply_seo(C, name, doc, og):
     if not copy:
         warn("seo.pages has no seo_title and seo_description for %s; the builder's copy is used" % name)
     doc = doc.replace('<html lang="en"', '<html lang="en-US"', 1)
+    m = re.search(r"<title>(.*?)</title>", doc, re.S)  # re-find after the lang edit shifted every offset
     if m:
         doc = doc[:m.start()] + "<title>%s</title>" % esc(title) + doc[m.end():]
     md = re.search(r'<meta name="description" content="([^"]*)">', doc)

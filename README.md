@@ -10,13 +10,17 @@ The website for King Health LLC (Javon King, independent insurance advisor, Newa
 | `site/` | Review build for previewing on this Mac. It is hidden from search engines and refreshes itself after every rebuild. |
 | `public/` | Launch build. This is the only folder Cloudflare Pages serves. |
 | `brand/` | Logo and emblem masters. |
-| `docs/` | Design direction and the search optimization specification. |
+| `docs/` | Design direction, the search optimization specification, `AI_HANDOFF_KING_HEALTH.md` (give this to any AI assistant before asking it to edit the site) and `GOHIGHLEVEL_SETUP_GUIDE.md`. |
 
 ## Everyday workflow
 
 1. Edit `_build/content.json` (text, links, hours, license, service areas) or swap photos.
 2. Double click `BUILD.terminal`. It rebuilds `site/` for review and `public/` for launch, then runs the checks.
 3. Double click `PUSH_TO_GITHUB.terminal`. It shows the changes, asks for approval, commits and pushes. Cloudflare Pages publishes the new version automatically within a minute or two.
+
+## Live preview
+
+https://king-health.pages.dev (Cloudflare Pages project `king-health`, deployed from GitHub `tealapexgroupjh/king-health`, branch `main`, folder `public/`).
 
 ## Cloudflare Pages settings
 

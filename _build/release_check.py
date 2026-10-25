@@ -228,6 +228,10 @@ def seo_findings():
         t = html.unescape(m.group(1)).strip() if m else ""
         md = re.search(r'<meta name="description" content="([^"]*)">', d)
         desc = html.unescape(md.group(1)).strip() if md else ""
+        head = d[:d.find("</head>")]
+        if not re.search(r'<meta name="viewport" content="width=device-width, initial-scale=1">', head) or head.count("<title>") != 1 \
+                or re.search(r"</title>[a-z]", head) or ("<title>" in head and not re.search(r'">\s*<title>|>\n<title>', head)):
+            fails.append("%s has a malformed head (viewport or title tag damaged)" % name)
         if not t:
             fails.append("%s has no title" % name)
         elif len(t) > 60:

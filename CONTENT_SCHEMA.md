@@ -1,6 +1,6 @@
 # content.json schema (shared contract between the copywriter and the builder)
 
-File: `/mnt/user-data/outputs/king_health_v2/summit/_build/content.json`. UTF-8 JSON. Every string obeys
+File: `_build/content.json`. Note: the example values below are from the first draft; the live values in content.json are the source of truth. UTF-8 JSON. Every string obeys
 the copy rules in SPEC_KING_HEALTH_V2_SUMMIT.md (no em or en dashes, no numerals except the phone
 placeholder, no number words used as counts, no emoji, "we" voice, full sentences, warm and elevated).
 
