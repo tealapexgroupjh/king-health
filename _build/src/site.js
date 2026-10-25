@@ -3,7 +3,7 @@
 /* Single configuration object. Paste the GoHighLevel inbound webhook URL to go live; leave it empty for demo mode.
    If the GoHighLevel form embed is pasted into a page's .kh-form-slot instead, the native form hides itself. */
 var KH_CONFIG = {
-  ghlWebhookUrl: '',
+  ghlWebhookUrl: 'https://services.leadconnectorhq.com/hooks/3EReOYEGztjvr04Cu0rd/webhook-trigger/c4e7bd00-d5a0-4e2d-99f4-ce3ba448a8e6', /* GHL workflow: Website Lead, King Health site form */
   ghlRecruitWebhookUrl: '', /* Join the Team native fallback form; demo mode when empty */
   reviewsJson: 'assets/reviews.json', /* owner authorized Google Business Profile feed, used only when no GHL widget is present */
   phone: /*__KH_PHONE__*/'',

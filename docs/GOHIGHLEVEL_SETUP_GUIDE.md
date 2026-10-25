@@ -30,7 +30,7 @@ Option A keeps one source of truth, costs nothing extra, and lets GoHighLevel do
 
 ### A1. Lead forms into GoHighLevel
 
-The site's "Request a consultation" form is in demo mode today, which means it validates and shows a thank you message but sends nothing. Choose one of these:
+**Status (2026-10-25): connected.** The site's own "Request a consultation" form now posts to a GoHighLevel inbound webhook. The published workflow "Website Lead: King Health site form (test)" creates the contact (source Website Lead), tags it `website lead`, creates an opportunity in 1.1 Medicare Marketing Leads at New Lead (unassigned), and emails Javon@kinghealthdirect.com. Details are in section 6a of `AI_HANDOFF_KING_HEALTH.md`. The two approaches below remain for reference:
 
 **Using a GoHighLevel form embed (most complete)**
 1. In GoHighLevel, build the form exactly as described in `GHL_FORM_SETUP.md` in this project (field keys, option lists and consent wording are listed there).
@@ -85,7 +85,7 @@ Only choose this if the site must live entirely inside GoHighLevel.
 
 ## Before going live anywhere
 
-- Connect the forms (A1). Today they send nothing.
+- Forms (A1) are connected through the webhook. Decide whether to keep, rename or extend the test workflow (assignment, SMS alert) before launch.
 - Fill in the Terms page effective date and governing state, and have an attorney review it.
 - Replace the stock About page portrait with a real photo of Javon.
 - Confirm WhatsApp is active on (973) 524-7188, or provide the WhatsApp number.

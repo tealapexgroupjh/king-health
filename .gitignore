@@ -3,3 +3,6 @@
 __pycache__/
 site/assets/build-stamp.txt
 *.tgz
+
+# sync bundles from Claude sessions
+.kh_*.tgz
