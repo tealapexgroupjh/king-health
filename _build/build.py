@@ -670,6 +670,9 @@ def g_icon(cls="g-ic"):
     return '<svg class="%s" viewBox="0 0 256 262" aria-hidden="true" focusable="false"><use href="#kh-g"/></svg>' % cls
 
 
+ICON_SLUGS = {"group-ancillary", "ancillary", "group-benefits"}
+
+
 def icon(slug, cls=""):
     return '<svg class="ic%s" aria-hidden="true" focusable="false" %s><use href="#i-%s"/></svg>' % (
         (" " + cls) if cls else "", ICON_ATTRS, esc(slug))
@@ -1094,6 +1097,21 @@ def build_faq(C, P):
 """ % (esc(f["heading"]), esc(f.get("index_label", "Topics")), esc(f.get("index_label", "Topics")), toc, "\n        ".join(blocks))
     body += universal_form(C, f["form_heading"], f["form_text"])
     return page(C, f["heading"], f["lede"], "faq", body, active="faq")
+
+
+def duo_tags_html(pc):
+    """2026-10-25: coverage pills. A pill with text and bullets opens a short explainer on hover, keyboard focus or tap."""
+    lis = []
+    for i, t in enumerate(pc["duo_tags"], 1):
+        if isinstance(t, str):
+            lis.append("<li>%s</li>" % esc(t))
+            continue
+        tip = '<div class="duo-tip" id="duo-tip-%d" role="tooltip"><p class="duo-tip-title">%s</p><p>%s</p><ul>%s</ul></div>' % (
+            i, esc(t["label"]), esc(t["text"]), "".join("<li>%s</li>" % esc(b) for b in t.get("bullets", [])))
+        lis.append('<li class="has-tip"><button type="button" class="duo-tag" aria-describedby="duo-tip-%d" aria-expanded="false" data-tip>%s</button>%s</li>'
+                   % (i, esc(t["label"]), tip))
+    hint = ('<p class="duo-tags-hint">%s</p>' % esc(pc["duo_tags_hint"])) if pc.get("duo_tags_hint") else ""
+    return '\n        <div class="duo-tags"><p class="duo-tags-label">%s</p>%s<ul>%s</ul></div>' % (esc(pc.get("duo_tags_label", "")), hint, "".join(lis))
 
 def license_value(site, key):
     """Optional content.json site keys; a visible blank until the client supplies them (the spec's placeholder)."""
@@ -1597,16 +1615,41 @@ def build_product(C, P, p):
       <div class="prow-media reveal">%s</div>
     </div>
   </section>
-  <section class="section tint" aria-labelledby="suits-title">
+""" % (esc(plabel(C, p)), paras(pc.get("at_a_glance", [])), P.img("card_%s" % p, used=used, alternates=alternates, near_fold=True))
+    kind = CHARTS.get(p)
+    if pc.get("duo_cards") and not kind:
+        # 2026-10-25: "Who it is designed for" and "How the plan works" side by side as cards (client request, group ancillary first)
+        body += """  <section class="section tint duo-sec" aria-label="Who it is designed for and how the plan works">
+    <div class="container duo">
+      <article class="duo-card reveal" aria-labelledby="suits-title">
+        <span class="duo-ic" aria-hidden="true">%s</span>
+        <p class="kicker">Who it serves</p>
+        <h2 class="h2" id="suits-title">Who it is designed for</h2>
+        <div class="copy">%s</div>%s
+      </article>
+      <article class="duo-card reveal" aria-labelledby="how-title">
+        <span class="duo-ic" aria-hidden="true">%s</span>
+        <p class="kicker">The mechanics</p>
+        <h2 class="h2" id="how-title">How the plan works</h2>
+        <div class="copy">%s</div>
+      </article>
+    </div>
+  </section>
+""" % (icon("group-benefits"), paras(pc.get("designed_for", [])),
+       duo_tags_html(pc) if pc.get("duo_tags") else "",
+       icon(p if p in ICON_SLUGS else "ancillary"), paras(pc.get("how_it_works", [])))
+        kind = "__done__"
+    else:
+        body += """  <section class="section tint" aria-labelledby="suits-title">
     <div class="container sec-head sec-copy reveal">
       <h2 class="h2" id="suits-title">Who it is designed for</h2>
       <div class="copy">%s</div>
     </div>
   </section>
-""" % (esc(plabel(C, p)), paras(pc.get("at_a_glance", [])), P.img("card_%s" % p, used=used, alternates=alternates, near_fold=True),
-       paras(pc.get("designed_for", [])))
-    kind = CHARTS.get(p)
-    if kind:
+""" % paras(pc.get("designed_for", []))
+    if kind == "__done__":
+        pass
+    elif kind:
         body += """  <section class="section" aria-labelledby="how-title">
     <div class="container prow how">
       <div class="prow-body reveal"><h2 class="h2" id="how-title">How the plan works</h2><div class="copy">%s</div></div>

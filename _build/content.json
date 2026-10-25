@@ -748,7 +748,66 @@
           "q": "Is there a minimum number of participants?",
           "a": "Carriers commonly require a minimum level of participation for a group ancillary plan to be placed and renewed, and the threshold usually differs between employer paid and voluntary plans. We confirm the requirements that apply to your company before any quote is prepared."
         }
-      ]
+      ],
+      "duo_cards": true,
+      "duo_tags_label": "Coverages commonly offered",
+      "duo_tags": [
+        {
+          "label": "Accident",
+          "text": "Pays a cash benefit when an employee is injured in a covered accident, on or off the job depending on the plan. Benefits help with the costs a health plan leaves behind.",
+          "bullets": [
+            "Emergency room and urgent care visits",
+            "Fractures, dislocations and burns",
+            "Hospital stays and follow up care"
+          ]
+        },
+        {
+          "label": "Critical illness",
+          "text": "Pays a lump sum when an employee is diagnosed with a covered serious illness. The money can go toward treatment, travel or everyday bills.",
+          "bullets": [
+            "Heart attack and stroke",
+            "Cancer, depending on the plan",
+            "Kidney failure and major organ transplant"
+          ]
+        },
+        {
+          "label": "Hospital indemnity",
+          "text": "Pays a set cash benefit when an employee is admitted to the hospital, regardless of what the health plan pays. It helps soften deductibles and out of pocket costs.",
+          "bullets": [
+            "Hospital admission",
+            "Each day of a covered stay",
+            "Intensive care stays, depending on the plan"
+          ]
+        },
+        {
+          "label": "Cancer",
+          "text": "Pays benefits after a covered cancer diagnosis and throughout treatment. Benefits help with expenses that medical coverage may not fully cover.",
+          "bullets": [
+            "An initial diagnosis benefit",
+            "Chemotherapy and radiation treatment",
+            "Travel and lodging for treatment, depending on the plan"
+          ]
+        },
+        {
+          "label": "Short term disability",
+          "text": "Replaces a portion of an employee's income when a covered illness or injury keeps them from working for a short period. Benefits begin after a brief waiting period.",
+          "bullets": [
+            "A percentage of weekly earnings",
+            "Recovery from surgery or childbirth, depending on the plan",
+            "Works alongside state disability programs where they apply"
+          ]
+        },
+        {
+          "label": "Long term disability",
+          "text": "Replaces a portion of income when a covered illness or injury keeps an employee from working for an extended period. Benefits often begin after short term disability ends.",
+          "bullets": [
+            "A percentage of monthly earnings",
+            "Benefits that can last for years, depending on the plan",
+            "Protection for serious or lasting conditions"
+          ]
+        }
+      ],
+      "duo_tags_hint": "Hover over or tap a coverage to see what it provides."
     },
     "group-dental-vision": {
       "nav_label": "Group Dental and Vision",

@@ -48,6 +48,23 @@ var KH_CONFIG = {
     $all('[data-from-kicker]').forEach(function (k) { k.textContent = FROM[fromKey]; k.setAttribute('href', FROM_SLUG[fromKey] + '.html'); });
   }
 
+  /* ---------- Coverage pills with explainers (2026-10-25): hover and focus open through CSS; a tap toggles ---------- */
+  var tips = $all('[data-tip]');
+  function closeTips(except) { tips.forEach(function (b) { if (b !== except) { b.setAttribute('aria-expanded', 'false'); b.parentNode.classList.remove('open'); } }); }
+  tips.forEach(function (b) {
+    b.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = b.getAttribute('aria-expanded') !== 'true';
+      closeTips(b);
+      b.setAttribute('aria-expanded', String(open));
+      b.parentNode.classList.toggle('open', open);
+    });
+  });
+  if (tips.length) {
+    document.addEventListener('click', function () { closeTips(null); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeTips(null); });
+  }
+
   /* ---------- Theme system ---------- */
   var THEME_KEY = 'kh-theme';
   var animTimer = null;

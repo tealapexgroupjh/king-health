@@ -1391,3 +1391,64 @@ body > .site-footer { flex-shrink: 0; margin-top: auto; }
 /* 2026-10-25: FAQ joined the footer links; keep them on one row on desktop */
 @media (min-width: 1101px) { .ft-links { flex: 1 1 auto; gap: 0 22px; } }
 @media (min-width: 1240px) { .ft-links { flex-wrap: nowrap; white-space: nowrap; gap: 0 20px; } }
+
+/* 2026-10-25: product pages with duo_cards: "Who it is designed for" and "How the plan works" side by side as cards */
+.duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 2.6vw, 32px); align-items: stretch; }
+.duo-card { position: relative; display: flex; flex-direction: column; padding: clamp(26px, 3vw, 40px); background: var(--surface);
+  border: 1px solid var(--line); border-radius: 2px; overflow: hidden;
+  transition: transform .45s cubic-bezier(.2,.7,.2,1), box-shadow .45s cubic-bezier(.2,.7,.2,1), border-color .45s ease, opacity .6s ease; }
+.duo-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent);
+  transform: scaleX(.18); transform-origin: left center; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+.duo-card.in::before { transform: scaleX(.32); }
+.duo-card:hover { transform: translateY(-4px); box-shadow: 0 22px 44px -26px var(--shadow); border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); }
+.duo-card:hover::before { transform: scaleX(1); }
+.duo-card + .duo-card { transition-delay: 0s, 0s, 0s, .12s; }
+.duo-ic { display: grid; place-items: center; width: 52px; height: 52px; margin-bottom: 18px; border-radius: 2px;
+  color: var(--icon, var(--brand)); background: var(--icon-tile, var(--surface-2)); border: 1px solid var(--line);
+  transition: transform .45s cubic-bezier(.2,.7,.2,1); }
+.duo-ic .ic { width: 26px; height: 26px; }
+.duo-card:hover .duo-ic { transform: translateY(-2px) rotate(-3deg); }
+.duo-card .h2 { font-size: clamp(24px, 2.2vw, 32px); margin-top: 6px; }
+.duo-card .copy { margin-top: 14px; }
+.duo-card .copy p { color: var(--ink-soft); font-size: 16px; line-height: 1.68; max-width: none; }
+.duo-card .copy p + p { margin-top: 14px; }
+@media (max-width: 960px) { .duo { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: reduce) {
+  .duo-card, .duo-card::before, .duo-ic { transition: none; }
+  .duo-card:hover, .duo-card:hover .duo-ic { transform: none; }
+}
+.duo-tags { margin-top: auto; padding-top: 26px; }
+.duo-tags-label { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); padding-top: 18px; border-top: 1px solid var(--line); }
+.duo-tags ul { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.duo-tags li { padding: 7px 14px; font-size: 14px; font-weight: 500; color: var(--ink); background: var(--icon-tile, var(--surface-2)); border: 1px solid var(--line); border-radius: 999px;
+  transition: border-color .3s ease, transform .3s ease; }
+.duo-tags li:hover { border-color: var(--accent); transform: translateY(-1px); }
+@media (prefers-reduced-motion: reduce) { .duo-tags li { transition: none; } .duo-tags li:hover { transform: none; } }
+
+/* 2026-10-25: coverage pill explainers. The panel opens above the pill row on hover, keyboard focus or tap. */
+.duo-card { overflow: visible; }
+.duo-tags ul { position: relative; }
+.duo-tags-hint { margin-top: 6px; font-size: 13px; color: var(--ink-soft); }
+.duo-tags li.has-tip { padding: 0; border: 0; background: none; }
+.duo-tag { font: inherit; font-size: 14px; font-weight: 500; color: var(--ink); cursor: pointer; padding: 7px 14px; min-height: 36px;
+  background: var(--icon-tile, var(--surface-2)); border: 1px solid var(--line); border-radius: 999px; transition: border-color .25s ease, background-color .25s ease, transform .25s ease; }
+.duo-tag:hover, .has-tip.open .duo-tag, .duo-tag:focus-visible { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--surface)); transform: translateY(-1px); }
+.duo-tip { position: absolute; left: 0; right: 0; bottom: calc(100% + 12px); z-index: 5; padding: 18px 20px 16px; text-align: left;
+  background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 2px;
+  box-shadow: 0 22px 44px -18px var(--shadow); opacity: 0; visibility: hidden; transform: translateY(6px);
+  transition: opacity .22s ease, transform .22s ease, visibility 0s linear .22s; pointer-events: none; }
+.has-tip:hover .duo-tip, .has-tip:focus-within .duo-tip, .has-tip.open .duo-tip { opacity: 1; visibility: visible; transform: none; transition: opacity .22s ease, transform .22s ease, visibility 0s; }
+.duo-tip-title { font-family: Manrope, Inter, sans-serif; font-weight: 700; font-size: 16px; color: var(--ink); }
+.duo-tip p:not(.duo-tip-title) { margin-top: 6px; font-size: 14.5px; line-height: 1.6; color: var(--ink-soft); }
+.duo-tip ul { position: static; display: block; margin-top: 10px; }
+.duo-tip li { position: relative; padding: 3px 0 3px 18px; font-size: 14px; line-height: 1.5; color: var(--ink); background: none; border: 0; border-radius: 0; }
+.duo-tip li::before { content: ""; position: absolute; left: 2px; top: 11px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.duo-tip li:hover { transform: none; }
+@media (prefers-reduced-motion: reduce) { .duo-tip, .duo-tag { transition: none; } }
+
+/* 2026-10-25: Coverage at a glance photo matches the height of its text on desktop */
+@media (min-width: 961px) {
+  .prow:not(.how) { align-items: stretch; }
+  .prow:not(.how) .prow-media { aspect-ratio: auto; min-height: 420px; height: 100%; }
+}
+.duo-tags li.has-tip:hover, .duo-tip li:hover { transform: none; border-color: transparent; }
