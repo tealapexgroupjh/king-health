@@ -35,6 +35,7 @@ var KH_CONFIG = {
   var fromKey = null;
   if (pageId === 'ancillary') {
     fromKey = params.get('from');
+    if (fromKey === 'group') { location.replace('group-ancillary.html'); return; } /* 2026-10-25: group ancillary has its own page */
     if (!FROM[fromKey]) fromKey = 'senior';
     $all('.subnav[data-from]').forEach(function (n) { n.hidden = n.getAttribute('data-from') !== fromKey; });
     $all('.drop[data-cat]').forEach(function (d) {

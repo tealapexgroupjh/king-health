@@ -55,7 +55,9 @@
     },
     "banner_terms": "family-lawn-walk",
     "why_home": "advisor-lounge-meeting",
-    "banner_faq": "advisor-client-meeting"
+    "banner_faq": "advisor-client-meeting",
+    "banner_group-ancillary": "group-consult",
+    "card_group-ancillary": "doctor-consult-desk"
   },
   "files": {
     "advisor-client-meeting.jpg": {

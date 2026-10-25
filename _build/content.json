@@ -708,6 +708,48 @@
         }
       ]
     },
+    "group-ancillary": {
+      "nav_label": "Group Ancillary",
+      "category": "group-benefits",
+      "title": "Group Ancillary Benefits | King Health",
+      "heading": "Group ancillary benefits that round out the package your team relies on",
+      "lede": "Accident, critical illness, hospital indemnity, cancer and disability coverage offered through the workplace, so your employees gain added protection and your business strengthens its benefits without carrying the full cost.",
+      "card_text": "Workplace accident, critical illness, hospital indemnity, cancer and disability coverage that employers can offer on an employer paid or voluntary basis.",
+      "at_a_glance": [
+        "Group ancillary benefits are supplemental coverages offered through an employer alongside the core group health plan. They commonly include accident, critical illness, hospital indemnity and cancer insurance, which pay cash benefits directly to the employee when a covered event occurs, as well as short term and long term disability coverage, which replaces a portion of income when an illness or injury keeps an employee from working. These plans provide limited benefits and do not replace comprehensive health insurance.",
+        "Unlike an individually purchased policy, a group plan is arranged under a master contract held by the employer. Benefits can be fully employer paid, shared between the business and its employees, or offered on a voluntary basis in which employees pay their own premiums through payroll deduction, so a business can expand its package with little or no added cost. Plan design, eligibility and pricing are set at the group level and vary by carrier and by state."
+      ],
+      "designed_for": [
+        "Group ancillary benefits are designed for employers of every size who want to strengthen recruiting and retention, give employees choices that fit their own households, and help their teams manage the deductibles and out of pocket costs that higher deductible health plans can bring. Accident coverage often suits physical and hourly workforces, while critical illness, hospital indemnity and disability coverage appeal broadly to employees who want a financial cushion when life is interrupted."
+      ],
+      "how_it_works": [
+        "Most group ancillary plans are offered during an enrollment period, when eligible employees can elect coverage for themselves and often for a spouse and children. Many carriers offer guaranteed issue or simplified enrollment at that time, which means coverage up to set limits can be issued without a medical exam, and carriers typically require a minimum level of participation before a plan can be placed.",
+        "When a covered event occurs, cash benefit plans pay a set amount directly to the employee, regardless of what the health plan pays, and disability plans pay a portion of the employee's earnings for a defined period after a waiting period. Some policies allow employees to keep their coverage if they leave the company while others end with employment, so we review portability, participation rules and contribution options with you, compare carriers side by side and help you plan an enrollment your team understands."
+      ],
+      "faq_heading": "Group ancillary, answered",
+      "faq": [
+        {
+          "q": "Who pays for group ancillary benefits?",
+          "a": "The employer decides. Benefits can be fully employer paid, shared between the business and its employees, or offered on a voluntary basis in which employees pay their own premiums through payroll deduction, which adds valuable choices at little or no cost to the business."
+        },
+        {
+          "q": "How is this different from ancillary coverage purchased individually?",
+          "a": "Group ancillary coverage is arranged through the employer under a group contract, with eligibility, plan design and pricing set for the whole group, and enrollment usually takes place during a set enrollment period. Individual ancillary policies are purchased and owned directly by the policyholder, with underwriting and pricing determined individually."
+        },
+        {
+          "q": "Do employees need a medical exam to enroll?",
+          "a": "Often they do not. Many carriers offer guaranteed issue or simplified enrollment during the initial enrollment period, up to set coverage limits. Requirements vary by carrier, product and group size, and enrolling after that window may require answers to health questions."
+        },
+        {
+          "q": "Can employees keep coverage if they leave the company?",
+          "a": "It depends on the plan. Some group policies include a portability or conversion option that lets a departing employee continue coverage by paying the carrier directly, while others end when employment ends. We confirm these terms before you choose a plan."
+        },
+        {
+          "q": "Is there a minimum number of participants?",
+          "a": "Carriers commonly require a minimum level of participation for a group ancillary plan to be placed and renewed, and the threshold usually differs between employer paid and voluntary plans. We confirm the requirements that apply to your company before any quote is prepared."
+        }
+      ]
+    },
     "group-dental-vision": {
       "nav_label": "Group Dental and Vision",
       "category": "group-benefits",
@@ -1955,6 +1997,10 @@
       "faq.html": {
         "seo_title": "Frequently Asked Questions | King Health",
         "seo_description": "Answers about Medicare, life, health, group benefits and retirement coverage from King Health, an independent insurance advisory in Newark, New Jersey."
+      },
+      "group-ancillary.html": {
+        "seo_title": "Group Ancillary Benefits in NJ and NC | King Health",
+        "seo_description": "Group accident, critical illness, hospital indemnity, cancer and disability coverage for New Jersey employers, employer paid or voluntary. Call King Health."
       }
     }
   },

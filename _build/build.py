@@ -84,20 +84,20 @@ CATS = [
     {"slug": "individual-benefits", "key": "individual", "label": "Individual Benefits",
      "products": ["individual-health", "whole-life", "term-life", "ancillary", "dental-vision"]},
     {"slug": "group-benefits", "key": "group", "label": "Group Benefits",
-     "products": ["group-health", "group-life", "ancillary", "group-dental-vision"]},
+     "products": ["group-health", "group-life", "group-ancillary", "group-dental-vision"]},  # 2026-10-25: group has its own ancillary page
     {"slug": "retirement", "key": "retirement", "label": "Retirement",
      "products": ["annuities", "indexed-universal-life"]},
 ]
 CAT_BY_SLUG = {c["slug"]: c for c in CATS}
 CAT_BY_KEY = {c["key"]: c for c in CATS}
-ANCILLARY_FROM = ["senior", "individual", "group"]
+ANCILLARY_FROM = ["senior", "individual"]  # group uses group-ancillary.html
 
 # Form option labels. These are the GoHighLevel option values and must not drift.
 FORM_LABEL = {
     "medicare": "Medicare", "final-expense": "Final Expense", "ancillary": "Ancillary",
     "individual-health": "Individual Health", "whole-life": "Whole Life", "term-life": "Term Life",
     "dental-vision": "Dental and Vision", "group-health": "Group Health", "group-life": "Group Life",
-    "group-dental-vision": "Group Dental and Vision", "annuities": "Annuities",
+    "group-dental-vision": "Group Dental and Vision", "group-ancillary": "Group Ancillary", "annuities": "Annuities",
     "indexed-universal-life": "Indexed Universal Life",
 }
 ALL_OR_UNSURE = "All or unsure"

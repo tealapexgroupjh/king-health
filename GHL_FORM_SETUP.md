@@ -27,7 +27,7 @@ Create these fields in GoHighLevel in this order. The query key column is the cu
 
 - Senior Benefits: Medicare, Final Expense, Ancillary, All or unsure
 - Individual Benefits: Individual Health, Whole Life, Term Life, Ancillary, Dental and Vision, All or unsure
-- Group Benefits: Group Health, Group Life, Ancillary, Group Dental and Vision, All or unsure
+- Group Benefits: Group Health, Group Life, Group Ancillary, Group Dental and Vision, All or unsure
 - Retirement: Annuities, Indexed Universal Life, All or unsure
 - General Inquiry: no coverage field
 
@@ -46,7 +46,7 @@ When this approach is used, give each of the four dropdowns the query key `cover
 
 If conditional logic is not available on the plan, use one dropdown with key `coverage` and these options, written so each is unambiguous on its own:
 
-Senior Benefits: Medicare; Senior Benefits: Final Expense; Senior Benefits: Ancillary; Senior Benefits: All or unsure; Individual Benefits: Individual Health; Individual Benefits: Whole Life; Individual Benefits: Term Life; Individual Benefits: Ancillary; Individual Benefits: Dental and Vision; Individual Benefits: All or unsure; Group Benefits: Group Health; Group Benefits: Group Life; Group Benefits: Ancillary; Group Benefits: Group Dental and Vision; Group Benefits: All or unsure; Retirement: Annuities; Retirement: Indexed Universal Life; Retirement: All or unsure; General Inquiry
+Senior Benefits: Medicare; Senior Benefits: Final Expense; Senior Benefits: Ancillary; Senior Benefits: All or unsure; Individual Benefits: Individual Health; Individual Benefits: Whole Life; Individual Benefits: Term Life; Individual Benefits: Ancillary; Individual Benefits: Dental and Vision; Individual Benefits: All or unsure; Group Benefits: Group Health; Group Benefits: Group Life; Group Benefits: Group Ancillary; Group Benefits: Group Dental and Vision; Group Benefits: All or unsure; Retirement: Annuities; Retirement: Indexed Universal Life; Retirement: All or unsure; General Inquiry
 
 Keep `category` as its own required field. With this fallback, the URL preset fills `category` reliably. It fills `coverage` only if the option text equals the passed value, so either accept that the visitor confirms coverage, or rename the options to the plain names in the lists above and rely on the category to tell the duplicate Ancillary entries apart.
 
@@ -70,11 +70,11 @@ Each page's form carries `data-preset-category` and `data-preset-coverage`, for 
 The site resolves the effective preset in this order:
 
 1. URL parameters `?category=` and `?coverage=` on the page address. These accept the option text or a lowercase, hyphenated form, so `?category=retirement&coverage=annuities` and `?category=Retirement&coverage=Annuities` behave the same. They are useful for ads and emails.
-2. On the shared Ancillary page, `?from=senior`, `?from=individual` or `?from=group` sets the category, the second navigation bar and the banner kicker. Senior is the default.
+2. On the shared Ancillary page, `?from=senior` or `?from=individual` sets the category, the second navigation bar and the banner kicker. Senior is the default. Group ancillary has its own page, group-ancillary.html, and `?from=group` forwards there.
 3. Otherwise, the page's own data attributes apply.
 
 The `kh-ghl-bridge` script (`assets/kh-ghl-bridge.js`) then appends the resolved values to the GoHighLevel iframe `src` as `category` and `coverage` parameters. GoHighLevel prefills a field from a URL parameter whose name matches the field's query key, so the embedded form opens with the same selections. The bridge also watches the slot, so it works when GoHighLevel's script inserts the iframe after the page loads.
 
 ## Test after setup
 
-Open medicare.html and confirm the embedded form shows Senior Benefits and Medicare. Open ancillary.html?from=group and confirm Group Benefits and Ancillary. Choose General Inquiry and confirm no coverage field shows. Submit a test entry and confirm the contact, both consent values and the `coverage` value land in GoHighLevel.
+Open medicare.html and confirm the embedded form shows Senior Benefits and Medicare. Open group-ancillary.html and confirm Group Benefits and Group Ancillary. Choose General Inquiry and confirm no coverage field shows. Submit a test entry and confirm the contact, both consent values and the `coverage` value land in GoHighLevel.

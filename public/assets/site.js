@@ -14,7 +14,7 @@ var KH_CONFIG = {
   'use strict';
   var doc = document.documentElement;
   var reduceMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var COVERAGE = {"Senior Benefits": ["Medicare", "Final Expense", "Ancillary", "All or unsure"], "Individual Benefits": ["Individual Health", "Whole Life", "Term Life", "Ancillary", "Dental and Vision", "All or unsure"], "Group Benefits": ["Group Health", "Group Life", "Ancillary", "Group Dental and Vision", "All or unsure"], "Retirement": ["Annuities", "Indexed Universal Life", "All or unsure"]};
+  var COVERAGE = {"Senior Benefits": ["Medicare", "Final Expense", "Ancillary", "All or unsure"], "Individual Benefits": ["Individual Health", "Whole Life", "Term Life", "Ancillary", "Dental and Vision", "All or unsure"], "Group Benefits": ["Group Health", "Group Life", "Group Ancillary", "Group Dental and Vision", "All or unsure"], "Retirement": ["Annuities", "Indexed Universal Life", "All or unsure"]};
   var THEMES = {"ivory": "Ivory Crown", "onyx": "Onyx Crown", "forest": "Forest Hall", "linen": "Linen Estate", "fairway": "Fairway"};
   var DARK = ["onyx", "forest"];
   var SIGNATURE = "ivory";
@@ -35,6 +35,7 @@ var KH_CONFIG = {
   var fromKey = null;
   if (pageId === 'ancillary') {
     fromKey = params.get('from');
+    if (fromKey === 'group') { location.replace('group-ancillary.html'); return; } /* 2026-10-25: group ancillary has its own page */
     if (!FROM[fromKey]) fromKey = 'senior';
     $all('.subnav[data-from]').forEach(function (n) { n.hidden = n.getAttribute('data-from') !== fromKey; });
     $all('.drop[data-cat]').forEach(function (d) {
