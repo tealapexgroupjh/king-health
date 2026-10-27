@@ -444,7 +444,7 @@ var KH_CONFIG = {
       $all('img', clone).forEach(function (i) { i.setAttribute('alt', ''); });
       r.appendChild(clone);
       vp.classList.add('is-moving');
-      vp.style.setProperty('--cstrip-dur', (track.getBoundingClientRect().width / 32).toFixed(1) + 's');
+      vp.style.setProperty('--cstrip-dur', (track.getBoundingClientRect().width / (window.matchMedia('(max-width: 760px)').matches ? 16 : 32)).toFixed(1) + 's'); /* phones move at half speed */
     }
     btn.hidden = false;
     if (motionPaused()) { setBtn(true); } else { start(); setBtn(false); }

@@ -1515,3 +1515,11 @@ body > .site-footer { flex-shrink: 0; margin-top: auto; }
 @media (max-width: 560px) { .ctile img, .cstrip-item img { height: calc(var(--lh, 34px) * .78); } }
 /* Badge logos (a wordmark knocked out of a solid shape) keep their inner type in the dark themes. */
 [data-theme="onyx"] .cstrip-item img[src*="ambetter"], [data-theme="forest"] .cstrip-item img[src*="ambetter"] { filter: grayscale(1); opacity: .85; }
+
+/* 2026-10-26: the footer always meets the bottom of the window, so a short page never leaves an empty band beneath it. */
+body { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; }
+body > main { flex: 1 0 auto; }
+body > .site-footer { flex-shrink: 0; }
+body > header, body > nav, body > section { flex-shrink: 0; }
+/* 2026-10-26: phones navigate with the Menu alone; the second nav bar is hidden under 761px and its links live in the menu. */
+@media (max-width: 760px) { .subnav { display: none !important; } }

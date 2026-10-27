@@ -790,11 +790,22 @@ def header(C, active_cat=None, active=None):
         mp.append('<a class="mp-link" href="%s.html" data-cat-link="%s"%s>%s</a>' % (cat["slug"], cat["key"], cur, esc(clabel(C, cat))))
         mp.append('<div class="mp-sub">%s</div>' % "".join(
             '<a href="%s">%s</a>' % (product_href(p, cat), esc(plabel(C, p))) for p in cat["products"]))
-    for href, label, pid in (("about.html", "About Us", "about"), ("contact.html", "Contact Us", "contact")):  # Carriers lives under About (King Health bar)
+    # 2026-10-26: phones drop the second nav bar, so the menu carries its links: King Health with About Us, FAQ, Carriers
+    # and Client Reviews beneath it (the same pattern as the coverage groups above), then Contact Us.
+    cur = ' aria-current="page"' if active == "home" else ""
+    mp.append('<a class="mp-link" href="index.html"%s>King Health</a>' % cur)
+    kh = []
+    for href, label, pid in (("about.html", "About Us", "about"), ("faq.html", "FAQ", "faq"), ("carriers.html", "Carriers", "carriers"),
+                             ("reviews.html", "Client Reviews", "reviews")):
         if not href_live(href):
             continue
         cur = ' aria-current="page"' if active == pid else ""
-        mp.append('<a class="mp-link" href="%s"%s>%s</a>' % (href, cur, label))
+        kh.append('<a href="%s"%s>%s</a>' % (href, cur, label))
+    if kh:
+        mp.append('<div class="mp-sub">%s</div>' % "".join(kh))
+    if href_live("contact.html"):
+        cur = ' aria-current="page"' if active == "contact" else ""
+        mp.append('<a class="mp-link" href="contact.html"%s>Contact Us</a>' % cur)
     return """<a class="skip" href="#main">Skip to content</a>
 <header class="site-header" id="siteHeader">
   <div class="container hd">
