@@ -1690,7 +1690,7 @@ def build_product(C, P, p):
   </section>
 """ % paras(pc.get("how_it_works", []))
     group = (not shared) and cat["slug"] == "group-benefits"
-    body += product_carriers(C, p)  # 2026-10-26: the carriers King Health places for this coverage line
+    # 2026-10-26: carriers appear only on the home page and the Carriers page (client request); product_carriers() stays available.
     # 2026-10-25: the product questions now sit beside the form (consult_faq_aside); faq_block stays available for other pages.
     if p == "medicare":
         body += '  <section class="section tpmo-sec" aria-label="Medicare disclaimer">\n    <div class="container">%s</div>\n  </section>\n' % tpmo_block(C)
