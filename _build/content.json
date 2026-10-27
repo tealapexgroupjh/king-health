@@ -987,10 +987,14 @@
     "sections": [
       "Medicare",
       "Final Expense",
+      "Ancillary",
       "Individual Health",
       "Individual Life",
       "Dental and Vision",
-      "Group Benefits",
+      "Group Health",
+      "Group Life",
+      "Group Ancillary",
+      "Group Dental and Vision",
       "Retirement"
     ],
     "logos": [],
@@ -1005,6 +1009,199 @@
       "pause": "Pause carrier logos",
       "play": "Play carrier logos",
       "home_link": "View carriers by coverage"
+    },
+    "carrier_list_comment": "2026-10-26: carriers and coverage lines from Javon's list. To show a logo, put a transparent PNG or SVG named with the slug (for example aetna.svg or aetna.png) in site/media/carriers/ and rebuild; the name tile switches to the logo automatically. The lines decide which rows on the Carriers page and which coverage pages show each carrier.",
+    "carrier_list": [
+      {
+        "name": "Aetna",
+        "slug": "aetna",
+        "lines": [
+          "Medicare",
+          "Group Health"
+        ]
+      },
+      {
+        "name": "Ambetter",
+        "slug": "ambetter",
+        "lines": [
+          "Individual Health"
+        ]
+      },
+      {
+        "name": "AmeriHealth",
+        "slug": "amerihealth",
+        "lines": [
+          "Individual Health"
+        ]
+      },
+      {
+        "name": "Ameritas",
+        "slug": "ameritas",
+        "lines": [
+          "Dental and Vision",
+          "Group Dental and Vision"
+        ]
+      },
+      {
+        "name": "Blue Cross Blue Shield",
+        "slug": "blue-cross-blue-shield",
+        "lines": [
+          "Individual Health",
+          "Group Health"
+        ]
+      },
+      {
+        "name": "Cigna Healthcare",
+        "short": "Cigna",
+        "slug": "cigna",
+        "lines": [
+          "Group Health"
+        ]
+      },
+      {
+        "name": "Clover Health",
+        "slug": "clover-health",
+        "lines": [
+          "Medicare"
+        ]
+      },
+      {
+        "name": "Combined Insurance",
+        "short": "Combined",
+        "slug": "combined-insurance",
+        "lines": [
+          "Ancillary",
+          "Group Ancillary",
+          "Group Life"
+        ]
+      },
+      {
+        "name": "Corebridge Financial",
+        "slug": "corebridge-financial",
+        "lines": [
+          "Final Expense"
+        ]
+      },
+      {
+        "name": "Delta Dental",
+        "slug": "delta-dental",
+        "lines": [
+          "Dental and Vision"
+        ]
+      },
+      {
+        "name": "Devoted Health",
+        "slug": "devoted-health",
+        "lines": [
+          "Medicare"
+        ]
+      },
+      {
+        "name": "Guarantee Trust Life",
+        "short": "GTL",
+        "slug": "guarantee-trust-life",
+        "lines": [
+          "Ancillary"
+        ]
+      },
+      {
+        "name": "Horizon Blue Cross Blue Shield of New Jersey",
+        "short": "Horizon BCBSNJ",
+        "slug": "horizon-bcbsnj",
+        "lines": [
+          "Medicare"
+        ]
+      },
+      {
+        "name": "Humana",
+        "slug": "humana",
+        "lines": [
+          "Medicare"
+        ]
+      },
+      {
+        "name": "MassMutual",
+        "slug": "massmutual",
+        "lines": [
+          "Group Life"
+        ]
+      },
+      {
+        "name": "Mutual of Omaha",
+        "slug": "mutual-of-omaha",
+        "lines": [
+          "Final Expense",
+          "Retirement"
+        ]
+      },
+      {
+        "name": "Nationwide",
+        "slug": "nationwide",
+        "lines": [
+          "Group Health",
+          "Retirement"
+        ]
+      },
+      {
+        "name": "Oscar Health",
+        "short": "Oscar",
+        "slug": "oscar",
+        "lines": [
+          "Individual Health"
+        ]
+      },
+      {
+        "name": "Royal Neighbors of America",
+        "slug": "royal-neighbors-of-america",
+        "lines": [
+          "Final Expense"
+        ]
+      },
+      {
+        "name": "Transamerica",
+        "slug": "transamerica",
+        "lines": [
+          "Final Expense",
+          "Retirement"
+        ]
+      },
+      {
+        "name": "UnitedHealthcare",
+        "slug": "unitedhealthcare",
+        "lines": [
+          "Medicare",
+          "Individual Health",
+          "Group Health"
+        ]
+      },
+      {
+        "name": "Wellpoint",
+        "slug": "wellpoint",
+        "lines": [
+          "Medicare"
+        ]
+      }
+    ],
+    "product_lines": {
+      "medicare": "Medicare",
+      "final-expense": "Final Expense",
+      "ancillary": "Ancillary",
+      "individual-health": "Individual Health",
+      "whole-life": "Individual Life",
+      "term-life": "Individual Life",
+      "dental-vision": "Dental and Vision",
+      "group-health": "Group Health",
+      "group-life": "Group Life",
+      "group-ancillary": "Group Ancillary",
+      "group-dental-vision": "Group Dental and Vision",
+      "annuities": "Retirement",
+      "indexed-universal-life": "Retirement"
+    },
+    "product_block": {
+      "kicker": "Carriers",
+      "heading": "Carriers we place for %s",
+      "text": "King Health is appointed with each carrier below for this coverage, which allows us to compare their plans side by side and recommend the one that best suits your circumstances and your budget.",
+      "link": "View every carrier by coverage"
     }
   },
   "contact": {

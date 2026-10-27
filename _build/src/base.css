@@ -1444,3 +1444,63 @@ body > .site-footer { flex-shrink: 0; margin-top: auto; }
   .prow:not(.how) .prow-media { aspect-ratio: auto; min-height: 420px; height: 100%; }
 }
 .duo-tags li.has-tip:hover, .duo-tip li:hover { transform: none; border-color: transparent; }
+
+/* 2026-10-25: carriers listed by name until their logo files are added (site/media/carriers/<slug>.svg or .png) */
+.cstrip-item.carrier-name { border: 1px solid var(--line); border-radius: 2px; background: var(--surface); padding: 0 14px; transition: border-color .25s ease, transform .25s ease; }
+.cstrip-item.carrier-name span { font-family: Manrope, Inter, sans-serif; font-weight: 700; font-size: 15px; letter-spacing: -0.01em; line-height: 1.25; color: var(--ink); text-align: center; }
+.cstrip-item.carrier-name:hover { border-color: var(--accent); transform: translateY(-2px); }
+.carrier-tiles { list-style: none; margin: 0; gap: 12px; padding: 16px; }
+.ctile { display: grid; place-items: center; min-height: 56px; padding: 8px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 2px; transition: border-color .25s ease, transform .25s ease; }
+.ctile span { font-family: Manrope, Inter, sans-serif; font-weight: 700; font-size: 15px; color: var(--ink); text-align: center; }
+.ctile img { height: 36px; width: auto; max-width: 150px; object-fit: contain; }
+.ctile:hover, .cstrip-item:hover { border-color: var(--accent); }
+.ctile:hover { transform: translateY(-2px); }
+@media (prefers-reduced-motion: reduce) { .ctile, .cstrip-item.carrier-name { transition: none; } .ctile:hover, .cstrip-item.carrier-name:hover { transform: none; } }
+
+/* 2026-10-25 (rev): Appointed carriers as an editorial band. Label and note centered above, carriers in one still row
+   divided by hairlines (names until logo files arrive, logos after). Seven carriers fit without the moving marquee. */
+.cstrip-in { display: block !important; text-align: center; padding: clamp(36px, 4.5vw, 56px) 0; }
+.cstrip-head { display: flex; flex-direction: column; align-items: center; }
+.cstrip-head .kicker { justify-content: center; }
+.cstrip-note { max-width: 62ch !important; margin-left: auto; margin-right: auto; }
+.cstrip-viewport { margin-top: 28px !important; }
+.cstrip-track { gap: 0 !important; justify-content: center; }
+.cstrip-item, .cstrip-item.carrier-name { width: auto; height: 64px; padding: 0 clamp(18px, 2.2vw, 32px); border: 0; border-radius: 0; background: none; position: relative; }
+.cstrip-item + .cstrip-item::before { content: ""; position: absolute; left: 0; top: 18px; bottom: 18px; width: 1px; background: var(--line); }
+.cstrip-item.carrier-name span { font-size: clamp(15px, 1.25vw, 18px); font-weight: 700; letter-spacing: -0.015em; color: var(--ink-soft); white-space: nowrap; transition: color .25s ease; }
+.cstrip-item.carrier-name::after { content: ""; position: absolute; left: 50%; bottom: 12px; width: 0; height: 2px; background: var(--accent); transform: translateX(-50%); transition: width .3s cubic-bezier(.2,.7,.2,1); }
+.cstrip-item.carrier-name:hover { transform: none; }
+.cstrip-item.carrier-name:hover span { color: var(--ink); }
+.cstrip-item.carrier-name:hover::after { width: 36px; }
+.cstrip-item img { max-width: 120px; max-height: 34px; }
+.cstrip-foot { justify-content: center !important; margin-top: 18px; }
+.cstrip-toggle { margin: 16px auto 0; display: block; }
+@media (max-width: 760px) {
+  .cstrip-track { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+  .cstrip-item, .cstrip-item.carrier-name { height: 56px; border-bottom: 1px solid var(--line); }
+  .cstrip-item + .cstrip-item::before { display: none; }
+  .cstrip-item:nth-child(even) { border-left: 1px solid var(--line); }
+  .cstrip-item.carrier-name span { white-space: normal; text-align: center; }
+}
+/* Medicare row on the Carriers page: lighter tiles */
+.carrier-tiles { background: none; border: 0; padding: 0; gap: 10px; }
+.ctile { min-height: 60px; padding: 10px 22px; box-shadow: 0 1px 0 var(--line); }
+.ctile span { font-size: 15.5px; letter-spacing: -0.01em; }
+.ctile:hover { box-shadow: 0 14px 28px -20px var(--shadow); }
+@media (prefers-reduced-motion: reduce) { .cstrip-item.carrier-name::after, .cstrip-item.carrier-name span { transition: none; } }
+
+/* 2026-10-26: carrier logos from Javon. Logo tiles sit on a light plate in the dark themes so every brand color stays legible,
+   and the coverage pages show the carriers placed for that line. */
+.ctile img { height: 34px; max-width: 168px; }
+.ctile:has(img) { padding: 10px 20px; }
+[data-theme="onyx"] .ctile:has(img), [data-theme="forest"] .ctile:has(img) { background: rgb(251 250 246); border-color: rgb(255 255 255 / .18); }
+.pcar-sec .sec-head { margin-bottom: clamp(18px, 2.4vw, 28px); }
+.pcar-sec .carrier-tiles { justify-content: flex-start; }
+.pcar-foot { margin-top: 18px; }
+@media (max-width: 560px) { .ctile img { height: 28px; max-width: 132px; } }
+/* 2026-10-26: optical sizing for carrier logos; build.py sets --lh per logo so every brand carries the same visual weight. */
+.ctile img, .cstrip-item img { height: var(--lh, 34px); width: auto; max-height: none; max-width: none; }
+.cstrip-item img { height: calc(var(--lh, 34px) * .92); }
+@media (max-width: 560px) { .ctile img, .cstrip-item img { height: calc(var(--lh, 34px) * .78); } }
+/* Badge logos (a wordmark knocked out of a solid shape) keep their inner type in the dark themes. */
+[data-theme="onyx"] .cstrip-item img[src*="ambetter"], [data-theme="forest"] .cstrip-item img[src*="ambetter"] { filter: grayscale(1); opacity: .85; }

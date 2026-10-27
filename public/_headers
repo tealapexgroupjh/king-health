@@ -7,6 +7,7 @@ https://:project.pages.dev/*
   X-Frame-Options: SAMEORIGIN
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
   Strict-Transport-Security: max-age=31536000
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-0xlzibQdqnAL0naQsIw5IUVJ/QnifxEpULuFGpPeo6I=' https://*.leadconnectorhq.com https://*.msgsndr.com https://*.gohighlevel.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://*.leadconnectorhq.com https://*.msgsndr.com https://*.gohighlevel.com; frame-src 'self' https://*.leadconnectorhq.com https://*.msgsndr.com https://*.gohighlevel.com https://www.google.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests
 
 /*.vcf
   Content-Type: text/vcard; charset=utf-8

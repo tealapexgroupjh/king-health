@@ -626,7 +626,8 @@ def head(title, description, page_id):
 ICON_ATTRS = 'fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"'
 CARRIER_ICON = {"Medicare": "medicare", "Final Expense": "final-expense", "Individual Health": "individual-health",
                 "Individual Life": "whole-life", "Dental and Vision": "dental-vision", "Group Benefits": "group-benefits",
-                "Retirement": "retirement"}
+                "Retirement": "retirement", "Ancillary": "ancillary", "Group Health": "group-health", "Group Life": "group-life",
+                "Group Ancillary": "group-ancillary", "Group Dental and Vision": "group-dental-vision"}
 _SPRITE = []
 
 
@@ -1666,6 +1667,7 @@ def build_product(C, P, p):
   </section>
 """ % paras(pc.get("how_it_works", []))
     group = (not shared) and cat["slug"] == "group-benefits"
+    body += product_carriers(C, p)  # 2026-10-26: the carriers King Health places for this coverage line
     # 2026-10-25: the product questions now sit beside the form (consult_faq_aside); faq_block stays available for other pages.
     if p == "medicare":
         body += '  <section class="section tpmo-sec" aria-label="Medicare disclaimer">\n    <div class="container">%s</div>\n  </section>\n' % tpmo_block(C)
@@ -1737,7 +1739,10 @@ def build_carriers(C, P):
     for name in c.get("sections", []):
         sid = re.sub(r"[^a-z]+", "-", name.lower()).strip("-")
         imgs = [x for x in logos.get(name, []) if x]
-        if imgs:
+        named = [car for car in (c.get("carrier_list") or []) if name in car.get("lines", [])]
+        if named and not imgs:
+            strip = '<ul class="logo-strip has-logos carrier-tiles" aria-label="%s carriers">%s</ul>' % (esc(name), "".join(carrier_tile(car, "ctile") for car in named))
+        elif imgs:
             strip = '<div class="logo-strip has-logos">%s</div>' % "".join(
                 '<img src="%s" alt=""%s loading="lazy">' % (esc(x), logo_dims(x)) for x in imgs)  # Wave 4: dimensions
         else:
@@ -1924,15 +1929,69 @@ def ext_link(url, label, cls, extra_attrs=""):
     return '<a class="%s" href="#" data-placeholder%s>%s</a>' % (cls, extra_attrs, esc(label))
 
 
+
+def carrier_logo_file(slug):
+    """2026-10-25: the logo file for a carrier slug in site/media/carriers, if one has been added."""
+    for ext in ("svg", "png", "webp"):
+        rel = "media/carriers/%s.%s" % (slug, ext)
+        if os.path.exists(os.path.join(SITE, rel)):
+            return rel
+    return ""
+
+
+def logo_height(src, area=4400, lo=22, hi=46):
+    """2026-10-26: optical sizing. Each logo gets the same visual area, so a wide wordmark and a square badge read at one weight."""
+    size = image_size(os.path.join(SITE, src.split("?", 1)[0]))
+    if not size or not size[1]:
+        return 34
+    aspect = size[0] / float(size[1])
+    return int(round(max(lo, min(hi, (area / aspect) ** 0.5))))
+
+
+def carrier_tile(car, cls):
+    """A carrier tile: the logo when its file exists, otherwise the carrier name set in type."""
+    src = carrier_logo_file(car["slug"])
+    if src:
+        return '<li class="%s"><img src="%s" alt="%s"%s style="--lh:%dpx" loading="lazy" decoding="async"></li>' % (
+            cls, esc(src), esc(car["name"]), logo_dims(src), logo_height(src))
+    return '<li class="%s carrier-name" title="%s"><span>%s</span></li>' % (cls, esc(car["name"]), esc(car.get("short") or car["name"]))
+
+
+def product_carriers(C, p):
+    """2026-10-26: carrier tiles on a coverage page, drawn from carriers.carrier_list by the line named in carriers.product_lines."""
+    c = C["carriers"]
+    line = (c.get("product_lines") or {}).get(p)
+    named = [car for car in (c.get("carrier_list") or []) if line and line in car.get("lines", [])]
+    if not named:
+        return ""
+    b = c.get("product_block", {})
+    link = ""
+    if page_live("carriers"):
+        link = '<div class="pcar-foot"><a class="tlink" href="carriers.html"><span>%s</span></a></div>' % esc(b.get("link", "View every carrier by coverage"))
+    return """  <section class="section pcar-sec" aria-labelledby="pcar-title">
+    <div class="container">
+      <div class="sec-head reveal"><p class="kicker">%s</p><h2 class="h2" id="pcar-title">%s</h2><p>%s</p></div>
+      <ul class="logo-strip has-logos carrier-tiles reveal" aria-label="%s carriers">%s</ul>
+      %s
+    </div>
+  </section>
+""" % (esc(b.get("kicker", "Carriers")), esc(b.get("heading", "Carriers we place for %s") % plabel(C, p)), esc(b.get("text", "")),
+       esc(line), "".join(carrier_tile(car, "ctile") for car in named), link)
+
+
 def carrier_strip(C, context):
     """A4: the Appointed carriers strip. Static and wrapped by default; site.js moves it only when real logos overflow."""
     c = C["carriers"]
     st = c.get("strip", {})
     logos = c.get("logos") if isinstance(c.get("logos"), list) else []
     logos = [l for l in logos if isinstance(l, dict) and l.get("src")]
-    if not logos and RELEASE:
+    clist = c.get("carrier_list") or []
+    if not logos and not clist and RELEASE:
         return ""
-    if logos:
+    if clist and not logos:
+        items = "".join(carrier_tile(car, "cstrip-item") for car in clist)
+        sr = ""
+    elif logos:
         items = "".join('<li class="cstrip-item"><img src="%s" alt="%s"%s loading="lazy" decoding="async"></li>' % (
             esc(l["src"]), esc(l.get("alt", "")), logo_dims(l["src"])) for l in logos)  # Wave 4: dimensions
         sr = ""
@@ -2536,6 +2595,11 @@ def seo_base(C):
 def abs_url(C, path):
     """Absolute URL from base_url. The home page canonical is the bare root."""
     path = "" if path == "index.html" else path
+    # 2026-10-25: Cloudflare Pages serves /about for about.html and redirects the .html address, so search tags use the clean form.
+    page, hsh, frag = path.partition("#")
+    if page.endswith(".html"):
+        page = "" if page == "index.html" else page[:-5]
+    path = page + hsh + frag
     return "%s/%s" % (seo_base(C), path)
 
 
@@ -3041,8 +3105,26 @@ def main():
             f.write(vc)
     headers = os.path.join(SITE, "_headers")
     if RELEASE:  # Cloudflare Pages: security headers, contact card download, and no indexing of the pages.dev preview address
+        # 2026-10-25: Content Security Policy. The inline theme script is allowed by its hash, computed here so the policy
+        # always matches the build. GoHighLevel hosts are pre-allowed for the form webhook and any later widget or embed.
+        import hashlib, base64
+        inline_hashes = set()
+        for _n, _doc in pages.items():
+            for _m in re.finditer(r"<script>(.*?)</script>", _doc, re.S):
+                inline_hashes.add("'sha256-%s'" % base64.b64encode(hashlib.sha256(_m.group(1).encode("utf-8")).digest()).decode())
+        ghl = "https://*.leadconnectorhq.com https://*.msgsndr.com https://*.gohighlevel.com"
+        csp = ("default-src 'self'; script-src 'self' %s %s; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
+               "font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' %s; "
+               "frame-src 'self' %s https://www.google.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; "
+               "object-src 'none'; upgrade-insecure-requests") % (" ".join(sorted(inline_hashes)), ghl, ghl, ghl)
+        hdrs = CF_HEADERS.replace("  Strict-Transport-Security: max-age=31536000\n",
+                                  "  Strict-Transport-Security: max-age=31536000\n  Content-Security-Policy: %s\n" % csp, 1)
         with open(headers, "w", encoding="utf-8") as f:
-            f.write(CF_HEADERS)
+            f.write(hdrs)
+        # 2026-10-25: permanent redirects from the addresses the earlier GoHighLevel site used on kinghealthdirect.com,
+        # so existing Google results and bookmarks land on the matching new page. /contact, /privacy and /terms already exist.
+        with open(os.path.join(SITE, "_redirects"), "w", encoding="utf-8") as f:
+            f.write("/home / 301\n/001 / 301\n/service / 301\n/services / 301\n")
     elif os.path.exists(headers):
         os.remove(headers)
     stamp = os.path.join(SITE, "assets", "build-stamp.txt")
