@@ -709,6 +709,7 @@ def brand_lock():
     return ('<a class="brand-lock" href="index.html">'
             '<img class="logo logo-light" src="brand/king-health-wordmark.png" alt="King Health, home" width="945" height="557">'
             '<img class="logo logo-dark" src="brand/king-health-wordmark-reverse.png" alt="" width="945" height="557">'
+            '<span class="kh-leaves" aria-hidden="true"><i></i><i></i><i></i><i></i></span>'  # 2026-10-26: a few leaves drift from the tree
             '</a>')
 
 
@@ -1392,7 +1393,9 @@ def tail():
 
 def page(C, title, desc, pid, body, active_cat=None, active=None, sub=""):
     full_title = title if "King Health" in title else "%s | King Health" % title
-    if not sub:  # Wave 3: every page without a category bar carries the King Health bar
+    if pid == "home":  # 2026-10-26: the home page carries no second nav bar (client request); every other page keeps it
+        sub = ""
+    elif not sub:  # Wave 3: every page without a category bar carries the King Health bar
         sub = site_nav(C, SITE_NAV_CURRENT.get(pid))
     return (head(full_title, desc, pid) + header(C, active_cat, active) + sub
             + '<main id="main" tabindex="-1">\n' + body + "</main>\n" + footer(C) + drawer() + tail())

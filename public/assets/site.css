@@ -1523,3 +1523,29 @@ body > .site-footer { flex-shrink: 0; }
 body > header, body > nav, body > section { flex-shrink: 0; }
 /* 2026-10-26: phones navigate with the Menu alone; the second nav bar is hidden under 761px and its links live in the menu. */
 @media (max-width: 760px) { .subnav { display: none !important; } }
+
+/* 2026-10-26 (final): the line beneath the header is a still gold bar, matching the gold line at the top of the page.
+   The animated versions were tried and set aside as too busy. */
+.site-header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; pointer-events: none; background: var(--accent); }
+
+
+/* 2026-10-26: a very light touch on the logo. Four small leaves loosen from the tree's upper right, where the logo already
+   scatters leaves, and drift down and away before fading, each on its own long, staggered cycle. Reduced motion removes them. */
+.brand-lock { position: relative; }
+.kh-leaves { position: absolute; inset: 0; pointer-events: none; overflow: visible; color: rgb(10 75 11); }
+[data-theme="onyx"] .kh-leaves, [data-theme="forest"] .kh-leaves { color: rgb(112 159 103); }
+.kh-leaves i { position: absolute; width: 4px; height: 2px; border-radius: 4px 0 4px 0; background: currentColor; opacity: 0;
+  animation: kh-leaf 13s ease-in-out infinite; }
+.kh-leaves i:nth-child(1) { left: 67%; top: 9%;  animation-delay: 0s; }
+.kh-leaves i:nth-child(2) { left: 74%; top: 16%; animation-delay: 3.6s; animation-duration: 15s; }
+.kh-leaves i:nth-child(3) { left: 71%; top: 22%; animation-delay: 7.1s; }
+.kh-leaves i:nth-child(4) { left: 79%; top: 27%; animation-delay: 10.2s; animation-duration: 14s; }
+@keyframes kh-leaf {
+  0% { opacity: 0; transform: translate(0, 0) rotate(0deg); }
+  6% { opacity: .9; }
+  30% { transform: translate(5px, 9px) rotate(70deg); }
+  55% { transform: translate(2px, 17px) rotate(150deg); }
+  78% { opacity: .55; }
+  90%, 100% { opacity: 0; transform: translate(8px, 26px) rotate(230deg); }
+}
+@media (prefers-reduced-motion: reduce) { .kh-leaves { display: none; } }
