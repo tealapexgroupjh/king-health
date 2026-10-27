@@ -850,8 +850,8 @@ def second_nav(label, label_href, label_current, links, aria, attrs="", cta_labe
         label_href, cur if label_current else "", esc(label))]
     items += ['<li><a href="%s"%s>%s</a></li>' % (href, cur if on else "", esc(text)) for href, text, on in links]
     return ('<nav class="subnav" aria-label="%s"%s><div class="container sn">'
-            '<ul class="sn-list">%s</ul><a class="sn-cta" href="%s"%s>%s<span aria-hidden="true" class="sn-cta-arrow"></span></a></div></nav>\n'
-            % (esc(aria), attrs, "".join(items), cta_href, cur if cta_current else "", esc(cta_label)))
+            '<ul class="sn-list">%s</ul></div></nav>\n'  # 2026-10-26: the trailing Contact Us link left the second bar (client request)
+            % (esc(aria), attrs, "".join(items)))
 
 
 def subnav(C, cat, current, hidden=False):
