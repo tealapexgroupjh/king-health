@@ -1248,10 +1248,19 @@ def contact_qr_svg(C):
         q = segno.make(text, error="l")
         rows = [list(r) for r in q.matrix]
         n, border = len(rows), 2
-        d = "".join("M%d %dh1v1h-1z" % (x + border, y + border) for y, r in enumerate(rows) for x, v in enumerate(r) if v)
+        # 2026-10-26: black and gold. The three corner finder rings are deep gold (5.6 to 1 contrast on white, well above
+        # what phone scanners need); every data module stays black so the code reads exactly as before.
+        def ring(x, y):
+            return (x < 7 and y < 7 and not (2 <= x <= 4 and 2 <= y <= 4)) or \
+                   (x >= n - 7 and y < 7 and not (n - 5 <= x <= n - 3 and 2 <= y <= 4)) or \
+                   (x < 7 and y >= n - 7 and not (2 <= x <= 4 and n - 5 <= y <= n - 3))
+        cell = lambda x, y: "M%d %dh1v1h-1z" % (x + border, y + border)
+        d = "".join(cell(x, y) for y, r in enumerate(rows) for x, v in enumerate(r) if v and not ring(x, y))
+        g = "".join(cell(x, y) for y, r in enumerate(rows) for x, v in enumerate(r) if v and ring(x, y))
         size = n + 2 * border
         svg = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" shape-rendering="crispEdges">'
-               '<rect width="%d" height="%d" fill="white"/><path fill="black" d="%s"/></svg>' % (size, size, size, size, d))
+               '<rect width="%d" height="%d" fill="white"/><path fill="#111111" d="%s"/><path fill="#8a6a10" d="%s"/></svg>'
+               % (size, size, size, size, d, g))
         with open(QR_FALLBACK, "w", encoding="utf-8") as f:
             f.write(svg)
     except Exception:

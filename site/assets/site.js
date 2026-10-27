@@ -427,9 +427,10 @@ var KH_CONFIG = {
     var track = vp.querySelector('.cstrip-track');
     if (!track || !track.querySelector('.cstrip-item') || track.querySelector('[data-placeholder]')) return; /* placeholders never move */
     if (reduceMQ.matches) return; /* static, wrapped, every logo visible */
+    vp.classList.add('is-moving'); /* measure in the moving layout, which phones and desktops share */
     track.style.flexWrap = 'nowrap'; track.style.justifyContent = 'flex-start';
     var fits = track.scrollWidth <= vp.clientWidth;
-    track.style.flexWrap = ''; track.style.justifyContent = '';
+    track.style.flexWrap = ''; track.style.justifyContent = ''; vp.classList.remove('is-moving');
     if (fits) return; /* the logos sit centered and still, no toggle */
     function setBtn(paused) {
       btn.setAttribute('aria-pressed', String(paused));

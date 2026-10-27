@@ -1476,11 +1476,14 @@ body > .site-footer { flex-shrink: 0; margin-top: auto; }
 .cstrip-foot { justify-content: center !important; margin-top: 18px; }
 .cstrip-toggle { margin: 16px auto 0; display: block; }
 @media (max-width: 760px) {
-  .cstrip-track { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); }
-  .cstrip-item, .cstrip-item.carrier-name { height: 56px; border-bottom: 1px solid var(--line); }
-  .cstrip-item + .cstrip-item::before { display: none; }
-  .cstrip-item:nth-child(even) { border-left: 1px solid var(--line); }
+  /* 2026-10-26: phones get the same moving logo band as the desktop; the two column grid remains only for a still strip
+     (reduced motion, or names before logos arrive). */
+  .cstrip-viewport:not(.is-moving) .cstrip-track { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+  .cstrip-viewport:not(.is-moving) .cstrip-item, .cstrip-viewport:not(.is-moving) .cstrip-item.carrier-name { height: 56px; border-bottom: 1px solid var(--line); }
+  .cstrip-viewport:not(.is-moving) .cstrip-item + .cstrip-item::before { display: none; }
+  .cstrip-viewport:not(.is-moving) .cstrip-item:nth-child(even) { border-left: 1px solid var(--line); }
   .cstrip-item.carrier-name span { white-space: normal; text-align: center; }
+  .is-moving .cstrip-item { height: 56px; padding: 0 20px; }
 }
 /* Medicare row on the Carriers page: lighter tiles */
 .carrier-tiles { background: none; border: 0; padding: 0; gap: 10px; }
